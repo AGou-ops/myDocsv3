@@ -1,0 +1,21 @@
+# Linux 基础
+
+- Ansible
+- Ansible
+- Cache
+- DHCP-PXE-Cobbler
+- DataBases
+- FileSystem
+- KVM
+- Kafka
+- LoadBalancer
+- Makefile
+- Nexus
+- RabbitMQ
+- Shell
+- SpringBoot
+- Terraform
+- Web Servers
+- Zabbix
+- Zookeeper
+- ...
