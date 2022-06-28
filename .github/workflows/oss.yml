@@ -1,0 +1,29 @@
+name: OSS #自动化的名称
+on:
+  push: # push的时候触发
+    branches: # 那些分支需要触发
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest # 镜像市场
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        TARGET_REPO: AGou-ops/myDocsv3
+        TARGET_BRANCH: gh-pages
+        BUILD_SCRIPT: yarn && yarn build
+        BUILD_DIR: docs/.vitepress/dist
+    - uses: manyuanrong/setup-ossutil@v2.0
+      with:
+        # endpoint 可以去oss控制台上查看
+        endpoint: "oss-cn-hangzhou.aliyuncs.com"
+        # 使用我们之前配置在secrets里面的accesskeys来配置ossutil
+        access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+        access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
+    - name: Deply To OSS
+      run: ossutil cp docs/.vitepress/dist/ oss://agou-ops/myDocsv3 -rf
