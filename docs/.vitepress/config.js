@@ -1,7 +1,7 @@
 export default {
   title: 'AGou\'s Docsv3',
   description: 'Welcome to AGou\'s Documetations.',
-  base: '/myDocsv3/',
+  base: '/',
   markdown: {
     lineNumbers: true,
     theme: 'material-palenight',
