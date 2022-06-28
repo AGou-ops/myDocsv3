@@ -2,7 +2,7 @@
 
 `docker-compose.yml` 文件内容：
 
-```yml
+```yaml
 version: '3'
 services:
   elasticsearch:

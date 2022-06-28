@@ -2,7 +2,7 @@
 
 从一个简单的示例开始:
 
-```Groovy
+```bash
 pipeline {
     agent any
     stages {
@@ -17,7 +17,7 @@ pipeline {
 
 ## 常用选项说明
 
-```Groovy
+```bash
 pipeline {
     agent any
     environment { 		// 全局变量

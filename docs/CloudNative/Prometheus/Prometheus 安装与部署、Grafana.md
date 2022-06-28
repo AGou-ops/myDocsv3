@@ -150,7 +150,7 @@ systemctl daemon-reload
 systemctl start prometheus.service
 ```
 
-Prometheus 服务启动完成后，可以通过[http://localhost:9090](http://localhost:9090/)访问 Prometheus 的 UI 界面
+Prometheus 服务启动完成后，可以通过http://localhost:9090访问 Prometheus 的 UI 界面
 
 ## 安装配置 node_exporter
 

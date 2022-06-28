@@ -61,7 +61,7 @@ kubectl version
 grep -Eoc '(vmx|svm)' /proc/cpuinfo
 ```
 
-检查***<u>BIOS的VT是否开启</u>***，使用以下工具进行检测：
+检查***BIOS的VT是否开启***，使用以下工具进行检测：
 
 ```bash
 sudo apt update

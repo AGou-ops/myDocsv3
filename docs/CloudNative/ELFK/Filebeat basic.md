@@ -19,7 +19,7 @@ cat /proc/`ps -ef |  grep -v grep |   grep filebeat  | awk '{print $2}'`/status 
 
 `filebeat`的配置文件是`filebeat.yml`, 目录中附带有其示例配置文件`filebeat.yml`
 
-```yml
+```yaml
 filebeat.inputs:
 - type: log
   enabled: true
@@ -73,7 +73,7 @@ output.kafka:
 
 收集`nginx`日志到本地：
 
-```yml
+```yaml
 # vim /usr/local/filebeat-7.7.1-linux-x86_64/filebeat.yml
 filebeat.inputs:
 - type: log

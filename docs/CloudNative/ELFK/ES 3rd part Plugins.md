@@ -29,7 +29,7 @@ docker run -p 9100:9100 mobz/elasticsearch-head:5
 
 ## cerebro
 
-Cerebro 是一款项目管理和协作软件。专为营销部门、建筑公司、视觉特效处理和动画工作室以及建筑管理局设计。对于elasticsearch来说，cerebro可以对ElasticSearch进行**<u>集群监控和管理、集群配置修改、索引分片管理。</u>**
+Cerebro 是一款项目管理和协作软件。专为营销部门、建筑公司、视觉特效处理和动画工作室以及建筑管理局设计。对于elasticsearch来说，cerebro可以对ElasticSearch进行**集群监控和管理、集群配置修改、索引分片管理。**
 
 官方站点及github仓库：https://cerebrohq.com/en/ | https://github.com/lmenezes/cerebro
 
