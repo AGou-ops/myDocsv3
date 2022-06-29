@@ -16,7 +16,7 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: AGou-ops/myDocsv3
         TARGET_BRANCH: gh-pages
-        BUILD_SCRIPT: yarn && cd docs && yarn && cd .. && yarn build
+        BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: docs/.vitepress/dist
     - uses: manyuanrong/setup-ossutil@v2.0
       with:

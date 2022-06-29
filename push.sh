@@ -2,4 +2,4 @@
 
 git add -A
 git commit -m "rebuilding site $(date)"
-git push origin HEAD:main
+git push -f origin HEAD:main
