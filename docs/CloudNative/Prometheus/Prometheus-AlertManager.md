@@ -33,7 +33,7 @@ Alertmanager 主要用于接收 Prometheus 发送的告警信息，它支持丰�
 docker run --name node-exporter -d -p 9100:9100 prom/node-exporter
 ```
 
-访问测试：http://localhost:9100
+访问测试：http://127.0.0.1:9100
 
 ### 配置 Prom
 
@@ -92,7 +92,7 @@ scrape_configs:
 docker run -d --name prometheus -p 9090:9090 -v /home/prom/prometheus.yml:/etc/prometheus/prometheus.yml -v /home/prom/nodes/:/etc/prometheus/nodes/ prom/prometheus
 ```
 
-查看`node-exporter`和`prometheus`健康状况：http://localhost:9090/targets
+查看`node-exporter`和`prometheus`健康状况：http://127.0.0.1:9090/targets
 
 ## 配置 AlertManager
 

@@ -1,78 +1,15 @@
-export default {
-  title: 'AGou\'s Docsv3',
-  description: 'Welcome to AGou\'s Documetations.',
-  base: '/',
-  markdown: {
-    lineNumbers: true,
-    theme: 'material-palenight',
-    linkify: false
-  },
-  themeConfig: {
-    lang: 'zh-CN',
-    siteTitle: 'AGou\'s Docsv3',
-    // 读取public下的文件
-    logo: '/logo.png',
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/AGou-ops' },
-      // { icon: 'youtube', link: 'https://github.com/vuejs/vitepress' }
-    ],
-    algolia: {
-      appId: '5M8VQRD7W9',
-      apiKey: '2fcdbd0ce638664e7a28cc64939603b9',
-      indexName: 'myDocsv3',
-      // buttonText: '搜索'
-    },
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2019-present AGou-ops'
-    },
-    editLink: {
-      pattern: 'https://github.com/AGou-ops/myDocsv3/edit/main/docs/:path',
-      text: '在GitHub编辑此页',
-    },
-    lastUpdatedText: '更新时间',
-    nav: [
-      {
-        text: '🏠 主页',
-        collapsible: true,
-        link: '/'
-        // activeMatch: '/config/'
-      },
-      {
-        text: '📖 目录',
-        collapsible: true,
-        items: [
-            { text: '☁️ 云原生相关', link: '/CloudNative/' },
-            { text: '😊 Linux基础', link: '/LinuxBasics/' },
-            { text: '♨️ 编程语言', link: '/ProgramLang/' },
-            { text: '🕹️ 脚本相关', link: '/Scripts/' },
-            { text: '👨‍⚖️ 面试相关', link: '/Interview/' },
-        ]
-      },
-      {
-        text: '版本',
-        collapsible: true,
-        items: [
-            { text: 'Ver1.0', link: 'https://agou-ops.cn/myDocs' },
-            { text: 'Ver2.0', link: 'https://agou-ops.cn/myDocsv2' },
-        ]
-      },
-      {
-        text: '✨ 我的博客',
-        collapsible: true,
-        link: 'https://agou-ops.cn',
-      }
-    ],
-    sidebar: {
+import type { DefaultTheme } from "vitepress";
+
+export const en: DefaultTheme.Sidebar = {
       '/guide/': guide(),
       '/CloudNative/': CloudNative(),
       '/Interview/': Interview(),
       '/LinuxBasics/': LinuxBasics(),
       '/ProgramLang/': ProgramLang(),
       '/Scripts/': Scripts(),
-  }
-}
-}
+};
+
+
 
 
 function guide() {

@@ -131,7 +131,7 @@ end
 
 重载配置：`vagrant reload --provision`
 
-最后打开浏览器访问`http://localhost:4567`即可。
+最后打开浏览器访问`http://127.0.0.1:4567`即可。
 
 **配置项详解：**
 

@@ -82,7 +82,7 @@ Add the following to the location part of the server block
     server_name yourdomain.com www.yourdomain.com;
 
     location / {
-        proxy_pass http://localhost:5000; #whatever port your app runs on
+        proxy_pass http://127.0.0.1:5000; #whatever port your app runs on
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';

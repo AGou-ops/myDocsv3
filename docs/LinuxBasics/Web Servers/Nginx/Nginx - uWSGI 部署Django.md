@@ -94,7 +94,7 @@ Superuser created successfully.
 (venv)$ python manage.py runserver [0.0.0.0:8000]
 ```
 
-服务默认监听在本地的`8000`端口，打开浏览器，访问 http://localhost:8000 检查服务状态即可。
+服务默认监听在本地的`8000`端口，打开浏览器，访问 http://127.0.0.1:8000 检查服务状态即可。
 
 #### 取消激活虚拟环境
 
@@ -193,7 +193,7 @@ $ sudo systemctl enable nginx
 $ sudo systemctl enable uwsgi
 ```
 
-:smile:到此安装完成，打开浏览器访问 http://localhost:8000 测试即可。
+:smile:到此安装完成，打开浏览器访问 http://127.0.0.1:8000 测试即可。
 
 ## 其他
 

@@ -219,7 +219,7 @@ docker exec consul2 consul reload
 ```bash
 curl -X PUT -d '{"id": "nginx","name": "nginx","address": "172.16.1.132","port": 80,"checks": [{"http": "http://172.16.1.132/","interval": "5s"}]}' http://127.0.0.1:8500/v1/agent/service/register
 # 或者
-curl -X PUT --data @nginx.json http://localhost:8500/v1/agent/service/register
+curl -X PUT --data @nginx.json http://127.0.0.1:8500/v1/agent/service/register
 ```
 
 注销服务使用：`curl -X PUT http://172.16.1.132:8500/v1/agent/service/deregister/nginx_test`

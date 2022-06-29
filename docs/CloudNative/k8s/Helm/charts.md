@@ -238,15 +238,15 @@ charts/
 
 dependencies:
   - name: subchart
-    repository: http://localhost:10191
+    repository: http://127.0.0.1:10191
     version: 0.1.0
     alias: new-subchart-1
   - name: subchart
-    repository: http://localhost:10191
+    repository: http://127.0.0.1:10191
     version: 0.1.0
     alias: new-subchart-2
   - name: subchart
-    repository: http://localhost:10191
+    repository: http://127.0.0.1:10191
     version: 0.1.0
 ```
 
@@ -277,14 +277,14 @@ Tags - tag字段是与chart关联的YAML格式的标签列表。在顶层value�
 
 dependencies:
   - name: subchart1
-    repository: http://localhost:10191
+    repository: http://127.0.0.1:10191
     version: 0.1.0
     condition: subchart1.enabled, global.subchart1.enabled
     tags:
       - front-end
       - subchart1
   - name: subchart2
-    repository: http://localhost:10191
+    repository: http://127.0.0.1:10191
     version: 0.1.0
     condition: subchart2.enabled,global.subchart2.enabled
     tags:
@@ -343,7 +343,7 @@ helm install --set tags.front-end=true --set subchart2.enabled=false
 
 dependencies:
   - name: subchart
-    repository: http://localhost:10191
+    repository: http://127.0.0.1:10191
     version: 0.1.0
     import-values:
       - data
@@ -380,7 +380,7 @@ myint: 99
 
 dependencies:
   - name: subchart1
-    repository: http://localhost:10191
+    repository: http://127.0.0.1:10191
     version: 0.1.0
     ...
     import-values:

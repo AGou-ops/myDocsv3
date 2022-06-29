@@ -114,7 +114,7 @@ nexus.exe /run
 
 The `nexus.exe` executable can be used to manage the repository manager as a service with the `/start`, `/stop`, `/restart`,` /force-reload` and `/``status` commands.
 
-最后, 打开浏览器访问 http://localhost:8081/ 即可.
+最后, 打开浏览器访问 http://127.0.0.1:8081/ 即可.
 
 :information_source:注意: `admin`账户的默认密码在`[Nexus安装目录]\sonatype-work\nexus3\admin.password`, 第一次引导时会提示你修改密码.
 

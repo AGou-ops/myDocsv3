@@ -99,7 +99,7 @@ node02  4a0a188a-aafe-24c2-1dc5-62f321671573  172.16.1.132:8310  follower  true 
 node03  77926cab-0bbb-5c4a-5976-e3b354915c1e  172.16.1.132:8320  follower  true   3
 ```
 
-此时，你可以访问任意一个节点，查看其健康状况，http://localhost:8500 或 http://localhost:8501 或 http://localhost:8502
+此时，你可以访问任意一个节点，查看其健康状况，http://127.0.0.1:8500 或 http://127.0.0.1:8501 或 http://127.0.0.1:8502
 
 ![](http://agou-images.oss-cn-qingdao.aliyuncs.com/blog-images/promethues%20%2B%20consul/consul-01.png)
 
@@ -174,7 +174,7 @@ docker run -d -p 9100:9100 --name node-exporter prom/node-exporter
 docker run -d -p 8080:8080 --name cadvisor-exporter google/cadvisor
 ```
 
-注册完毕后，打开 Consul 的 web 界面进行查看，http://localhost:8500
+注册完毕后，打开 Consul 的 web 界面进行查看，http://127.0.0.1:8500
 
 ![](http://agou-images.oss-cn-qingdao.aliyuncs.com/blog-images/promethues%20%2B%20consul/consul-02.png)
 
@@ -224,7 +224,7 @@ scrape_configs:
 ./prometheus --config.file=prometheus.yml
 ```
 
-打开浏览器，访问 http://localhost:9090 进行查看
+打开浏览器，访问 http://127.0.0.1:9090 进行查看
 
 ![](http://agou-images.oss-cn-qingdao.aliyuncs.com/blog-images/promethues%20%2B%20consul/consul-03.png)
 

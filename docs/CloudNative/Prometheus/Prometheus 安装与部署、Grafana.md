@@ -150,7 +150,7 @@ systemctl daemon-reload
 systemctl start prometheus.service
 ```
 
-Prometheus 服务启动完成后，可以通过http://localhost:9090访问 Prometheus 的 UI 界面
+Prometheus 服务启动完成后，可以通过http://127.0.0.1:9090访问 Prometheus 的 UI 界面
 
 ## 安装配置 node_exporter
 
@@ -187,7 +187,7 @@ systemctl daemon-reload
 systemctl start node_exporter
 ```
 
-服务启动后可以用 http://localhost:9100/metrics 测试 node_exporter 是否获取到节点的监控指标。
+服务启动后可以用 http://127.0.0.1:9100/metrics 测试 node_exporter 是否获取到节点的监控指标。
 
 ## 使用 Grafana 展示工具
 
@@ -204,7 +204,7 @@ sudo yum install grafana-6.7.3-1.x86_64.rpm
 systemctl start grafana-server
 ```
 
-服务启动后 grafana 默认监听在 3000 端口 ，可以通http://localhost:3000 访问 grafana 的 ui 界面，默认登录账号密码为 `admin/admin` ，第一次登录需要我们重置密码。
+服务启动后 grafana 默认监听在 3000 端口 ，可以通http://127.0.0.1:3000 访问 grafana 的 ui 界面，默认登录账号密码为 `admin/admin` ，第一次登录需要我们重置密码。
 
 添加`Prometheus`数据源：
 

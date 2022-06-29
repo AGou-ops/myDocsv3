@@ -2,7 +2,7 @@
 
 ## Inotify 简介
 
-> 开源地址： https：//github.com/inotify-tools/inotify-tools
+> 开源地址： https://github.com/inotify-tools/inotify-tools
 
 `Inotify` 一种强大的、细粒度的、异步文件系统监控机制，它满足各种各样的文件监控需要，可以监控文件系统的访问属性、读写属性、权限属性、删除创建、移动等操作，也就是可以监控文件发生的一切变化。
 
@@ -33,7 +33,7 @@ total 0
 
 ```bash
 # 下载源码包
-wget https：//github.com/inotify-tools/inotify-tools/archive/3.20.2.2.tar.gz -o inotify-tools.tar.gz
+wget https://github.com/inotify-tools/inotify-tools/archive/3.20.2.2.tar.gz -o inotify-tools.tar.gz
 tar xf inotify-tools.tar.gz && cd $_
 # 编译安装
 ./configure --prefix=/usr && make && su -c 'make install'

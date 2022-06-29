@@ -158,7 +158,7 @@ sh $SONAR_HOME/bin/linux-x86-64/sonar.sh console
 cat $SONAR_HOME/logs/web.log
 ```
 
-成功启动后，可以访问 `http://localhost:9000`
+成功启动后，可以访问 `http://127.0.0.1:9000`
 
 ![](https://agou-images.oss-cn-qingdao.aliyuncs.com/blog-images/CI%26CD/sonarqube-1.png)
 
@@ -199,7 +199,7 @@ $ docker run -d --name sonarqube \
 # docker run -d --name sonarqube -p 9000:9000 -e SONAR_JDBC_URL=jdbc:postgresql://39.99.144.153/sonarqube -e SONAR_JDBC_USERNAME=postgres -e SONAR_JDBC_PASSWORD=sonar -v /x/sonarqube_extensions:/opt/sonarqube/extensions sonarqube
 ```
 
-3. Log in to http://localhost:9000 with System Administrator credentials (login=admin, password=admin).
+3. Log in to http://127.0.0.1:9000 with System Administrator credentials (login=admin, password=admin).
 
 ## sonarqube 手动扫描代码
 

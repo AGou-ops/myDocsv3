@@ -248,7 +248,7 @@ spec:
           imagePullPolicy: "IfNotPresent"
           args:
             - --volume-dir=/etc/config
-            - --webhook-url=http://localhost:9090/-/reload
+            - --webhook-url=http://127.0.0.1:9090/-/reload
           volumeMounts:
             - name: config-volume
               mountPath: /etc/config

@@ -40,7 +40,7 @@ sudo systemctl status jenkins
 java -jar jenkins.war --httpPort=9090
 ```
 
-最后, 打开浏览器访问 : http://localhost:8080 , 等待解锁`Jenkins`即可.([UNLOCK JENKINS](https://www.jenkins.io/doc/book/installing/#unlocking-jenkins))
+最后, 打开浏览器访问 : http://127.0.0.1:8080 , 等待解锁`Jenkins`即可.([UNLOCK JENKINS](https://www.jenkins.io/doc/book/installing/#unlocking-jenkins))
 
 ![](http://agou-images.oss-cn-qingdao.aliyuncs.com/blog-images/CI%26CD/jenkins-1.png)
 
@@ -105,7 +105,7 @@ http://xx.xx.xx.xx:8080/restart 	# xx.xx.xx.xx 为服务器IP
 
 然后将原来`jenkins`目录中的文件复制到新文件夹中即可.
 
-最后重启`jenkins`服务. http://localhost:8080/restart 
+最后重启`jenkins`服务. http://127.0.0.1:8080/restart 
 
 > Windows 下重启`jenkins`遇到的问题: `Jenkins cannot restart itself as currently configured.`
 >

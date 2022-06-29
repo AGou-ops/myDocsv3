@@ -225,12 +225,12 @@ HEALTHCHECK NODE			# 禁止从父镜像继承的HEALTHCHECK生效
 *  0表示正常退出，1表示unhealthy，2表示reserved
 # 例子：
 HEALTHCHECK --interval=4m --timeout=3s \ 
-CMD curl -f http://localhost || exit 1
+CMD curl -f http://127.0.0.1 || exit 1
 
 * 总结：当容器启动之后，首先间隔interval秒然后进行健康检查，如果一个检查所花的时间超过了timeout秒，那么就认为这次检查失败了，如果连续retries次失败，就认为此容器状态为unhealthy
 
 # 使用例子：
-HEALTHCHECK –interval=10s –timeout=3s –retries=3 CMD curl http://localhost			#  可能会出现curl这个地址3秒内没响应则认为失败，然后再开始interval的时间进行下次检测，最后显示unhealthy的状态应该是39s
+HEALTHCHECK –interval=10s –timeout=3s –retries=3 CMD curl http://127.0.0.1			#  可能会出现curl这个地址3秒内没响应则认为失败，然后再开始interval的时间进行下次检测，最后显示unhealthy的状态应该是39s
 # 获取指定容器的健康状态
 docker inspect –format ‘【【json .State.Health.Status】】’ 41f1414fab75
 

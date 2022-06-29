@@ -121,7 +121,7 @@ volumes:
 docker-compose up -d
 ```
 
-等待完成之后，打开浏览器访问 http://localhost:8000 即可.
+等待完成之后，打开浏览器访问 http://127.0.0.1:8000 即可.
 
 > 该示例来源于官方文档：https://docs.docker.com/compose/wordpress/
 
@@ -266,8 +266,8 @@ Compose和Docker兼容性：
         healthcheck           # v2.1 以上版本, 定义容器健康状态检查, 类似于 Dockerfile 的 HEALTHCHECK 指令
             test                  # 检查容器检查状态的命令, 该选项必须是一个字符串或者列表, 第一项必须是 NONE, CMD 或 CMD-SHELL, 如果其是一个字符串则相当于 CMD-SHELL 加该字符串
                 NONE                  # 禁用容器的健康状态检测
-                CMD                   # test: ["CMD", "curl", "-f", "http://localhost"]
-                CMD-SHELL             # test: ["CMD-SHELL", "curl -f http://localhost || exit 1"] 或者　test: curl -f https://localhost || exit 1
+                CMD                   # test: ["CMD", "curl", "-f", "http://127.0.0.1"]
+                CMD-SHELL             # test: ["CMD-SHELL", "curl -f http://127.0.0.1 || exit 1"] 或者　test: curl -f https://localhost || exit 1
             interval: 1m30s       # 每次检查之间的间隔时间
             timeout: 10s          # 运行命令的超时时间
             retries: 3            # 重试次数

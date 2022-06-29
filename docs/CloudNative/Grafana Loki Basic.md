@@ -33,7 +33,7 @@ wget https://raw.githubusercontent.com/grafana/loki/v1.6.0/production/docker-com
 docker-compose -f docker-compose.yaml up
 ```
 
-安装完成之后打开浏览器访问: http://localhost:3000 进入`Grafana`面板, 输入默认账号密码`admin/admin`.
+安装完成之后打开浏览器访问: http://127.0.0.1:3000 进入`Grafana`面板, 输入默认账号密码`admin/admin`.
 
 #### 添加`Loki`数据源:
 
@@ -42,7 +42,7 @@ docker-compose -f docker-compose.yaml up
 ![](https://agou-images.oss-cn-qingdao.aliyuncs.com/blog-images/loki/add%20loki%20data%20source-1.png)
 
 2. 在列表中找到`Loki`并点击
-3. 添加URL为`http://localhost:3100`(如果使用的是`docker-compose`部署, 则需要填写的URL为`http://loki:3100`), 然后点击`Save & Test`即可
+3. 添加URL为`http://127.0.0.1:3100`(如果使用的是`docker-compose`部署, 则需要填写的URL为`http://loki:3100`), 然后点击`Save & Test`即可
 4. 点击左侧列表中的`Explore`, 选择一个数据流
 
 ![](https://agou-images.oss-cn-qingdao.aliyuncs.com/blog-images/loki/add%20loki%20data%20source-2.png)
@@ -70,7 +70,7 @@ kubectl get secret --namespace <YOUR-NAMESPACE> loki-grafana -o jsonpath="{.data
 kubectl port-forward --namespace <YOUR-NAMESPACE> service/loki-grafana 3000:80
 ```
 
-随后打开浏览器访问: http://localhost:3000
+随后打开浏览器访问: http://127.0.0.1:3000
 
 ## 示例`promtail`文件
 

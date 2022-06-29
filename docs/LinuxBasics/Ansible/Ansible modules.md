@@ -229,7 +229,7 @@
 ```yaml
   - name: check service status
     uri:
-      url: http://localhost
+      url: http://127.0.0.1
       return_content: yes
     register: result
     until: '"???" in result.content'

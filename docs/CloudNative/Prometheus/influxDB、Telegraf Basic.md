@@ -89,7 +89,7 @@ systemctl restart telegraf
 
 ```bash
 root@localhost:~\# influx
-Connected to http://localhost:8086 version 1.8.10
+Connected to http://127.0.0.1:8086 version 1.8.10
 InfluxDB shell version: 1.8.10
 > show databases
 name: databases
@@ -175,7 +175,7 @@ Using database metrics
 curl -i -XPOST 'http://127.0.0.1:8086/write?db=metrics' -- data-binary 'test,host=127.0.0.1,monitor_name=test count=1'
 # 查
 > select * from test order by time desc
-curl -G 'http://localhost:8086/query?pretty=true' -- data-urlencode "db=metrics" -- data-urlencode "q=select * from test order by time desc"
+curl -G 'http://127.0.0.1:8086/query?pretty=true' -- data-urlencode "db=metrics" -- data-urlencode "q=select * from test order by time desc"
 # 改
 > insert test,host=127.0.0.1,monitor_name=test count=1
 # 删
