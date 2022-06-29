@@ -1,6 +1,6 @@
 {
-    "index_name": "test",
-    "start_urls": ["http://localhost:3000"],
+    "index_name": "myDocsv3",
+    "start_urls": ["https://docs.agou-ops.cn/"],
     "selectors": {
       "lvl0": ".content h1",
       "lvl1": ".content h2",
