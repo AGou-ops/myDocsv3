@@ -1,0 +1,1409 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://docs.agou-ops.cn/</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Interview/</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/guide/</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/%E5%AE%9E%E7%8E%B0%E5%9F%BA%E4%BA%8EEFK%E6%97%A5%E5%BF%97%E5%B9%B3%E5%8F%B0%E6%94%B6%E9%9B%86Kubernetes%E9%9B%86%E7%BE%A4%E6%97%A5%E5%BF%97%E4%BF%A1%E6%81%AF.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Kubernetes%20Yaml%20quicklystart.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Kubernetes%20REST%20API.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Minikube%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/k8s%20command.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/kompose%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/k8s%20%E5%9B%BE%E8%A7%A3%E5%A4%A7%E5%85%A8.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Installation/Kubernetes%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E8%A3%85.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Installation/%E4%BD%BF%E7%94%A8%20Kubeadm%20%E9%83%A8%E7%BD%B2%EF%BC%88%E5%8D%95master%EF%BC%89.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Installation/%E4%BD%BF%E7%94%A8%20Kubespray%20%E9%83%A8%E7%BD%B2.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Installation/%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E6%BA%90%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%B0%8F%E5%B7%A5%E5%85%B7.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B/SpringCloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E5%9C%A8Kubernetes%E9%9B%86%E7%BE%A4%E4%B8%AD%E4%B8%8A%E7%BA%BF%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B/RBAC%20%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B/%E5%85%B6%E4%BB%96%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Kubeadm%20%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2k8s%E9%9B%86%E7%BE%A4.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/kubenetes%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E4%B8%80%20Kubernetes%E6%A6%82%E8%BF%B0.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E4%BA%8C%20%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%E5%8F%8A%E9%99%84%E4%BB%B6.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E4%B8%89%20%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%9B%9B%20%E5%85%A5%E9%97%A8%E5%91%BD%E4%BB%A4.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E4%BA%94%20%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%85%AD%20POD%20%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E4%B8%83%20%E6%8E%A7%E5%88%B6%E5%99%A8%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%85%AB%20Service%20%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E4%B9%9D%20ingress%20%E6%8E%A7%E5%88%B6%E5%99%A8.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%20POD%20%E5%AD%98%E5%82%A8%E5%8D%B7.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%E4%B8%80%20%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF%E5%AE%B9%E5%99%A8%E5%8C%96.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%E4%BA%8C%20StatefulSet%20%E6%8E%A7%E5%88%B6%E5%99%A8.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%E4%B8%89%20%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%E5%9B%9B%20%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%E4%BA%94%20dashboard.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%E5%85%AD%20%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%E4%B8%83%20%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%E5%85%AB%20%E9%AB%98%E7%BA%A7%E8%B0%83%E5%BA%A6%E8%AE%BE%E7%BD%AE.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Quicklystart/%E5%8D%81%E4%B9%9D%20%E5%AE%B9%E5%99%A8%E8%B5%84%E6%BA%90%E9%99%90%E5%88%B6.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Kubernetes%20with%20Jenkins%20CICD.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/k3d.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Remote%20access%20k8s.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Prometheus-Grafana%E5%85%A8%E6%96%B9%E4%BD%8D%E7%9B%91%E6%8E%A7Kubernetes%E9%9B%86%E7%BE%A4.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Helm/Helm%EF%BC%88Go%EF%BC%89template.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Helm/charts.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/Helm/Helm%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/k8s/k8s%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%8E%9F%E7%90%86%E7%9B%B8%E5%85%B3.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Grafana%20Loki%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Dubbo%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/DockerFile.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/Docker%20Network.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/Docker%20Volume.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/Docker%20Portainer.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/Docker%20%E5%9B%BA%E5%AE%9AIP%E5%8F%8A%E8%B7%A8%E4%B8%BB%E6%9C%BA%E4%BA%92%E9%80%9A.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/SSH%20Docker%20container.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/Docker%20Compose.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/Docker%20openvswitch.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/Docker%20Private%20Registry.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/Docker%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Docker/Docker%20Remote%20Access.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Istio%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/Kafka-ELFK%E5%88%86%E5%B8%83%E5%BC%8F%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/ES%203rd%20part%20Plugins.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/ELK-Redis%E7%BC%93%E5%AD%98%E4%BB%A5%E5%8F%8A%E6%97%A5%E5%BF%97%E5%88%86%E6%B5%81.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/ELK%20basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/Kafka-Redis-ELFK%E5%88%86%E5%B8%83%E5%BC%8F%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/ES%20Docker%E4%B8%89%E8%8A%82%E7%82%B9%E9%83%A8%E7%BD%B2.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/ELK-Kafka-Filebeat.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/Elastic%20Stack%20Beats.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/TCP-ELK%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/%E6%94%B6%E9%9B%86Java%E3%80%81Tomcat%E6%97%A5%E5%BF%97.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/syslog-ELK%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/Filebeat%20basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/ES%20%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/Logstash%20%E6%97%A5%E5%BF%97%E5%88%86%E6%B5%81.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/Logstash%20Basic%20-%20Plugins.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/%E4%BD%BF%E7%94%A8%20docker-compose%20%E9%83%A8%E7%BD%B2%20ELK.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/ELFK/%E9%83%A8%E7%BD%B2ELK-Kafka-Filebeat%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/GitLab/GitLab%20reset%20passwd.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/GitLab/GitLab%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/GitLab/GitLab%20Backup-Move.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/%E5%8F%91%E5%B8%83%E6%96%B9%E5%BC%8F.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/Gogs%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/Jira%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/Jenkins/Jenkinsfile.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/Jenkins/Jenkins%20Plugins.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/Jenkins/Jenkins%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/Sonarqube/Sonarqube%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/cicd/Sonarqube/Sonarqube%20with%20Jenkins.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Consul%20%E5%85%A5%E9%97%A8.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Prometheus/Prometheus%20%E5%AE%89%E8%A3%85%E4%B8%8E%E9%83%A8%E7%BD%B2%E3%80%81Grafana.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Prometheus/Prometheus-Consul%EF%BC%88%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%EF%BC%89.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Prometheus/Prometheus%20in%20Docker.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Prometheus/Prometheus%20%E8%BF%9B%E9%98%B6.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Prometheus/influxDB%E3%80%81Telegraf%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/Prometheus/Prometheus-AlertManager.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/CloudComptering/Microsoft%20Azure.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/CloudComptering/Amazon%20Web%20Services.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/CloudNative/CloudComptering/Amazon%20EKS%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DHCP-PXE-Cobbler/PXE%20CentOS.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DHCP-PXE-Cobbler/DHCP%20%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DHCP-PXE-Cobbler/Cobbler%20CentOS.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/SpringBoot/SpringBoot%20Quicklystart.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/SpringBoot/SpringBoot%20in%20Docker.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Terraform/Terraform%20Examples.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Terraform/Terraform%20Variable.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Terraform/Terraform%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/Redis/Redis%20%E8%BF%9B%E9%98%B6.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/Redis/Redis%20Backup.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/Redis/Redis%20Installation.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/Redis/Redis%20%20HA.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/Redis/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E3%80%81%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF%E3%80%81%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/Redis/Redis%20Codis.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/Redis/Redis%20Sentinel.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/Redis/Redis%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/Redis/Redis%20Cluster.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MongoDB/MongoDB%20Backup.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MongoDB/MongoDB%20Sharded-Cluster.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MongoDB/MongoDB%20Cluster.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MongoDB/mongodump%EF%BC%88restore%EF%BC%89oplog%E9%AB%98%E7%BA%A7%E5%A4%87%E4%BB%BD.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MongoDB/MongoDB%20%E5%BC%82%E6%9E%84%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E8%BF%81%E7%A7%BB.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MongoDB/MongoDB%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MongoDB/MongoDB%20Installation.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20Function.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20%E5%B0%8F%E6%8A%80%E5%B7%A7.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MariaDB%20Log.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20Auth%20CLI.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20Cursor.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20%E5%BF%AB%E9%80%9F%E6%89%8B%E5%86%8C.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20%E7%BA%A6%E6%9D%9F.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20Stored%20Procedure.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20EXPLAIN.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20BackUP%20-%20Client%20Tools.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20Internal_function.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20Cluster.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20Transaction.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20Data_Type.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/DataBases/MySQL/MySQL%20Configuration.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/lsyncd.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Useful%20Command.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Jvm%20-%20Tomcat/Tomcat%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%96%B9%E6%96%B9%E9%9D%A2%E9%9D%A2%E5%82%A8%E5%A4%87%E7%9F%A5%E8%AF%86.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Jvm%20-%20Tomcat/Tomcat%20Session%EF%BC%88memcached%EF%BC%89.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Jvm%20-%20Tomcat/Tomcat%20%E8%B0%83%E4%BC%98.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Jvm%20-%20Tomcat/Jvm%20Monitor%20Tools.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Jvm%20-%20Tomcat/Tomcat%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Jvm%20-%20Tomcat/Tomcat%20Session%EF%BC%88Redis%20with%20Nginx%EF%BC%89.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Jvm%20-%20Tomcat/Tomcat%20Cluster%EF%BC%88nginx%EF%BC%89.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Jvm%20-%20Tomcat/Tomcat%20%E5%B8%B8%E7%94%A8%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E8%A7%84%E8%8C%83.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/PHP/PHP%20%E4%BC%98%E5%8C%96%E5%8F%8A%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20-%20uWSGI%20%E9%83%A8%E7%BD%B2Django.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B8%8E%E5%AE%89%E5%85%A8.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20%E9%AB%98%E7%BA%A7%E6%A8%A1%E5%9D%97.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7%E4%B8%8E%E5%9B%9E%E6%BB%9A.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Others/Node.js%20with%20ssl%20-%20nginx.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Others/%E4%BD%BF%E7%94%A8logrotate%E5%88%87%E5%89%B2nginx%E6%97%A5%E5%BF%97.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Others/%E6%A3%80%E6%9F%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81gzip.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20%E7%88%AC%E8%99%AB%E9%99%90%E5%88%B6.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Problems/rewrite%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20Cache.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E6%89%8B%E5%86%8C.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20Rewrite.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20%E7%BC%96%E8%AF%91%E5%8F%8A%E5%88%B6%E4%BD%9C%E5%8C%85.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/HTTPS%20%20%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BC%98%E5%8C%96.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20try_files.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Nginx/Nginx%20%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Apache/LAMP%20%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Python%20Django/Access%20to%20Database.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Web%20Servers/Python%20Django/Django%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Cache/Varnish/varnish%20%E6%9E%B6%E6%9E%84%E3%80%81%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Cache/Varnish/varnish%20%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Cache/Varnish/varnish%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Cache/Nuster/Nuster%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/SSH%20Tunnel.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/WireShark%20Filter.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Makefile/Makefile%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Shell/Shell%20getopts%20%E6%A0%B7%E4%BE%8B.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Shell/command.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Shell/Linux%20Shell%20%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Shell/userful-shell.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/lvm%20%E8%AE%B2%E8%A7%A3.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/WireGuard%20VPN%20for%20Ubuntu.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/LVS/ipvsadm%20%E5%8F%82%E6%95%B0.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/LVS/LVS%20%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/LVS/LVS%20%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/LVS/LVS%20%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/LVS/LVS%20%E5%9B%9B%E7%A7%8D%E6%A8%A1%E5%9E%8B%E8%AF%A6%E8%A7%A3.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/LVS/LVS%20-%20keepalived.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/Keepalived%20-%20Nginx/Nginx%20-%20keepalived%E5%AE%9E%E7%8E%B0%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/Keepalived%20-%20Nginx/Nginx%20-%20keepalived%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%8F%8A%E8%84%9A%E6%9C%AC.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/HAProxy/HAProxy%20%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/HAProxy/HAProxy%20in%20Docker.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/HAProxy/HAProxy%20%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/HAProxy/Keepalived%20-%20HAProxy.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/LoadBalancer/HAProxy/HAProxy%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/RabbitMQ/RabbitMQ%20on%20Docker.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/RabbitMQ/RabbitMQ%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/RabbitMQ/RabbitMQ%20Mirror%20Queue.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/vsFTP%20%E5%9F%BA%E7%A1%80%E5%8F%8A%E5%AE%9E%E6%88%98.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/TFTP.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/FastDFS/FastDFS%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/GlusterFS/%E4%B8%B4%E6%97%B6.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/Ceph/CephFS.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/Ceph/Ceph%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/Ceph/Ceph%20Manager%20Dashboard.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/Ceph/Cephadm%20%E9%83%A8%E7%BD%B2octopus.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/Ceph/ceph%20%E9%83%A8%E7%BD%B2%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/Ceph/Ceph%20Cluster%20%E7%A7%BB%E9%99%A4.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/Ceph/Ceph%20RGW.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/Ceph/Ceph-deploy%20%E9%9B%86%E7%BE%A4%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/NFS%20%E5%9F%BA%E7%A1%80%E5%8F%8A%E5%AE%9E%E6%88%98.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/MinIO/MinIO%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/MinIO/MinIO%20in%20Docker.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/SAMBA%20%E5%9F%BA%E7%A1%80%E5%8F%8A%E5%AE%9E%E6%88%98.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/FileSystem/smb.conf%E8%AF%A6%E8%A7%A3.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/OpenVPN%20for%20CentOS.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/keepalived.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Zookeeper/Zookeeper%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/rsync%20-%20inotify%EF%BC%88sersync%EF%BC%89.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Ansible/Ansible%20Playbook%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Ansible/Ansible%20inventory.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Ansible/Ansible%20Ad-hoc%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Ansible/Ansible%20Best%20Practices.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Ansible/Ansible%20modules.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Ansible/Ansible%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Ansible/Ansible%20Tower.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Split%20-%20Logrotate.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Windows%20useful%20cmd.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Nexus/Nexus%20-%20yum%20%E7%A7%81%E6%9C%8D.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Nexus/Nexus%20Basic%20-%20Maven%20%E7%A7%81%E6%9C%8D.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Nexus/nexus%20%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E8%84%9A%E6%9C%AC.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Kafka/%E4%BD%BF%E7%94%A8%20docker-compose%20%E9%83%A8%E7%BD%B2%20Kafka.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Kafka/CMAK.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Kafka/Kafka%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/KVM/KVM%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/KVM/KVM%202%20VMware%20Station.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/KVM/kvm_install.sh.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/k3s%20-%20k3d%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Vagrant.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Zabbix/Zabbix%20%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Zabbix/Zabbix%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/SQL%20review.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/dnsmasq.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/inotifywait%20%E6%96%87%E4%BB%B6%E7%9B%91%E6%8E%A7.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/Firewalld%20IPtables%E5%BF%AB%E9%80%9F%E6%89%8B%E5%86%8C.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/PowerDNS.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/CertBot%20Nginx%20SSL.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/JumpServer.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/LinuxBasics/vim%20tricks.html</loc>
+	<lastmod>2022-06-30T05:20:05+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Pointer.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Testing.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Errors%20-%20handler.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20fmt%E5%8D%A0%E4%BD%8D%E7%AC%A6.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Pkgs.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Interface.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20File%20Operate.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20%E5%B9%B6%E5%8F%91.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Package%20manage.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Json.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Basic.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/String%20Operate.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Function.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Golang/Golang%20Project%20Layout.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Lua/Lua%20Baisc.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/ProgramLang/Lua/Lua%20continue%20Ex.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/shell/%E6%97%A5%E5%B8%B8%E5%B7%A1%E6%A3%80Shell.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/shell/Shell%20%E5%B9%B6%E5%8F%91.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/shell/CentOS%20sys%20information.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/shell/resort-file-from-csv/resort-file.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/shell/Redis%20tools.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/shell/Dokcer%20%E9%95%9C%E5%83%8F%E5%A4%87%E4%BB%BD.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/shell/Nginx%20Log%20Check.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/shell/Rsync.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Scripts/windows/%E9%80%9A%E7%94%A8%E4%BF%AE%E6%94%B9dns.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Interview/%E5%B7%A5%E4%BD%9C%E9%9D%A2%E8%AF%95%E9%A2%98/Redis.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/Interview/%E5%B7%A5%E4%BD%9C%E9%9D%A2%E8%AF%95%E9%A2%98/%E9%80%89%E6%8B%A9%E5%85%AC%E5%8F%B8.html</loc>
+	<lastmod>2022-06-30T05:20:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://docs.agou-ops.cn/guide/index.html</loc>
+	<lastmod>2022-06-30T05:20:07+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>
