@@ -48,10 +48,9 @@ useMediumZoom();
     />
   </p>
   <div style="text-align: center;">
-<p>本站所有原创内容开源许可协议均为：<strong><code>WTFPL</code>，转载的时候随便去掉本站信息都可以，不用经过博主同意。</strong></p>
-<blockquote><p><strong>何为<code>WTFPL</code>？</strong></p>
-<p><strong><a href='http://www.wtfpl.net/'>WTFPL © Do What the Fuck You Want to Public License</a></strong>【意思自行体会】</p>
-<p><em>The WTFPL is a very permissive license for software and other scientific or artistic works that offers a great degree of freedom. In fact, it is probably the best license out there.</em></p>
+    <br>
+<p>本站所有原创内容开源许可协议均为：<strong><a href= 'http://www.wtfpl.net/'>WTFPL</a>，转载的时候随便去掉本站信息都可以，不用经过博主同意。</strong></p>
+<blockquote><p><strong><a href='http://www.wtfpl.net/'>WTFPL © Do What the Fuck You Want to Public License</a></strong>【意思自行体会】</p>
 </blockquote>
 </div>
   <footer

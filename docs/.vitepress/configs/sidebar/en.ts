@@ -10,8 +10,6 @@ export const en: DefaultTheme.Sidebar = {
 };
 
 
-
-
 function guide() {
   return [
         {
@@ -55,7 +53,7 @@ function CloudNative(){
         { text: '使用 Kubeadm 部署（单master）', link: '/CloudNative/k8s/Installation/使用 Kubeadm 部署（单master）' },
         { text: '使用 Kubespray 部署', link: '/CloudNative/k8s/Installation/使用 Kubespray 部署' },
         { text: '使用国内源及相关小工具', link: '/CloudNative/k8s/Installation/使用国内源及相关小工具' },
-        { text: 'index', link: '/CloudNative/k8s/Installation/index' },
+
         ]
     },
     {
@@ -63,7 +61,7 @@ function CloudNative(){
       collapsible: true,
       items: [
         { text: 'SpringCloud微服务电商系统在Kubernetes集群中上线详细教程', link: '/CloudNative/k8s/实战案例/SpringCloud微服务电商系统在Kubernetes集群中上线详细教程' },
-        { text: 'index', link: '/CloudNative/k8s/实战案例/index' },
+
         { text: 'RBAC 实战案例', link: '/CloudNative/k8s/实战案例/RBAC 实战案例' },
         { text: '其他实战案例', link: '/CloudNative/k8s/实战案例/其他实战案例' },
         { text: 'Kubeadm 快速部署k8s集群', link: '/CloudNative/k8s/Kubeadm 快速部署k8s集群' },
@@ -105,7 +103,7 @@ function CloudNative(){
       items: [
         { text: 'Helm（Go）template', link: '/CloudNative/k8s/Helm/Helm（Go）template' },
         { text: 'charts', link: '/CloudNative/k8s/Helm/charts' },
-        { text: 'index', link: '/CloudNative/k8s/Helm/index' },
+
         { text: 'Helm Basic', link: '/CloudNative/k8s/Helm/Helm Basic' },
         { text: 'k8s概念及原理相关', link: '/CloudNative/k8s/k8s概念及原理相关' },
         { text: 'Grafana Loki Basic', link: '/CloudNative/Grafana Loki Basic' },
@@ -121,7 +119,7 @@ function CloudNative(){
         { text: 'Docker Volume', link: '/CloudNative/Docker/Docker Volume' },
         { text: 'Docker Portainer', link: '/CloudNative/Docker/Docker Portainer' },
         { text: 'Docker 固定IP及跨主机互通', link: '/CloudNative/Docker/Docker 固定IP及跨主机互通' },
-        { text: 'index', link: '/CloudNative/Docker/index' },
+
         { text: 'SSH Docker container', link: '/CloudNative/Docker/SSH Docker container' },
         { text: 'Docker Compose', link: '/CloudNative/Docker/Docker Compose' },
         { text: 'Docker openvswitch', link: '/CloudNative/Docker/Docker openvswitch' },
@@ -139,7 +137,7 @@ function CloudNative(){
         { text: 'ES 3rd part Plugins', link: '/CloudNative/ELFK/ES 3rd part Plugins' },
         { text: 'ELK-Redis缓存以及日志分流', link: '/CloudNative/ELFK/ELK-Redis缓存以及日志分流' },
         { text: 'ELK basic', link: '/CloudNative/ELFK/ELK basic' },
-        { text: 'index', link: '/CloudNative/ELFK/index' },
+
         { text: 'Kafka-Redis-ELFK分布式日志收集', link: '/CloudNative/ELFK/Kafka-Redis-ELFK分布式日志收集' },
         { text: 'ES Docker三节点部署', link: '/CloudNative/ELFK/ES Docker三节点部署' },
         { text: 'ELK-Kafka-Filebeat', link: '/CloudNative/ELFK/ELK-Kafka-Filebeat' },
@@ -167,10 +165,10 @@ function CloudNative(){
         { text: 'GitLab reset passwd', link: '/CloudNative/cicd/GitLab/GitLab reset passwd' },
         { text: 'GitLab Basic', link: '/CloudNative/cicd/GitLab/GitLab Basic' },
         { text: 'GitLab Backup-Move', link: '/CloudNative/cicd/GitLab/GitLab Backup-Move' },
-        { text: 'index', link: '/CloudNative/cicd/GitLab/index' },
+
         { text: '发布方式', link: '/CloudNative/cicd/发布方式' },
         { text: 'Gogs Basic', link: '/CloudNative/cicd/Gogs Basic' },
-        { text: 'index', link: '/CloudNative/cicd/index' },
+
         { text: 'Jira Basic', link: '/CloudNative/cicd/Jira Basic' },
         ]
     },
@@ -180,7 +178,7 @@ function CloudNative(){
       items: [
         { text: 'Jenkinsfile', link: '/CloudNative/cicd/Jenkins/Jenkinsfile' },
         { text: 'Jenkins Plugins', link: '/CloudNative/cicd/Jenkins/Jenkins Plugins' },
-        { text: 'index', link: '/CloudNative/cicd/Jenkins/index' },
+
         { text: 'Jenkins Basic', link: '/CloudNative/cicd/Jenkins/Jenkins Basic' },
         ]
     },
@@ -188,11 +186,11 @@ function CloudNative(){
       text: 'CI & CD - Sonarqube',
       collapsible: true,
       items: [
-        { text: 'index', link: '/CloudNative/cicd/Sonarqube/index' },
+
         { text: 'Sonarqube Basic', link: '/CloudNative/cicd/Sonarqube/Sonarqube Basic' },
         { text: 'Sonarqube with Jenkins', link: '/CloudNative/cicd/Sonarqube/Sonarqube with Jenkins' },
         { text: 'Consul 入门', link: '/CloudNative/Consul 入门' },
-        { text: 'index', link: '/CloudNative/index' },
+
         ]
     },
     {
@@ -203,7 +201,7 @@ function CloudNative(){
         { text: 'Prometheus-Consul（服务发现）', link: '/CloudNative/Prometheus/Prometheus-Consul（服务发现）' },
         { text: 'Prometheus in Docker', link: '/CloudNative/Prometheus/Prometheus in Docker' },
         { text: 'Prometheus 进阶', link: '/CloudNative/Prometheus/Prometheus 进阶' },
-        { text: 'index', link: '/CloudNative/Prometheus/index' },
+
         { text: 'influxDB、Telegraf Basic', link: '/CloudNative/Prometheus/influxDB、Telegraf Basic' },
         { text: 'Prometheus-AlertManager', link: '/CloudNative/Prometheus/Prometheus-AlertManager' },
         ]
@@ -214,7 +212,7 @@ function CloudNative(){
       items: [
         { text: 'Microsoft Azure', link: '/CloudNative/CloudComptering/Microsoft Azure' },
         { text: 'Amazon Web Services', link: '/CloudNative/CloudComptering/Amazon Web Services' },
-        { text: 'index', link: '/CloudNative/CloudComptering/index' },
+
         { text: 'Amazon EKS Basic', link: '/CloudNative/CloudComptering/Amazon EKS Basic' },
         ]
     },
@@ -234,8 +232,8 @@ function Interview(){
       items: [
         { text: 'Redis', link: '/Interview/工作面试题/Redis' },
         { text: '选择公司', link: '/Interview/工作面试题/选择公司' },
-        { text: 'index', link: '/Interview/工作面试题/index' },
-        { text: 'index', link: '/Interview/index' },
+
+
         ]
     },
 	]
@@ -254,7 +252,7 @@ function LinuxBasics(){
       collapsible: true,
       items: [
         { text: 'PXE CentOS', link: '/LinuxBasics/DHCP-PXE-Cobbler/PXE CentOS' },
-        { text: 'index', link: '/LinuxBasics/DHCP-PXE-Cobbler/index' },
+
         { text: 'DHCP 简单使用', link: '/LinuxBasics/DHCP-PXE-Cobbler/DHCP 简单使用' },
         { text: 'Cobbler CentOS', link: '/LinuxBasics/DHCP-PXE-Cobbler/Cobbler CentOS' },
         ]
@@ -263,7 +261,7 @@ function LinuxBasics(){
       text: 'SpringBoot',
       collapsible: true,
       items: [
-        { text: 'index', link: '/LinuxBasics/SpringBoot/index' },
+
         { text: 'SpringBoot Quicklystart', link: '/LinuxBasics/SpringBoot/SpringBoot Quicklystart' },
         { text: 'SpringBoot in Docker', link: '/LinuxBasics/SpringBoot/SpringBoot in Docker' },
         ]
@@ -274,7 +272,7 @@ function LinuxBasics(){
       items: [
         { text: 'Terraform Examples', link: '/LinuxBasics/Terraform/Terraform Examples' },
         { text: 'Terraform Variable', link: '/LinuxBasics/Terraform/Terraform Variable' },
-        { text: 'index', link: '/LinuxBasics/Terraform/index' },
+
         { text: 'Terraform Basic', link: '/LinuxBasics/Terraform/Terraform Basic' },
         ]
     },
@@ -292,7 +290,7 @@ function LinuxBasics(){
         { text: 'Redis Backup', link: '/LinuxBasics/DataBases/Redis/Redis Backup' },
         { text: 'Redis Installation', link: '/LinuxBasics/DataBases/Redis/Redis Installation' },
         { text: 'Redis  HA', link: '/LinuxBasics/DataBases/Redis/Redis  HA' },
-        { text: 'index', link: '/LinuxBasics/DataBases/Redis/index' },
+
         { text: '缓存穿透、缓存击穿、缓存雪崩', link: '/LinuxBasics/DataBases/Redis/缓存穿透、缓存击穿、缓存雪崩' },
         { text: 'Redis Codis', link: '/LinuxBasics/DataBases/Redis/Redis Codis' },
         { text: 'Redis Sentinel', link: '/LinuxBasics/DataBases/Redis/Redis Sentinel' },
@@ -307,12 +305,12 @@ function LinuxBasics(){
         { text: 'MongoDB Backup', link: '/LinuxBasics/DataBases/MongoDB/MongoDB Backup' },
         { text: 'MongoDB Sharded-Cluster', link: '/LinuxBasics/DataBases/MongoDB/MongoDB Sharded-Cluster' },
         { text: 'MongoDB Cluster', link: '/LinuxBasics/DataBases/MongoDB/MongoDB Cluster' },
-        { text: 'index', link: '/LinuxBasics/DataBases/MongoDB/index' },
+
         { text: 'mongodump（restore）oplog高级备份', link: '/LinuxBasics/DataBases/MongoDB/mongodump（restore）oplog高级备份' },
         { text: 'MongoDB 异构数据平台迁移', link: '/LinuxBasics/DataBases/MongoDB/MongoDB 异构数据平台迁移' },
         { text: 'MongoDB Basic', link: '/LinuxBasics/DataBases/MongoDB/MongoDB Basic' },
         { text: 'MongoDB Installation', link: '/LinuxBasics/DataBases/MongoDB/MongoDB Installation' },
-        { text: 'index', link: '/LinuxBasics/DataBases/index' },
+
         ]
     },
     {
@@ -326,7 +324,7 @@ function LinuxBasics(){
         { text: 'MySQL Cursor', link: '/LinuxBasics/DataBases/MySQL/MySQL Cursor' },
         { text: 'MySQL 快速手册', link: '/LinuxBasics/DataBases/MySQL/MySQL 快速手册' },
         { text: 'MySQL 约束', link: '/LinuxBasics/DataBases/MySQL/MySQL 约束' },
-        { text: 'index', link: '/LinuxBasics/DataBases/MySQL/index' },
+
         { text: 'MySQL Stored Procedure', link: '/LinuxBasics/DataBases/MySQL/MySQL Stored Procedure' },
         { text: 'MySQL EXPLAIN', link: '/LinuxBasics/DataBases/MySQL/MySQL EXPLAIN' },
         { text: 'MySQL BackUP - Client Tools', link: '/LinuxBasics/DataBases/MySQL/MySQL BackUP - Client Tools' },
@@ -341,7 +339,7 @@ function LinuxBasics(){
       text: '数据库 - 压测工具',
       collapsible: true,
       items: [
-        { text: 'index', link: '/LinuxBasics/DataBases/压测工具/index' },
+
         { text: 'lsyncd', link: '/LinuxBasics/lsyncd' },
         { text: 'Useful Command', link: '/LinuxBasics/Useful Command' },
         ]
@@ -364,7 +362,7 @@ function LinuxBasics(){
         { text: 'Tomcat Session（Redis with Nginx）', link: '/LinuxBasics/Web Servers/Jvm - Tomcat/Tomcat Session（Redis with Nginx）' },
         { text: 'Tomcat Cluster（nginx）', link: '/LinuxBasics/Web Servers/Jvm - Tomcat/Tomcat Cluster（nginx）' },
         { text: 'Tomcat 常用设置及安全管理规范', link: '/LinuxBasics/Web Servers/Jvm - Tomcat/Tomcat 常用设置及安全管理规范' },
-        { text: 'index', link: '/LinuxBasics/Web Servers/Jvm - Tomcat/index' },
+
         ]
     },
     {
@@ -372,8 +370,8 @@ function LinuxBasics(){
       collapsible: true,
       items: [
         { text: 'PHP 优化及安全配置', link: '/LinuxBasics/Web Servers/PHP/PHP 优化及安全配置' },
-        { text: 'index', link: '/LinuxBasics/Web Servers/PHP/index' },
-        { text: 'index', link: '/LinuxBasics/Web Servers/index' },
+
+
         ]
     },
     {
@@ -392,7 +390,7 @@ function LinuxBasics(){
       items: [
         { text: 'Node.js with ssl - nginx', link: '/LinuxBasics/Web Servers/Nginx/Others/Node.js with ssl - nginx' },
         { text: '使用logrotate切割nginx日志', link: '/LinuxBasics/Web Servers/Nginx/Others/使用logrotate切割nginx日志' },
-        { text: 'index', link: '/LinuxBasics/Web Servers/Nginx/Others/index' },
+
         { text: '检查服务器是否支持gzip', link: '/LinuxBasics/Web Servers/Nginx/Others/检查服务器是否支持gzip' },
         { text: 'Nginx 爬虫限制', link: '/LinuxBasics/Web Servers/Nginx/Nginx 爬虫限制' },
         ]
@@ -402,10 +400,10 @@ function LinuxBasics(){
       collapsible: true,
       items: [
         { text: 'rewrite参数处理问题', link: '/LinuxBasics/Web Servers/Nginx/Problems/rewrite参数处理问题' },
-        { text: 'index', link: '/LinuxBasics/Web Servers/Nginx/Problems/index' },
+
         { text: 'Nginx Cache', link: '/LinuxBasics/Web Servers/Nginx/Nginx Cache' },
         { text: 'Nginx 负载均衡', link: '/LinuxBasics/Web Servers/Nginx/Nginx 负载均衡' },
-        { text: 'index', link: '/LinuxBasics/Web Servers/Nginx/index' },
+
         { text: 'Nginx 快速配置手册', link: '/LinuxBasics/Web Servers/Nginx/Nginx 快速配置手册' },
         { text: 'Nginx 反向代理', link: '/LinuxBasics/Web Servers/Nginx/Nginx 反向代理' },
         { text: 'Nginx Rewrite', link: '/LinuxBasics/Web Servers/Nginx/Nginx Rewrite' },
@@ -420,7 +418,7 @@ function LinuxBasics(){
       collapsible: true,
       items: [
         { text: 'LAMP 快速部署', link: '/LinuxBasics/Web Servers/Apache/LAMP 快速部署' },
-        { text: 'index', link: '/LinuxBasics/Web Servers/Apache/index' },
+
         ]
     },
     {
@@ -428,7 +426,7 @@ function LinuxBasics(){
       collapsible: true,
       items: [
         { text: 'Access to Database', link: '/LinuxBasics/Web Servers/Python Django/Access to Database' },
-        { text: 'index', link: '/LinuxBasics/Web Servers/Python Django/index' },
+
         { text: 'Django Basic', link: '/LinuxBasics/Web Servers/Python Django/Django Basic' },
         ]
     },
@@ -443,7 +441,7 @@ function LinuxBasics(){
       collapsible: true,
       items: [
         { text: 'varnish 架构、工作原理及简单配置', link: '/LinuxBasics/Cache/Varnish/varnish 架构、工作原理及简单配置' },
-        { text: 'index', link: '/LinuxBasics/Cache/Varnish/index' },
+
         { text: 'varnish 参考示例', link: '/LinuxBasics/Cache/Varnish/varnish 参考示例' },
         { text: 'varnish Basic', link: '/LinuxBasics/Cache/Varnish/varnish Basic' },
         ]
@@ -452,7 +450,7 @@ function LinuxBasics(){
       text: '缓存服务器 - /Nuster',
       collapsible: true,
       items: [
-        { text: 'index', link: '/LinuxBasics/Cache/Nuster/index' },
+
         { text: 'Nuster Basic', link: '/LinuxBasics/Cache/Nuster/Nuster Basic' },
         { text: 'SSH Tunnel', link: '/LinuxBasics/SSH Tunnel' },
         { text: 'WireShark Filter', link: '/LinuxBasics/WireShark Filter' },
@@ -472,7 +470,7 @@ function LinuxBasics(){
         { text: 'Shell getopts 样例', link: '/LinuxBasics/Shell/Shell getopts 样例' },
         { text: 'command', link: '/LinuxBasics/Shell/command' },
         { text: 'Linux Shell 实用命令及使用场景', link: '/LinuxBasics/Shell/Linux Shell 实用命令及使用场景' },
-        { text: 'index', link: '/LinuxBasics/Shell/index' },
+
         { text: 'userful-shell', link: '/LinuxBasics/Shell/userful-shell' },
         { text: 'lvm 讲解', link: '/LinuxBasics/lvm 讲解' },
         { text: 'WireGuard VPN for Ubuntu', link: '/LinuxBasics/WireGuard VPN for Ubuntu' },
@@ -492,7 +490,7 @@ function LinuxBasics(){
         { text: 'LVS 调度算法', link: '/LinuxBasics/LoadBalancer/LVS/LVS 调度算法' },
         { text: 'LVS 进阶配置', link: '/LinuxBasics/LoadBalancer/LVS/LVS 进阶配置' },
         { text: 'LVS 简单应用', link: '/LinuxBasics/LoadBalancer/LVS/LVS 简单应用' },
-        { text: 'index', link: '/LinuxBasics/LoadBalancer/LVS/index' },
+
         { text: 'LVS 四种模型详解', link: '/LinuxBasics/LoadBalancer/LVS/LVS 四种模型详解' },
         { text: 'LVS - keepalived', link: '/LinuxBasics/LoadBalancer/LVS/LVS - keepalived' },
         ]
@@ -503,8 +501,8 @@ function LinuxBasics(){
       items: [
         { text: 'Nginx - keepalived实现高可用集群', link: '/LinuxBasics/LoadBalancer/Keepalived - Nginx/Nginx - keepalived实现高可用集群' },
         { text: 'Nginx - keepalived快速配置及脚本', link: '/LinuxBasics/LoadBalancer/Keepalived - Nginx/Nginx - keepalived快速配置及脚本' },
-        { text: 'index', link: '/LinuxBasics/LoadBalancer/Keepalived - Nginx/index' },
-        { text: 'index', link: '/LinuxBasics/LoadBalancer/index' },
+
+
         ]
     },
     {
@@ -519,7 +517,7 @@ function LinuxBasics(){
       collapsible: true,
       items: [
         { text: 'HAProxy in Docker', link: '/LinuxBasics/LoadBalancer/HAProxy/HAProxy in Docker' },
-        { text: 'index', link: '/LinuxBasics/LoadBalancer/HAProxy/index' },
+
         { text: 'HAProxy 配置详解', link: '/LinuxBasics/LoadBalancer/HAProxy/HAProxy 配置详解' },
         { text: 'Keepalived - HAProxy', link: '/LinuxBasics/LoadBalancer/HAProxy/Keepalived - HAProxy' },
         { text: 'HAProxy Basic', link: '/LinuxBasics/LoadBalancer/HAProxy/HAProxy Basic' },
@@ -529,7 +527,7 @@ function LinuxBasics(){
       text: 'RabbitMQ',
       collapsible: true,
       items: [
-        { text: 'index', link: '/LinuxBasics/RabbitMQ/index' },
+
         { text: 'RabbitMQ on Docker', link: '/LinuxBasics/RabbitMQ/RabbitMQ on Docker' },
         { text: 'RabbitMQ Basic', link: '/LinuxBasics/RabbitMQ/RabbitMQ Basic' },
         { text: 'RabbitMQ Mirror Queue', link: '/LinuxBasics/RabbitMQ/RabbitMQ Mirror Queue' },
@@ -547,7 +545,7 @@ function LinuxBasics(){
       text: '文件系统 - /FastDFS',
       collapsible: true,
       items: [
-        { text: 'index', link: '/LinuxBasics/FileSystem/FastDFS/index' },
+
         { text: 'FastDFS Basic', link: '/LinuxBasics/FileSystem/FastDFS/FastDFS Basic' },
         ]
     },
@@ -555,7 +553,7 @@ function LinuxBasics(){
       text: '文件系统 - /GlusterFS',
       collapsible: true,
       items: [
-        { text: 'index', link: '/LinuxBasics/FileSystem/GlusterFS/index' },
+
         { text: '临时', link: '/LinuxBasics/FileSystem/GlusterFS/临时' },
         ]
     },
@@ -571,7 +569,7 @@ function LinuxBasics(){
         { text: 'Ceph Cluster 移除', link: '/LinuxBasics/FileSystem/Ceph/Ceph Cluster 移除' },
         { text: 'Ceph RGW', link: '/LinuxBasics/FileSystem/Ceph/Ceph RGW' },
         { text: 'Ceph-deploy 集群快速部署', link: '/LinuxBasics/FileSystem/Ceph/Ceph-deploy 集群快速部署' },
-        { text: 'index', link: '/LinuxBasics/FileSystem/Ceph/index' },
+
         { text: 'NFS 基础及实战', link: '/LinuxBasics/FileSystem/NFS 基础及实战' },
         ]
     },
@@ -580,10 +578,10 @@ function LinuxBasics(){
       collapsible: true,
       items: [
         { text: 'MinIO Basic', link: '/LinuxBasics/FileSystem/MinIO/MinIO Basic' },
-        { text: 'index', link: '/LinuxBasics/FileSystem/MinIO/index' },
+
         { text: 'MinIO in Docker', link: '/LinuxBasics/FileSystem/MinIO/MinIO in Docker' },
         { text: 'SAMBA 基础及实战', link: '/LinuxBasics/FileSystem/SAMBA 基础及实战' },
-        { text: 'index', link: '/LinuxBasics/FileSystem/index' },
+
         { text: 'smb.conf详解', link: '/LinuxBasics/FileSystem/smb.conf详解' },
         { text: 'OpenVPN for CentOS', link: '/LinuxBasics/OpenVPN for CentOS' },
         { text: 'keepalived', link: '/LinuxBasics/keepalived' },
@@ -593,7 +591,7 @@ function LinuxBasics(){
       text: 'Zookeeper',
       collapsible: true,
       items: [
-        { text: 'index', link: '/LinuxBasics/Zookeeper/index' },
+
         { text: 'Zookeeper Basic', link: '/LinuxBasics/Zookeeper/Zookeeper Basic' },
         { text: 'rsync - inotify（sersync）', link: '/LinuxBasics/rsync - inotify（sersync）' },
         ]
@@ -605,7 +603,7 @@ function LinuxBasics(){
         { text: 'Ansible Playbook Basic', link: '/LinuxBasics/Ansible/Ansible Playbook Basic' },
         { text: 'Ansible inventory', link: '/LinuxBasics/Ansible/Ansible inventory' },
         { text: 'Ansible Ad-hoc Basic', link: '/LinuxBasics/Ansible/Ansible Ad-hoc Basic' },
-        { text: 'index', link: '/LinuxBasics/Ansible/index' },
+
         { text: 'Ansible Best Practices', link: '/LinuxBasics/Ansible/Ansible Best Practices' },
         { text: 'Ansible modules', link: '/LinuxBasics/Ansible/Ansible modules' },
         { text: 'Ansible Basic', link: '/LinuxBasics/Ansible/Ansible Basic' },
@@ -620,9 +618,9 @@ function LinuxBasics(){
       items: [
         { text: 'Nexus - yum 私服', link: '/LinuxBasics/Nexus/Nexus - yum 私服' },
         { text: 'Nexus Basic - Maven 私服', link: '/LinuxBasics/Nexus/Nexus Basic - Maven 私服' },
-        { text: 'index', link: '/LinuxBasics/Nexus/index' },
+
         { text: 'nexus 批量上传脚本', link: '/LinuxBasics/Nexus/nexus 批量上传脚本' },
-        { text: 'index', link: '/LinuxBasics/index' },
+
         ]
     },
     {
@@ -631,7 +629,7 @@ function LinuxBasics(){
       items: [
         { text: '使用 docker-compose 部署 Kafka', link: '/LinuxBasics/Kafka/使用 docker-compose 部署 Kafka' },
         { text: 'CMAK', link: '/LinuxBasics/Kafka/CMAK' },
-        { text: 'index', link: '/LinuxBasics/Kafka/index' },
+
         { text: 'Kafka Basic', link: '/LinuxBasics/Kafka/Kafka Basic' },
         ]
     },
@@ -640,7 +638,7 @@ function LinuxBasics(){
       collapsible: true,
       items: [
         { text: 'KVM Basic', link: '/LinuxBasics/KVM/KVM Basic' },
-        { text: 'index', link: '/LinuxBasics/KVM/index' },
+
         { text: 'KVM 2 VMware Station', link: '/LinuxBasics/KVM/KVM 2 VMware Station' },
         { text: 'kvm_install.sh', link: '/LinuxBasics/KVM/kvm_install.sh' },
         { text: 'k3s - k3d Basic', link: '/LinuxBasics/k3s - k3d Basic' },
@@ -653,7 +651,7 @@ function LinuxBasics(){
       items: [
         { text: 'Zabbix 详细介绍', link: '/LinuxBasics/Zabbix/Zabbix 详细介绍' },
         { text: 'Zabbix Basic', link: '/LinuxBasics/Zabbix/Zabbix Basic' },
-        { text: 'index', link: '/LinuxBasics/Zabbix/index' },
+
         { text: 'SQL review', link: '/LinuxBasics/SQL review' },
         { text: 'dnsmasq', link: '/LinuxBasics/dnsmasq' },
         { text: 'inotifywait 文件监控', link: '/LinuxBasics/inotifywait 文件监控' },
@@ -686,7 +684,7 @@ function ProgramLang(){
         { text: 'Golang Pkgs', link: '/ProgramLang/Golang/Golang Pkgs' },
         { text: 'Golang Interface', link: '/ProgramLang/Golang/Golang Interface' },
         { text: 'Golang File Operate', link: '/ProgramLang/Golang/Golang File Operate' },
-        { text: 'index', link: '/ProgramLang/Golang/index' },
+
         { text: 'Golang 并发', link: '/ProgramLang/Golang/Golang 并发' },
         { text: 'Golang Package manage', link: '/ProgramLang/Golang/Golang Package manage' },
         { text: 'Golang Json', link: '/ProgramLang/Golang/Golang Json' },
@@ -701,9 +699,9 @@ function ProgramLang(){
       collapsible: true,
       items: [
         { text: 'Lua Baisc', link: '/ProgramLang/Lua/Lua Baisc' },
-        { text: 'index', link: '/ProgramLang/Lua/index' },
+
         { text: 'Lua continue Ex', link: '/ProgramLang/Lua/Lua continue Ex' },
-        { text: 'index', link: '/ProgramLang/index' },
+
         ]
     },
   ]
@@ -721,14 +719,14 @@ function Scripts(){
       text: '脚本 - python',
       collapsible: true,
       items: [
-        { text: 'index', link: '/Scripts/python/index' },
+
         ]
     },
     {
       text: '脚本 - golang',
       collapsible: true,
       items: [
-        { text: 'index', link: '/Scripts/golang/index' },
+
         ]
     },
     {
@@ -745,13 +743,13 @@ function Scripts(){
       collapsible: true,
       items: [
         { text: 'resort-file', link: '/Scripts/shell/resort-file-from-csv/resort-file' },
-        { text: 'index', link: '/Scripts/shell/resort-file-from-csv/index' },
+
         { text: 'Redis tools', link: '/Scripts/shell/Redis tools' },
         { text: 'Dokcer 镜像备份', link: '/Scripts/shell/Dokcer 镜像备份' },
-        { text: 'index', link: '/Scripts/shell/index' },
+
         { text: 'Nginx Log Check', link: '/Scripts/shell/Nginx Log Check' },
         { text: 'Rsync', link: '/Scripts/shell/Rsync' },
-        { text: 'index', link: '/Scripts/index' },
+
         ]
     },
     {

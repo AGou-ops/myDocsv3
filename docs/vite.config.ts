@@ -2,5 +2,8 @@ import { defineConfig } from "vite";
 import { unocssPlugin, unpluginComponents, pwaPlugin } from "./.vitepress/build";
 
 export default defineConfig({
-  plugins: [unpluginComponents, unocssPlugin, pwaPlugin]
+  plugins: [unpluginComponents, unocssPlugin, pwaPlugin],
+  build: {
+    chunkSizeWarningLimit: 1600,
+  },
 });
