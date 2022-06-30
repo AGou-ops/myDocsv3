@@ -16,8 +16,9 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: AGou-ops/myDocsv3
         TARGET_BRANCH: gh-pages
-        BUILD_SCRIPT: yarn && yarn build
+        BUILD_SCRIPT: export NODE_OPTIONS="--max-old-space-size=8192" && yarn && yarn build
         BUILD_DIR: docs/.vitepress/dist
+        CNMAE: docs.agou-ops.cn
     - uses: manyuanrong/setup-ossutil@v2.0
       with:
         # endpoint 可以去oss控制台上查看
