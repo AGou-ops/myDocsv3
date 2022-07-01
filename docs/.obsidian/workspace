@@ -1,0 +1,88 @@
+{
+  "main": {
+    "id": "7454f610abd14f2e",
+    "type": "split",
+    "children": [
+      {
+        "id": "48f85ef21d71260d",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "06802485883c6b5d",
+    "type": "split",
+    "children": [
+      {
+        "id": "9d0eb07db7872711",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "36e6765defd83aa0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "82dafa354a79ca66",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "681514d7046679ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3b6cc1ce3b05a0b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "89cbcd4a503a22ff",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "48f85ef21d71260d",
+  "lastOpenFiles": []
+}

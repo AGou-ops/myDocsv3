@@ -10,7 +10,7 @@ hero:
   text: AGou's Documetation!!
   tagline: 岂能尽如人意，但求无愧我心。
   # image:
-  #   src: https://user-images.githubusercontent.com/40693636/154064210-964aeaa0-d9dc-4cea-9e52-2ffc3789611b.png
+  #   src: https://agou-images.oss-cn-qingdao.aliyuncs.com/others/image-20220701095500209.png
   #   alt: cz-git
   actions:
     - theme: brand
