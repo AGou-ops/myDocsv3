@@ -4,7 +4,7 @@ import * as pageConfig from "./configs";
 
 export default defineConfig({
   // base: pageConfig.base,
-  base : "/",
+  base : "/myDocsv3/",
   head: pageConfig.head,
   // locales: pageConfig.locales,
 

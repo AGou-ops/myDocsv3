@@ -1,7 +1,7 @@
 import type { LocaleConfig } from "vitepress";
 import { name, descriptionCN, descriptionEN } from "../meta";
 
-export const base = "/myDocsv3/";
+export const base = "/";
 
 export const locales: Record<string, LocaleConfig> = {
   "/": {
