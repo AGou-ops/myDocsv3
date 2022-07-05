@@ -14,8 +14,8 @@
  1. 安装docker-distribution
 
 ```bash
-[root@docker2 ~]# yum -y install docker-distribution
-[root@docker2 ~]# rpm -ql docker-distribution
+[root@docker2 ~]\# yum -y install docker-distribution
+[root@docker2 ~]\# rpm -ql docker-distribution
 /etc/docker-distribution/registry/config.yml
 /usr/bin/registry
 /usr/lib/systemd/system/docker-distribution.service
@@ -27,7 +27,7 @@
 /usr/share/doc/docker-distribution-2.6.2/README.md
 /var/lib/registry
 # 可以看到镜像存储的位置是 /var/lib/registry 下，修改 yml 配置文件可以定义这个路径，这里使用默认配置。
-[root@docker2 ~]# cat /etc/docker-distribution/registry/config.yml 
+[root@docker2 ~]\# cat /etc/docker-distribution/registry/config.yml 
 version: 0.1
 log:
   fields:
@@ -39,8 +39,8 @@ storage:
         rootdirectory: /var/lib/registry
 http:
     addr: :5000        # 地址留空表示监听本机所有地址，默认监听在5000端口
-[root@docker2 ~]# systemctl start docker-distribution.service
-[root@docker2 ~]# lsof -i:5000
+[root@docker2 ~]\# systemctl start docker-distribution.service
+[root@docker2 ~]\# lsof -i:5000
 COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 registry 16006 root    3u  IPv6  51023      0t0  TCP *:commplex-main (LISTEN)
 ```
@@ -48,37 +48,37 @@ registry 16006 root    3u  IPv6  51023      0t0  TCP *:commplex-main (LISTEN)
  2. 现在已经搭建完成了， 我们可以将 docker1 上的镜像 push 到此仓库。如果配置内网 hosts 解析，使用主机名也可以，如 docker02:5000。
 
 ```bash
-[root@docker1 ~]# docker tag nginx:v5 10.0.0.12:5000/nginx:v5
-[root@docker1 ~]# docker push 10.0.0.12:5000/nginx:v5 
+[root@docker1 ~]\# docker tag nginx:v5 10.0.0.12:5000/nginx:v5
+[root@docker1 ~]\# docker push 10.0.0.12:5000/nginx:v5 
 The push refers to repository [10.0.0.12:5000/nginx]
 Get https://10.0.0.12:5000/v2/: http: server gave HTTP response to HTTPS client
 # 报错是因为客户端默认发出的请求是https的，我自建的仓库是http的。我们需要修改docker配置文件，指明就是使用非安全、非加密的registry。
-[root@docker1 ~]# vim /etc/docker/daemon.json 
+[root@docker1 ~]\# vim /etc/docker/daemon.json 
 {
   "registry-mirrors": ["https://p4y8tfz4.mirror.aliyuncs.com"],
   "insecure-registries": ["10.0.0.12:5000"]
 }
-[root@docker1 ~]# systemctl restart docker.service
+[root@docker1 ~]\# systemctl restart docker.service
 # 再次尝试push，推送成功
-[root@docker1 ~]# docker push 10.0.0.12:5000/nginx:v5
+[root@docker1 ~]\# docker push 10.0.0.12:5000/nginx:v5
 v5: digest: sha256:28570ef37c4b34702131c97b3b51b5c97e50c344cefbdb47f6ee906a47ba3d5c size: 1567
 ```
 
  3. 现在去 docker2 上面查看从 docker1 推上来的镜像。
 
 ```bash
-[root@docker2 ~]# ll /var/lib/registry/docker/registry/v2/repositories/
+[root@docker2 ~]\# ll /var/lib/registry/docker/registry/v2/repositories/
 total 0
 drwxr-xr-x 5 root root 55 Jul 24 11:03 nginx
 # 如果其它docker主机想pull此镜像，也是需要修改docker的配置文件。
-[root@docker2 ~]# vim /etc/docker/daemon.json 
+[root@docker2 ~]\# vim /etc/docker/daemon.json 
 {
   "registry-mirrors": ["https://p4y8tfz4.mirror.aliyuncs.com"],
   "insecure-registries": ["10.0.0.12:5000"]
 }
-[root@docker2 ~]# systemctl restart  docker
-[root@docker2 ~]# docker pull 10.0.0.12:5000/nginx:v5
-[root@docker2 ~]# docker images 
+[root@docker2 ~]\# systemctl restart  docker
+[root@docker2 ~]\# docker pull 10.0.0.12:5000/nginx:v5
+[root@docker2 ~]\# docker images 
 REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
 10.0.0.12:5000/nginx   v5                  e74b49bcb92b        23 hours ago        16MB
 ```
@@ -91,13 +91,13 @@ REPOSITORY             TAG                 IMAGE ID            CREATED          
 
 ```bash
 # 在下载之前先停掉之前安装的 docker-distribution
-[root@docker2 packages]# systemctl stop docker-distribution.service
-[root@docker2 packages]# pwd
+[root@docker2 packages]\# systemctl stop docker-distribution.service
+[root@docker2 packages]\# pwd
 /server/packages
-[root@docker2 packages]# wget https://storage.googleapis.com/harbor-releases/release-1.8.0/harbor-offline-installer-v1.8.1.tgz
-[root@docker2 packages]# tar xf harbor-offline-installer-v1.8.1.tgz -C /usr/local/
-[root@docker2 packages]# cd /usr/local/harbor/
-[root@docker2 harbor]# ll
+[root@docker2 packages]\# wget https://storage.googleapis.com/harbor-releases/release-1.8.0/harbor-offline-installer-v1.8.1.tgz
+[root@docker2 packages]\# tar xf harbor-offline-installer-v1.8.1.tgz -C /usr/local/
+[root@docker2 packages]\# cd /usr/local/harbor/
+[root@docker2 harbor]\# ll
 total 551208
 -rw-r--r-- 1 root root 564403568 Jun 17 11:30 harbor.v1.8.1.tar.gz
 -rw-r--r-- 1 root root      4512 Jul 24 19:39 harbor.yml
@@ -110,7 +110,7 @@ total 551208
 
 ```bash
 # 从 1.8.0 版本后，harbor 配置文件由原先的 harbor.cfg 改为 harbor.yml。
-[root@docker2 harbor]# vim harbor.yml
+[root@docker2 harbor]\# vim harbor.yml
 hostname: 10.0.0.12                # 填写局域网或者互联网可以访问得地址，有域名可以写域名
 harbor_admin_password: Harbor12345        # 管理员的初始密码，默认用户名为admin
 database:
@@ -124,26 +124,26 @@ jobservice:
  3. 执行 ./install.sh 安装
 
 ```bash
-[root@docker2 harbor]# ./install.sh 
+[root@docker2 harbor]\# ./install.sh 
 
 [Step 0]: checking installation environment ...
 
 Note: docker version: 18.09.6
 ✖ Need to install docker-compose(1.18.0+) by yourself first and run this script again.
 # 提示需要1.18.0以上版本的docker-compose，下面我们来看下默认的docker-compose版本是否满足我们的需求（需要安装了epel源）。
-[root@docker2 harbor]# yum info docker-compose | egrep -i 'repo|version'
+[root@docker2 harbor]\# yum info docker-compose | egrep -i 'repo|version'
 Version     : 1.18.0
 Repo        : epel/x86_64
-[root@docker2 harbor]# yum -y install docker-compose
+[root@docker2 harbor]\# yum -y install docker-compose
 # 开始安装harbor，因为需要解压使用harbor.v1.8.1.tar.gz中打包好的镜像，所以需要稍微等一下。
-[root@docker2 harbor]# ./install.sh
+[root@docker2 harbor]\# ./install.sh
 ✔ ----Harbor has been installed and started successfully.----
 
 Now you should be able to visit the admin portal at http://10.0.0.12. 
 For more details, please visit https://github.com/goharbor/harbor .
-[root@docker2 harbor]# echo $?
+[root@docker2 harbor]\# echo $?
 0
-[root@docker2 harbor]# netstat -lntp
+[root@docker2 harbor]\# netstat -lntp
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
 tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      730/sshd            
@@ -182,20 +182,20 @@ tcp6       0      0 :::22                   :::*                    LISTEN      
 
 ```bash
 # 修改配置文件端口
-[root@docker1 ~]# vim /etc/docker/daemon.json 
+[root@docker1 ~]\# vim /etc/docker/daemon.json 
 {
   "registry-mirrors": ["https://p4y8tfz4.mirror.aliyuncs.com"],
   "insecure-registries": ["10.0.0.12"]
 }
-[root@docker1 ~]# systemctl restart docker
-[root@docker1 ~]# docker images
+[root@docker1 ~]\# systemctl restart docker
+[root@docker1 ~]\# docker images
 REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
 10.0.0.12/operator/nginx   v6                  1bf6b39a84b9        43 hours ago        17MB
-[root@docker1 ~]# docker push 10.0.0.12/operator/nginx:v6
-[root@docker1 ~]# docker login -u merle 10.0.0.12
+[root@docker1 ~]\# docker push 10.0.0.12/operator/nginx:v6
+[root@docker1 ~]\# docker login -u merle 10.0.0.12
 Password:
 Login Succeeded
-[root@docker1 ~]# docker push 10.0.0.12/operator/nginx:v6
+[root@docker1 ~]\# docker push 10.0.0.12/operator/nginx:v6
 v6: digest: sha256:527ef2be458f05b4e50b5ef698fb1ea96feab8ea54dcba18da56a466b69034f3 size: 2193
 ```
 
@@ -208,7 +208,7 @@ v6: digest: sha256:527ef2be458f05b4e50b5ef698fb1ea96feab8ea54dcba18da56a466b6903
  8. 到这私有仓库也就搭建完成了，我们也可以在 /data 目录下查看数据
 
 ```bash
-[root@docker2 harbor]# ll /data/registry/docker/registry/v2/repositories/operator/
+[root@docker2 harbor]\# ll /data/registry/docker/registry/v2/repositories/operator/
 total 0
 drwxr-xr-x 5 10000 10000 55 Jul 25 10:25 nginx
 ```
@@ -217,16 +217,16 @@ drwxr-xr-x 5 10000 10000 55 Jul 25 10:25 nginx
 
 ```bash
 # 其实前面的./install.sh也是使用的 docker-compose create 和 docker-compose start 命令启动的 harbor。注意，命令执行需要再harbor的目录下，否则会报错找不到配置文件。
-[root@docker2 harbor]# docker-compose --help
-[root@docker2 ~]# docker-compose pause 
+[root@docker2 harbor]\# docker-compose --help
+[root@docker2 ~]\# docker-compose pause 
 ERROR: 
         Can't find a suitable configuration file in this directory or any
         parent. Are you in the right directory?
 
         Supported filenames: docker-compose.yml, docker-compose.yaml
-[root@docker2 ~]# cd -
+[root@docker2 ~]\# cd -
 /usr/local/harbor
-[root@docker2 harbor]# docker-compose pause 
+[root@docker2 harbor]\# docker-compose pause 
 Pausing harbor-log        ... done
 Pausing redis             ... done
 Pausing harbor-db         ... done

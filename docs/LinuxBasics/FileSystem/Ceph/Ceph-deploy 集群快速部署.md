@@ -41,8 +41,8 @@
 1、主机名设置，以node-1为例
 
 ```js
-[root@node-1 ~]# hostnamectl set-hostname node-1
-[root@node-1 ~]# hostnamectl status
+[root@node-1 ~]\# hostnamectl set-hostname node-1
+[root@node-1 ~]\# hostnamectl status
    Static hostname: node-1
          Icon name: computer-vm
            Chassis: vm
@@ -58,7 +58,7 @@
 2、设置/etc/hosts文件，将node-1至node-3信息写入到/etc/hosts文件中
 
 ```js
-[root@node-1 ~]# cat /etc/hosts
+[root@node-1 ~]\# cat /etc/hosts
 172.16.1.129 node-1
 172.16.1.130 node-2
 172.16.1.131 node-3
@@ -71,26 +71,26 @@
 4、关闭Selinux默认已关闭
 
 ```js
-[root@node-1 ~]# setenforce 0
-[root@node-1 ~]# getenforce 
+[root@node-1 ~]\# setenforce 0
+[root@node-1 ~]\# getenforce 
 ```
 
 5、关闭iptables防火墙，或者放行对应的端口：Ceph monitor 6789/tcp，Ceph OSD 6800-7300/tcp
 
 ```js
-[root@node-1 ~]# systemctl stop iptables
-[root@node-1 ~]# systemctl stop firewalld
-[root@node-1 ~]# systemctl disable iptables
-[root@node-1 ~]# systemctl disable firewalld
+[root@node-1 ~]\# systemctl stop iptables
+[root@node-1 ~]\# systemctl stop firewalld
+[root@node-1 ~]\# systemctl disable iptables
+[root@node-1 ~]\# systemctl disable firewalld
 ```
 
 6、配置好ntp时间同步，Ceph是分布式集群，对时间很敏感，如果时间不正确可能会导致集群奔溃，因此在Ceph集中中设置ntp同步非常关键，推荐使用内网的ntp服务器同步时间，腾讯云CVM默认会同步到内网的ntp时间同步，读者根据需要进行设定
 
 ```js
-[root@node-1 ~]# grep ^server /etc/ntp.conf 
+[root@node-1 ~]\# grep ^server /etc/ntp.conf 
 server ntpupdate.tencentyun.com iburst
-[root@node-1 ~]# 
-[root@node-1 ~]# ntpq -pn 
+[root@node-1 ~]\# 
+[root@node-1 ~]\# ntpq -pn 
      remote           refid      st t when poll reach   delay   offset  jitter
 ==============================================================================
 *169.254.0.2     183.3.239.152    4 u  238 1024  377    5.093    4.443   5.145
@@ -99,7 +99,7 @@ server ntpupdate.tencentyun.com iburst
 7、设置Ceph安装yum源，选择安装版本为octopus
 
 ```js
-[root@node-1 ~]# cat /etc/yum.repos.d/ceph.repo
+[root@node-1 ~]\# cat /etc/yum.repos.d/ceph.repo
 [Ceph]
 name=Ceph packages for $basearch
 baseurl=http://mirrors.aliyun.com/ceph/rpm-nautilus/el7/$basearch
@@ -123,8 +123,8 @@ trusted-host = https://pypi.tuna.tsinghua.edu.cn
 8、安装Ceph-deploy,对应版本为2.0.1，重要：默认epel源中ceph-deploy的版本是1.5，版本较老，会涉及到很多rpm依赖，安装问题，安装前检查好对应的版本，确保无误。
 
 ```js
-[root@node-1 ~]# yum update -y && yum install http://mirrors.aliyun.com/ceph/rpm-octopus/el7/noarch/ceph-deploy-2.0.1-0.noarch.rpm -y
-[root@node-1 ~]# ceph-deploy --version
+[root@node-1 ~]\# yum update -y && yum install http://mirrors.aliyun.com/ceph/rpm-octopus/el7/noarch/ceph-deploy-2.0.1-0.noarch.rpm -y
+[root@node-1 ~]\# ceph-deploy --version
 2.0.1
 ```
 注意：如果`--verion`使用时出现`Traceback (most recent call last):
@@ -139,7 +139,7 @@ Ceph-deploy部署过程中会生成一些集群初始化配置文件和key，后
 1、创建一个Ceph cluster集群,可以指定cluster-network（集群内部通讯）和public-network（外部访问Ceph集群）
 
 ```js
-[root@node-1 ceph-admin ]# ceph-deploy new --cluster-network 172.16.1.0/24 --public-network 172.16.1.0/24 node-1     #创建集群
+[root@node-1 ceph-admin ]\# ceph-deploy new --cluster-network 172.16.1.0/24 --public-network 172.16.1.0/24 node-1     #创建集群
 [ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
 [ceph_deploy.cli][INFO  ] Invoked (2.0.1): /usr/bin/ceph-deploy new --cluster-network 172.16.1.0/24 --public-network 172.16.1.0/24 node-1
 [ceph_deploy.cli][INFO  ] ceph-deploy options:
@@ -178,13 +178,13 @@ Ceph-deploy部署过程中会生成一些集群初始化配置文件和key，后
 通过上面的输出可以看到，new初始化集群过程中会生成ssh key密钥，ceph.conf配置文件，ceph.mon.keyring认证管理密钥，配置cluster network和pubic network，此时查看目录下的文件可以看到如下内容：
 
 ```js
-[root@node-1 ceph-admin ]# ls -l
+[root@node-1 ceph-admin ]\# ls -l
 总用量 12
 -rw-r--r-- 1 root root  265 3月   1 13:04 ceph.conf    #配置文件
 -rw-r--r-- 1 root root 3068 3月   1 13:04 ceph-deploy-ceph.log #部署日志文件
 -rw------- 1 root root   73 3月   1 13:04 ceph.mon.keyring #monitor认证key
  
-[root@node-1 ceph-admin-node]# cat ceph.conf 
+[root@node-1 ceph-admin-node]\# cat ceph.conf 
 [global]
 fsid = cfc3203b-6abb-4957-af1b-e9a2abdfe725
 public_network = 10.254.100.0/24  #public网络和cluster网络
@@ -199,7 +199,7 @@ auth_client_required = cephx
 2、安装Ceph部署相关的软件，常规通过yum进行安装，由于可能会安装错软件包，因此ceph-deploy提供了一个install的工具辅助软件包的安装，`ceph-deploy install node-1 node-2 node-3 `
 
 ```js
-[root@node-1 ~]# ceph-deploy install node-1 node-2 node-3
+[root@node-1 ~]\# ceph-deploy install node-1 node-2 node-3
  # 如果某一节点部署失败，八成是下载程序包出现的问题，对该节点进行单独安装即可
  yum install ceph ceph-radosgw
 ```
@@ -225,7 +225,7 @@ auth_client_required = cephx
 此时，Ceph集群已经建立起来，包含一个monitor节点，通过ceph -s可以查看当前ceph集群的状态，由于此时并没有任何的OSD节点，因此无法往集群中写数据等操作,如下是ceph -s查看的输出结果
 
 ```js
-[root@node-1 ceph-admin]# ceph -s 
+[root@node-1 ceph-admin]\# ceph -s 
   cluster:
     id:     760da58c-0041-4525-a8ac-1118106312de
     health: HEALTH_OK
@@ -254,7 +254,7 @@ auth_client_required = cephx
 执行完毕后，三个OSD均已加入到ceph集群中，通过ceph -s可以看到对应三个OSD节点
 
 ```js
-[root@node-1 ceph-admin]# ceph -s 
+[root@node-1 ceph-admin]\# ceph -s 
   cluster:
     id:     760da58c-0041-4525-a8ac-1118106312de
     health: HEALTH_WARN
@@ -275,7 +275,7 @@ auth_client_required = cephx
 也可以通过ceph osd tree查看每隔节点上osd的情况和crush tree的情况
 
 ```js
-    [root@node-1 ~]# ceph osd tree 
+    [root@node-1 ~]\# ceph osd tree 
 ID CLASS WEIGHT  TYPE NAME       STATUS REWEIGHT PRI-AFF 
 -1       0.14369 root default                            
 -3       0.04790     host node-1                         

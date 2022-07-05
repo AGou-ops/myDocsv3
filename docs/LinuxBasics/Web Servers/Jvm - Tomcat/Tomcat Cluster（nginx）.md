@@ -17,20 +17,20 @@
 在`/usr`目录下，复制一份 Tomcat，并将其命名为`tomcat9-test`作为测试使用。
 
 ```bash
-[root@stor1 tomcat]# cp -ar tomcat9/ tomcat9-test
-[root@stor1 tomcat]# ls
+[root@stor1 tomcat]\# cp -ar tomcat9/ tomcat9-test
+[root@stor1 tomcat]\# ls
 tomcat9  tomcat-test
 ```
 
 为`Tomcat-1`和`Tomcat-2`分别创建测试 WEB 站点：
 
 ```bash
-[root@stor1 tomcat]#  mkdir -p /web1/webapp
-[root@stor1 tomcat]#  mkdir -p /web2/webapp
+[root@stor1 tomcat]\#  mkdir -p /web1/webapp
+[root@stor1 tomcat]\#  mkdir -p /web2/webapp
 ```
 
 ```bash
-[root@stor1 tomcat]# vim /web1/webapp/index.jsp
+[root@stor1 tomcat]\# vim /web1/webapp/index.jsp
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
  <head>
@@ -40,7 +40,7 @@ tomcat9  tomcat-test
     <% out.println("Welcome tomcat1 Web Page");%>
  </body>
 </html>
-[root@stor1 tomcat]# vim /web2/webapp/index.jsp
+[root@stor1 tomcat]\# vim /web2/webapp/index.jsp
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
  <head>

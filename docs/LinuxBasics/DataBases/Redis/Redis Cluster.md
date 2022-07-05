@@ -181,10 +181,10 @@ slave1 已成功上任～
 
 ```bash
 # 创建多实例目录
-[root@db01 ~]#  mkdir -p /data/700{0..5}
+[root@db01 ~]\#  mkdir -p /data/700{0..5}
 
 # 编辑多实例配置文件
-[root@db01 ~]#  vim /data/7000/redis.conf
+[root@db01 ~]\#  vim /data/7000/redis.conf
 port 7000
 daemonize yes
 pidfile /data/7000/redis.pid
@@ -199,7 +199,7 @@ cluster-node-timeout 5000
 appendonly yes
 
 
-[root@db01 ~]#  vim /data/7001/redis.conf
+[root@db01 ~]\#  vim /data/7001/redis.conf
 port 7001
 daemonize yes
 pidfile /data/7001/redis.pid
@@ -214,7 +214,7 @@ cluster-node-timeout 5000
 appendonly yes
 
 
-[root@db01 ~]#  vim /data/7002/redis.conf
+[root@db01 ~]\#  vim /data/7002/redis.conf
 port 7002
 daemonize yes
 pidfile /data/7002/redis.pid
@@ -230,7 +230,7 @@ appendonly yes
 
 
 
-[root@db01 ~]#  vim /data/7003/redis.conf
+[root@db01 ~]\#  vim /data/7003/redis.conf
 port 7003
 daemonize yes
 pidfile /data/7003/redis.pid
@@ -246,7 +246,7 @@ appendonly yes
 
 
 
-[root@db01 ~]#  vim /data/7004/redis.conf
+[root@db01 ~]\#  vim /data/7004/redis.conf
 port 7004
 daemonize yes
 pidfile /data/7004/redis.pid
@@ -261,7 +261,7 @@ cluster-node-timeout 5000
 appendonly yes
 
 
-[root@db01 ~]#  vim /data/7005/redis.conf
+[root@db01 ~]\#  vim /data/7005/redis.conf
 port 7005
 daemonize yes
 pidfile /data/7005/redis.pid
@@ -276,15 +276,15 @@ cluster-node-timeout 5000
 appendonly yes
 
 # 启动节点
-[root@db01 ~]#  redis-server /data/7000/redis.conf 
-[root@db01 ~]#  redis-server /data/7001/redis.conf 
-[root@db01 ~]#  redis-server /data/7002/redis.conf 
-[root@db01 ~]#  redis-server /data/7003/redis.conf 
-[root@db01 ~]#  redis-server /data/7004/redis.conf 
-[root@db01 ~]#  redis-server /data/7005/redis.conf 
+[root@db01 ~]\#  redis-server /data/7000/redis.conf 
+[root@db01 ~]\#  redis-server /data/7001/redis.conf 
+[root@db01 ~]\#  redis-server /data/7002/redis.conf 
+[root@db01 ~]\#  redis-server /data/7003/redis.conf 
+[root@db01 ~]\#  redis-server /data/7004/redis.conf 
+[root@db01 ~]\#  redis-server /data/7005/redis.conf 
 
 # 检查端口
-[root@db01 ~]#  netstat -lntup|grep 700*
+[root@db01 ~]\#  netstat -lntup|grep 700*
 tcp        0      0 0.0.0.0:17003               0.0.0.0:*                   LISTEN      7433/redis-server *
 tcp        0      0 0.0.0.0:17004               0.0.0.0:*                   LISTEN      7437/redis-server *
 tcp        0      0 0.0.0.0:17005               0.0.0.0:*                   LISTEN      7443/redis-server *
@@ -311,7 +311,7 @@ tcp        0      0 :::17001                    :::*                        LIST
 tcp        0      0 :::17002                    :::*                        LISTEN      7429/redis-server *
 
 # 检查进程
-[root@db01 ~]#  ps -ef|grep redis
+[root@db01 ~]\#  ps -ef|grep redis
 root       7423      1  0 18:30 ?        00:00:00 redis-server *:7000 [cluster]
 root       7425      1  0 18:30 ?        00:00:00 redis-server *:7001 [cluster]
 root       7429      1  0 18:30 ?        00:00:00 redis-server *:7002 [cluster]

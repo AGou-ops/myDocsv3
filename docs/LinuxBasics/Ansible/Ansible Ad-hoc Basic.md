@@ -23,7 +23,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@node02
 列出当前所有被管控的主机:
 
 ```bash
-[root@master ~]# ansible all --list-hosts
+[root@master ~]\# ansible all --list-hosts
   hosts (2):
     node01
     node02

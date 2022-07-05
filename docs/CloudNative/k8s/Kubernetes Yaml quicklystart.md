@@ -163,7 +163,7 @@ spec:
 ### 2.2.pod资源一级可配置属性
 
 ```yaml
-[root@k8s-master ~]# kubectl explain pod
+[root@k8s-master ~]\# kubectl explain pod
 KIND:     Pod
 VERSION:  v1						# 编写yaml文件时第一行的版本号可以从这里进行查找
 FIELDS:									# 可配置的一级属性，基本所有资源都是如下五个，如果当前级别配置参数后面<>中是string就表示没有下一级配置参数，直接填写一个字符串即可，如果<>为object说明他还有下一级配置参数，可以通过资源类型.属性的方式查找
@@ -177,7 +177,7 @@ FIELDS:									# 可配置的一级属性，基本所有资源都是如下五�
 ### 2.4.pod初始化容器配置参数
 
 ```yaml
-[root@k8s-master ~/k8s_1.19_yaml]# kubectl explain pod.spec.initContainers
+[root@k8s-master ~/k8s_1.19_yaml]\# kubectl explain pod.spec.initContainers
 KIND:     Pod
 VERSION:  v1
 RESOURCE: initContainers <[]Object>
@@ -237,7 +237,7 @@ spec:
 ### 2.7.Pode亲和性调度配置参数
 
 ```yaml
-[root@k8s-master ~]# kubectl explain pod.spec.affinity.nodeAffinity
+[root@k8s-master ~]\# kubectl explain pod.spec.affinity.nodeAffinity
 requiredDuringSchedulingIgnoredDuringExecution	<Object>		# node节点必须满足所有规则才可以，相当于硬限制，（这名字真是有够长的），不会驱逐已经存在并运行的pod
 nodeSelectorTerms	<[]Object>				# 定义节点选择列表，也就是定义具体匹配规则
  matchFields  <Object>						# 根据节点字段列出的节点选择器要求选择
@@ -601,7 +601,7 @@ spec:
 ### 5.2.HostPath资源清单文件
 
 ```yaml
-[root@k8s-master ~/k8s_1.19_yaml]# vim volume-hostpath.yaml 
+[root@k8s-master ~/k8s_1.19_yaml]\# vim volume-hostpath.yaml 
 apiVersion: v1
 kind: Pod
 metadata:

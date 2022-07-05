@@ -563,7 +563,7 @@ Redis 事务相关命令：
 
 ```bash
 #登录redis
-[root@db01 ~]# redis-cli
+[root@db01 ~]\# redis-cli
 #验证密码
 127.0.0.1:6379> auth 123
 OK

@@ -20,6 +20,9 @@ SELECT * from information_schema.VIEWS;		-- 查看视图
 SELECT * from information_schema.TABLES;  		-- 查看数据库所有表
 EXPLAIN <sql语句>;		-- 
 
+-- 慢日志相关
+show variables  like '%slow_query_log%';
+
 -- 库级 --
 CREATE DATABASE IF NOT EXISTS <DATABASE_NAME> DEFAULT CHARSET utf8 COLLATE utf8_general_ci;		-- 创建数据库并指定字符集
 SHOW CREATE DATABASE <DATABASE>;
@@ -567,9 +570,9 @@ chown -R mysql:mysql /data/mysqldata/
 innobackupex  --defaults-file=/etc/my.cnf --user=backup --password='bc.123456'  --socket=/var/lib/mysql/mysql.sock    --slave-info  --safe-slave-backup   --no-timestamp  /backup/full
 备份源库上恢复日志
 备份完成后，还不能用于恢复，一些未提交的事物需要恢复，需要恢复redo logo的数据，确保数据一致
-[root@dg backup]# innobackupex --apply-log /backup/full
+[root@dg backup]\# innobackupex --apply-log /backup/full
 传输数据到新的备库
-[root@dg backup]# scp  -r full/  dgt:/backup/
+[root@dg backup]\# scp  -r full/  dgt:/backup/
 ```
 
 > 部分内容来源于网络。

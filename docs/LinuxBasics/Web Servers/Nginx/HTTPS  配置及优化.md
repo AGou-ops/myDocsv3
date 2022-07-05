@@ -142,12 +142,12 @@ ngx.crt                                                                         
 
 ```bash
 # 创建存放ssl证书的路径
-[root@web03 ~]# mkdir -p /etc/nginx/ssl_key
-[root@web03 ~]# cd /etc/nginx/ssl_key
+[root@web03 ~]\# mkdir -p /etc/nginx/ssl_key
+[root@web03 ~]\# cd /etc/nginx/ssl_key
 
-[root@web03 ssl_key]# openssl genrsa -idea -out server.key 2048
+[root@web03 ssl_key]\# openssl genrsa -idea -out server.key 2048
 
-[root@web03 ssl_key]# openssl req -days 36500 -x509 \
+[root@web03 ssl_key]\# openssl req -days 36500 -x509 \
 -sha256 -nodes -newkey rsa:2048 -keyout server.key -out server.crt
 
 ```

@@ -232,8 +232,8 @@ function Interview(){
       items: [
         { text: 'Redis', link: '/Interview/工作面试题/Redis' },
         { text: '选择公司', link: '/Interview/工作面试题/选择公司' },
-
-
+        { text: '来自网络1', link: '/Interview/工作面试题/网络1' },
+        { text: '来自群友1', link: '/Interview/工作面试题/群友1' },
         ]
     },
 	]

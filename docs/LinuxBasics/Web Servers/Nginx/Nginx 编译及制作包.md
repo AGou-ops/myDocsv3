@@ -20,7 +20,7 @@ make && make install
 ```
 3. Nginx的Unit File(参考epel仓库中的Unit File)
 ```bash
-[root@master ~]# cat /usr/lib/systemd/system/nginx.service
+[root@master ~]\# cat /usr/lib/systemd/system/nginx.service
 [Unit]
 Description=The nginx HTTP and reverse proxy server
 After=network.target remote-fs.target nss-lookup.target
@@ -99,7 +99,7 @@ rpmbuild/RPMS
 **查看Nginx编译参数**
 
 ```shell
-[root@Nginx ~]# nginx -V
+[root@Nginx ~]\# nginx -V
 ```
 
 下表展示了Nginx编译参数选项以及作用

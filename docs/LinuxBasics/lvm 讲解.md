@@ -67,7 +67,7 @@ I/O 大小(最小/最佳)：512 字节 / 512 字节
 
 
 ```csharp
-[root@minglinux-01 ~]# fdisk -l
+[root@minglinux-01 ~]\# fdisk -l
 
 磁盘 /dev/sda：32.2 GB, 32212254720 字节，62914560 个扇区
 Units = 扇区 of 1 * 512 = 512 bytes
@@ -115,13 +115,13 @@ I/O 大小(最小/最佳)：512 字节 / 512 字节
 pvcreate创建物理卷：
 
 ```csharp
-[root@minglinux-01 ~]# pvcreate /dev/sdb1
+[root@minglinux-01 ~]\# pvcreate /dev/sdb1
 WARNING: dos signature detected on /dev/sdb1 at offset 510. Wipe it? [y/n]: y
   Wiping dos signature on /dev/sdb1.
   Physical volume "/dev/sdb1" successfully created.
-[root@minglinux-01 ~]# pvcreate /dev/sdb2
+[root@minglinux-01 ~]\# pvcreate /dev/sdb2
   Physical volume "/dev/sdb2" successfully created.
-[root@minglinux-01 ~]# pvcreate /dev/sdb3
+[root@minglinux-01 ~]\# pvcreate /dev/sdb3
   Physical volume "/dev/sdb3" successfully created.
 ```
 
@@ -130,7 +130,7 @@ pvdisplay查看创建的物理卷：
 
 
 ```csharp
-[root@minglinux-01 ~]# pvdisplay
+[root@minglinux-01 ~]\# pvdisplay
   "/dev/sdb2" is a new physical volume of "1.00 GiB"
   --- NEW Physical volume ---
   PV Name               /dev/sdb2
@@ -173,7 +173,7 @@ pvs查看已存在物理卷：
 
 
 ```csharp
-[root@minglinux-01 ~]# pvs
+[root@minglinux-01 ~]\# pvs
   PV         VG Fmt  Attr PSize PFree
   /dev/sdb1     lvm2 ---  1.00g 1.00g
   /dev/sdb2     lvm2 ---  1.00g 1.00g
@@ -185,7 +185,7 @@ vgcreate创建卷组：
 
 
 ```csharp
-[root@minglinux-01 ~]# vgcreate vg1 /dev/sdb1 /dev/sdb2
+[root@minglinux-01 ~]\# vgcreate vg1 /dev/sdb1 /dev/sdb2
   Volume group "vg1" successfully created
 ```
 
@@ -194,7 +194,7 @@ vgdisplay和vgs查看卷组：
 
 
 ```csharp
-[root@minglinux-01 ~]# vgdisplay 
+[root@minglinux-01 ~]\# vgdisplay 
   --- Volume group ---
   VG Name               vg1
   System ID             
@@ -216,7 +216,7 @@ vgdisplay和vgs查看卷组：
   Free  PE / Size       510 / 1.99 GiB
   VG UUID               mWCQjl-Jehp-2fDc-INsd-3K3E-8d3t-ROinr1
    
-[root@minglinux-01 ~]# vgs
+[root@minglinux-01 ~]\# vgs
   VG  #PV #LV #SN Attr   VSize VFree
   vg1   2   0   0 wz--n- 1.99g 1.99g
 ```
@@ -226,7 +226,7 @@ lvcreate创建逻辑卷：
 
 
 ```csharp
-[root@minglinux-01 ~]# lvcreate -L 100M -n lv1 vg1
+[root@minglinux-01 ~]\# lvcreate -L 100M -n lv1 vg1
 WARNING: ext4 signature detected on /dev/vg1/lv1 at offset 1080. Wipe it? [y/n]: y
   Wiping ext4 signature on /dev/vg1/lv1.
   Logical volume "lv1" created.
@@ -237,7 +237,7 @@ WARNING: ext4 signature detected on /dev/vg1/lv1 at offset 1080. Wipe it? [y/n]:
 
 
 ```csharp
-[root@minglinux-01 ~]# mkfs.ext4 /dev/vg1/lv1
+[root@minglinux-01 ~]\# mkfs.ext4 /dev/vg1/lv1
 mke2fs 1.42.9 (28-Dec-2013)
 文件系统标签=
 OS type: Linux
@@ -265,8 +265,8 @@ Writing superblocks and filesystem accounting information: 完成
 
 
 ```csharp
-[root@minglinux-01 ~]# mount /dev/vg1/lv1 /mnt/
-[root@minglinux-01 ~]# df -h
+[root@minglinux-01 ~]\# mount /dev/vg1/lv1 /mnt/
+[root@minglinux-01 ~]\# df -h
 文件系统             容量  已用  可用 已用% 挂载点
 /dev/sda3             28G  2.4G   26G    9% /
 devtmpfs             901M     0  901M    0% /dev
@@ -283,9 +283,9 @@ tmpfs                183M     0  183M    0% /run/user/0
 
 
 ```csharp
-[root@minglinux-01 ~]# ls -l /dev/vg1/lv1
+[root@minglinux-01 ~]\# ls -l /dev/vg1/lv1
 lrwxrwxrwx. 1 root root 7 9月  27 23:35 /dev/vg1/lv1 -> ../dm-0
-[root@minglinux-01 ~]# ls -l /dev/mapper/vg1-lv1
+[root@minglinux-01 ~]\# ls -l /dev/mapper/vg1-lv1
 lrwxrwxrwx. 1 root root 7 9月  27 23:35 /dev/mapper/vg1-lv1 -> ../dm-0
 ```
 
@@ -301,10 +301,10 @@ lrwxrwxrwx. 1 root root 7 9月  27 23:35 /dev/mapper/vg1-lv1 -> ../dm-0
 
 
 ```dart
-[root@minglinux-01 ~]# umount /mnt/
-[root@minglinux-01 ~]# lvresize -L 200M /dev/vg1/lv1
+[root@minglinux-01 ~]\# umount /mnt/
+[root@minglinux-01 ~]\# lvresize -L 200M /dev/vg1/lv1
   New size (50 extents) matches existing size (50 extents).
-[root@minglinux-01 ~]# e2fsck -f /dev/vg1/lv1
+[root@minglinux-01 ~]\# e2fsck -f /dev/vg1/lv1
 e2fsck 1.42.9 (28-Dec-2013)
 第一步: 检查inode,块,和大小
 第二步: 检查目录结构
@@ -312,14 +312,14 @@ e2fsck 1.42.9 (28-Dec-2013)
 Pass 4: Checking reference counts
 第5步: 检查簇概要信息
 /dev/vg1/lv1: 11/25688 files (9.1% non-contiguous), 8896/102400 blocks
-[root@minglinux-01 ~]# resize2fs /dev/vg1/lv1
+[root@minglinux-01 ~]\# resize2fs /dev/vg1/lv1
 resize2fs 1.42.9 (28-Dec-2013)
 Resizing the filesystem on /dev/vg1/lv1 to 204800 (1k) blocks.
 The filesystem on /dev/vg1/lv1 is now 204800 blocks long.
 
-[root@minglinux-01 ~]# !mount 
+[root@minglinux-01 ~]\# !mount 
 mount /dev/vg1/lv1 /mnt/ 
-[root@minglinux-01 ~]# df -h 
+[root@minglinux-01 ~]\# df -h 
 文件系统             容量  已用  可用 已用% 挂载点
 /dev/sda3             28G  2.4G   26G    9% /
 devtmpfs             901M     0  901M    0% /dev
@@ -343,8 +343,8 @@ tmpfs                183M     0  183M    0% /run/user/0
 
 
 ```csharp
-[root@minglinux-01 ~]# umount /mnt/
-[root@minglinux-01 ~]# e2fsck -f /dev/vg1/lv1
+[root@minglinux-01 ~]\# umount /mnt/
+[root@minglinux-01 ~]\# e2fsck -f /dev/vg1/lv1
 e2fsck 1.42.9 (28-Dec-2013)
 第一步: 检查inode,块,和大小
 第二步: 检查目录结构
@@ -352,18 +352,18 @@ e2fsck 1.42.9 (28-Dec-2013)
 Pass 4: Checking reference counts
 第5步: 检查簇概要信息
 /dev/vg1/lv1: 11/49400 files (9.1% non-contiguous), 11884/204800 blocks
-[root@minglinux-01 ~]# resize2fs /dev/vg1/lv1 100M
+[root@minglinux-01 ~]\# resize2fs /dev/vg1/lv1 100M
 resize2fs 1.42.9 (28-Dec-2013)
 Resizing the filesystem on /dev/vg1/lv1 to 102400 (1k) blocks.
 The filesystem on /dev/vg1/lv1 is now 102400 blocks long.
 
-[root@minglinux-01 ~]# lvresize -L 100M /dev/vg1/lv1
+[root@minglinux-01 ~]\# lvresize -L 100M /dev/vg1/lv1
   WARNING: Reducing active logical volume to 100.00 MiB.
   THIS MAY DESTROY YOUR DATA (filesystem etc.)
 Do you really want to reduce vg1/lv1? [y/n]: y
   Size of logical volume vg1/lv1 changed from 200.00 MiB (50 extents) to 100.00 MiB (25 extents).
   Logical volume vg1/lv1 successfully resized.
-[root@minglinux-01 ~]# lvs
+[root@minglinux-01 ~]\# lvs
   LV   VG  Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
   lv1  vg1 -wi-a----- 100.00m 
 ```
@@ -375,19 +375,19 @@ xfs扩容：
 
 
 ```csharp
-[root@minglinux-01 ~]# !mount
+[root@minglinux-01 ~]\# !mount
 mount /dev/vg1/lv1 /mnt/ 
-[root@minglinux-01 ~]# ls /mnt/
-[root@minglinux-01 ~]# touch /mnt/123.txt
-[root@minglinux-01 ~]# echo "abc" > !$
+[root@minglinux-01 ~]\# ls /mnt/
+[root@minglinux-01 ~]\# touch /mnt/123.txt
+[root@minglinux-01 ~]\# echo "abc" > !$
 echo "abc" > /mnt/123.txt
-[root@minglinux-01 ~]# lvs
+[root@minglinux-01 ~]\# lvs
   LV   VG  Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
   lv1  vg1 -wi-ao---- 100.00m                                                    
-[root@minglinux-01 ~]# lvresize -L 300M /dev/vg1/lv1
+[root@minglinux-01 ~]\# lvresize -L 300M /dev/vg1/lv1
   Size of logical volume vg1/lv1 changed from 100.00 MiB (25 extents) to 300.00 MiB (75 extents).
   Logical volume vg1/lv1 successfully resized.
-[root@minglinux-01 ~]# lvs
+[root@minglinux-01 ~]\# lvs
   LV   VG  Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
   lv1  vg1 -wi-ao---- 300.00m
 ```
@@ -397,7 +397,7 @@ echo "abc" > /mnt/123.txt
 
 
 ```csharp
-[root@minglinux-01 ~]# df -h
+[root@minglinux-01 ~]\# df -h
 文件系统             容量  已用  可用 已用% 挂载点
 /dev/sda3             28G  2.4G   26G    9% /
 devtmpfs             901M     0  901M    0% /dev
@@ -414,7 +414,7 @@ tmpfs                183M     0  183M    0% /run/user/0
 
 
 ```csharp
-[root@minglinux-01 ~]# xfs_growfs /dev/vg1/lv1
+[root@minglinux-01 ~]\# xfs_growfs /dev/vg1/lv1
 meta-data=/dev/mapper/vg1-lv1    isize=512    agcount=4, agsize=6400 blks
          =                       sectsz=512   attr=2, projid32bit=1
          =                       crc=1        finobt=0 spinodes=0
@@ -425,7 +425,7 @@ log      =internal               bsize=4096   blocks=855, version=2
          =                       sectsz=512   sunit=0 blks, lazy-count=1
 realtime =none                   extsz=4096   blocks=0, rtextents=0
 data blocks changed from 25600 to 76800
-[root@minglinux-01 ~]# df -h
+[root@minglinux-01 ~]\# df -h
 文件系统             容量  已用  可用 已用% 挂载点
 /dev/sda3             28G  2.4G   26G    9% /
 devtmpfs             901M     0  901M    0% /dev
@@ -447,9 +447,9 @@ tmpfs                183M     0  183M    0% /run/user/0
 这里将/dev/sdb3加入到vg1卷组，vg1大小就扩展为3G，然后就可以重新设置逻辑卷的大小。命令如下：
 
 ```csharp
-[root@minglinux-01 ~]# vgextend vg1 /dev/sdb3
+[root@minglinux-01 ~]\# vgextend vg1 /dev/sdb3
   Volume group "vg1" successfully extended
-[root@minglinux-01 ~]# vgs
+[root@minglinux-01 ~]\# vgs
   VG  #PV #LV #SN Attr   VSize  VFree 
   vg1   3   1   0 wz--n- <2.99g <2.70g
 ```

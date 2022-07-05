@@ -20,11 +20,11 @@ nginx—>filebeat—>kafka—>logstash—>elasticsearch—>kibana
 
 ```sh
 1.下载elasticsearch7.6
-[root@elk-1 ~]# wget https://mirrors.huaweicloud.com/elasticsearch/7.6.0/elasticsearch-7.6.0-x86_64.rpm
-[root@elk-1 ~/soft]# rpm -ivh elasticsearch-7.6.0-x86_64.rpm 
+[root@elk-1 ~]\# wget https://mirrors.huaweicloud.com/elasticsearch/7.6.0/elasticsearch-7.6.0-x86_64.rpm
+[root@elk-1 ~/soft]\# rpm -ivh elasticsearch-7.6.0-x86_64.rpm 
 
 2.编辑配置文件，配置集群模式
-[root@elk-1 ~]#  vim /etc/elasticsearch/elasticsearch.yml
+[root@elk-1 ~]\#  vim /etc/elasticsearch/elasticsearch.yml
 cluster.name: elk-application
 node.name: elk-1
 path.data: /data/elasticsearch
@@ -41,19 +41,19 @@ http.cors.enabled: true
 http.cors.allow-origin: "*"
 
 3.创建数据目录
-[root@elk-1 ~]# mkdir /data/elasticsearch/ -p
-[root@elk-1 ~]# chown -R elasticsearch.elasticsearch /data/elasticsearch/
+[root@elk-1 ~]\# mkdir /data/elasticsearch/ -p
+[root@elk-1 ~]\# chown -R elasticsearch.elasticsearch /data/elasticsearch/
 
 4.配置内存锁定
-[root@elk-1 ~]# mkdir /etc/systemd/system/elasticsearch.service.d/
-[root@elk-1 ~]# vim /etc/systemd/system/elasticsearch.service.d/override.conf
+[root@elk-1 ~]\# mkdir /etc/systemd/system/elasticsearch.service.d/
+[root@elk-1 ~]\# vim /etc/systemd/system/elasticsearch.service.d/override.conf
 [Service]
 LimitMEMLOCK=infinity
 
 5.启动elasticsearch
-[root@elk-1 ~]# systemctl daemon-reload 
-[root@elk-1 ~]# systemctl start elasticsearch
-[root@elk-1 ~]# systemctl enable elasticsearch
+[root@elk-1 ~]\# systemctl daemon-reload 
+[root@elk-1 ~]\# systemctl start elasticsearch
+[root@elk-1 ~]\# systemctl enable elasticsearch
 ```
 
 ### 2.2.配置es-2节点
@@ -61,7 +61,7 @@ LimitMEMLOCK=infinity
 只是配置文件中node.name和network.host不同，其他操作方式一致
 
 ```sh
-[root@elk-2 ~]#  vim /etc/elasticsearch/elasticsearch.yml
+[root@elk-2 ~]\#  vim /etc/elasticsearch/elasticsearch.yml
 cluster.name: elk-application
 node.name: elk-2
 path.data: /data/elasticsearch
@@ -83,7 +83,7 @@ http.cors.allow-origin: "*"
 只是配置文件中node.name和network.host不同，其他操作方式一致
 
 ```sh
-[root@elk-2 ~]#  vim /etc/elasticsearch/elasticsearch.yml
+[root@elk-2 ~]\#  vim /etc/elasticsearch/elasticsearch.yml
 cluster.name: elk-application
 node.name: elk-3
 path.data: /data/elasticsearch
@@ -108,18 +108,18 @@ http.cors.allow-origin: "*"
 
 ```sh
 1.下载kibana rpm包
-[root@elk-1 ~]#  rpm -ivh kibana-7.6.0-x86_64.rpm 
+[root@elk-1 ~]\#  rpm -ivh kibana-7.6.0-x86_64.rpm 
 
 2.配置kibana
-[root@elk-1 ~]# vim /etc/kibana/kibana.yml
+[root@elk-1 ~]\# vim /etc/kibana/kibana.yml
 server.port: 5601                 
 server.host: "192.168.81.210"               
 server.name: "elk-application"                        
 elasticsearch.hosts: ["http://192.168.81.210:9200"]       
 i18n.locale: "zh-CN"
 
-[root@elk-1 ~]# systemctl restart kibana
-[root@elk-1 ~]#  systemctl enable elasticsearch
+[root@elk-1 ~]\# systemctl restart kibana
+[root@elk-1 ~]\#  systemctl enable elasticsearch
 ```
 
 **kibana部署成功**
@@ -132,19 +132,19 @@ i18n.locale: "zh-CN"
 
 ```sh
 1.下载软件
-[root@elk-1 ~]# wget http://archive.apache.org/dist/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz
+[root@elk-1 ~]\# wget http://archive.apache.org/dist/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz
 
 2.解压并移动zookeeper
-[root@elk-1 ~]# tar xf soft/zookeeper-3.4.13.tar.gz -C /data/
-[root@elk-1 ~]# mv /data/zookeeper-3.4.13/ /data/zookeeper
+[root@elk-1 ~]\# tar xf soft/zookeeper-3.4.13.tar.gz -C /data/
+[root@elk-1 ~]\# mv /data/zookeeper-3.4.13/ /data/zookeeper
 
 3.创建数据目录和日志目录
-[root@elk-1 ~]# mkdir /data/zookeeper/{data,logs}
+[root@elk-1 ~]\# mkdir /data/zookeeper/{data,logs}
 
 4.准备配置文件
-[root@elk-1 ~]# cd /data/zookeeper/conf
-[root@elk-1 /data/zookeeper/conf]# cp zoo_sample.cfg zoo.cfg
-[root@elk-1 /data/zookeeper/conf]# vim zoo.cfg 
+[root@elk-1 ~]\# cd /data/zookeeper/conf
+[root@elk-1 /data/zookeeper/conf]\# cp zoo_sample.cfg zoo.cfg
+[root@elk-1 /data/zookeeper/conf]\# vim zoo.cfg 
 tickTime=2000
 initLimit=10
 syncLimit=5
@@ -158,7 +158,7 @@ server.3=192.168.81.230:2888:3888
 
 5.生成节点id文件
 #节点id只能保护数字
-[root@elk-1 /data/zookeeper]# echo 1 > /data/zookeeper/data/myid
+[root@elk-1 /data/zookeeper]\# echo 1 > /data/zookeeper/data/myid
 ```
 
 ### 4.2.配置zookeeper-2节点
@@ -166,7 +166,7 @@ server.3=192.168.81.230:2888:3888
 与zookeeper-1节点只有配置文件和节点id文件有点不同，其余全一样
 
 ```sh
-[root@elk-2 /data/zookeeper/conf]# cat zoo.cfg 
+[root@elk-2 /data/zookeeper/conf]\# cat zoo.cfg 
 tickTime=2000
 initLimit=10
 syncLimit=5
@@ -178,13 +178,13 @@ server.1=192.168.81.210:2888:3888
 server.2=192.168.81.220:2888:3888
 server.3=192.168.81.230:2888:3888
 
-[root@elk-2 /data/zookeeper/conf]# echo 2 > /data/zookeeper/data/myid
+[root@elk-2 /data/zookeeper/conf]\# echo 2 > /data/zookeeper/data/myid
 ```
 
 ### 4.3.配置zookeeper-3节点
 
 ```sh
-[root@elk-3 /data/zookeeper/conf]# cat zoo.cfg 
+[root@elk-3 /data/zookeeper/conf]\# cat zoo.cfg 
 tickTime=2000
 initLimit=10
 syncLimit=5
@@ -196,7 +196,7 @@ server.1=192.168.81.210:2888:3888
 server.2=192.168.81.220:2888:3888
 server.3=192.168.81.230:2888:3888
 
-[root@elk-3 /data/zookeeper/conf]# echo 3 > /data/zookeeper/data/myid
+[root@elk-3 /data/zookeeper/conf]\# echo 3 > /data/zookeeper/data/myid
 ```
 
 ### 4.4.启动所有节点
@@ -204,17 +204,17 @@ server.3=192.168.81.230:2888:3888
 > zookeeper集群必须保证有两个节点存活，也就是说必须同时要启动两个节点，否则集群将启动不成功，因此要都修改好配置文件后，再统一启动
 
 ```sh
-[root@elk-1 /data/zookeeper]# ./bin/zkServer.sh status
+[root@elk-1 /data/zookeeper]\# ./bin/zkServer.sh status
 ZooKeeper JMX enabled by default
 Using config: /data/zookeeper/bin/../conf/zoo.cfg
 Mode: follower
 
-[root@elk-2 /data/zookeeper]# ./bin/zkServer.sh status
+[root@elk-2 /data/zookeeper]\# ./bin/zkServer.sh status
 ZooKeeper JMX enabled by default
 Using config: /data/zookeeper/bin/../conf/zoo.cfg
 Mode: follower
 
-[root@elk-3 /data/zookeeper]# ./bin/zkServer.sh status
+[root@elk-3 /data/zookeeper]\# ./bin/zkServer.sh status
 ZooKeeper JMX enabled by default
 Using config: /data/zookeeper/bin/../conf/zoo.cfg
 Mode: leader
@@ -228,15 +228,15 @@ Mode: leader
 
 ```sh
 1.下载二进制包
-[root@elk-1 ~]# wget https://archive.apache.org/dist/kafka/2.0.0/kafka_2.11-2.0.0.tgz
+[root@elk-1 ~]\# wget https://archive.apache.org/dist/kafka/2.0.0/kafka_2.11-2.0.0.tgz
 
 2.安装kafka
-[root@elk-1 ~/soft]# tar xf kafka_2.13-2.4.0.tgz -C /data/
-[root@elk-1 ~]# mv /data/kafka_2.13-2.4.0 /data/kafka
+[root@elk-1 ~/soft]\# tar xf kafka_2.13-2.4.0.tgz -C /data/
+[root@elk-1 ~]\# mv /data/kafka_2.13-2.4.0 /data/kafka
 
 3.修改配置文件
-[root@elk-1 ~]# cd /data/kafka
-[root@elk-1 /data/kafka]# vim config/server.properties 
+[root@elk-1 ~]\# cd /data/kafka
+[root@elk-1 /data/kafka]\# vim config/server.properties 
 broker.id=1
 listeners=PLAINTEXT://192.168.81.210:9092
 host.name=192.168.81.210
@@ -266,7 +266,7 @@ zookeeper.connection.timeout.ms=60000
 group.initial.rebalance.delay.ms=0
 
 4.创建数据目录
-[root@elk-3 ~]# mkdir /data/kafka/data
+[root@elk-3 ~]\# mkdir /data/kafka/data
 ```
 
 ### 5.2.配置kafka-2节点
@@ -276,7 +276,7 @@ group.initial.rebalance.delay.ms=0
 配置文件需要改的地方：broker.id改成2，表示第二个节点 listeners host.name advertised.listeners advertised.host.name改成本机ip地址
 
 ```sh
-[root@elk-2 /data/kafka]# cat config/server.properties 
+[root@elk-2 /data/kafka]\# cat config/server.properties 
 broker.id=2
 listeners=PLAINTEXT://192.168.81.220:9092
 host.name=192.168.81.220
@@ -313,7 +313,7 @@ group.initial.rebalance.delay.ms=0
 配置文件需要改的地方：broker.id改成3，表示第三个节点 listeners host.name advertised.listeners advertised.host.name改成本机ip地址
 
 ```sh
-[root@elk-3 /data/kafka]# cat config/server.properties 
+[root@elk-3 /data/kafka]\# cat config/server.properties 
 broker.id=3
 listeners=PLAINTEXT://192.168.81.230:9092
 host.name=192.168.81.230
@@ -346,9 +346,9 @@ group.initial.rebalance.delay.ms=0
 ### 5.4.启动kafka
 
 ```sh
-[root@elk-1 ~]# /data/kafka/bin/kafka-server-start -daemon /data/kafka/config/server.properties
-[root@elk-2 ~]# /data/kafka/bin/kafka-server-start -daemon /data/kafka/config/server.properties
-[root@elk-3 ~]# /data/kafka/bin/kafka-server-start -daemon /data/kafka/config/server.properties
+[root@elk-1 ~]\# /data/kafka/bin/kafka-server-start -daemon /data/kafka/config/server.properties
+[root@elk-2 ~]\# /data/kafka/bin/kafka-server-start -daemon /data/kafka/config/server.properties
+[root@elk-3 ~]\# /data/kafka/bin/kafka-server-start -daemon /data/kafka/config/server.properties
 ```
 
 ## 6.测试kafka与zookeeper连接
@@ -357,18 +357,18 @@ kafka能够产生数据并消费，整个集群就可以使用了
 
 ```sh
 1.创建一个topic
-[root@elk-1 /data/kafka]# ./bin/kafka-topics.sh --create --zookeeper 192.168.81.210:2181,192.168.81.220:2181,192.168.81.230:2181 --replication-factor 1 --partitions 1 --topic testpic
+[root@elk-1 /data/kafka]\# ./bin/kafka-topics.sh --create --zookeeper 192.168.81.210:2181,192.168.81.220:2181,192.168.81.230:2181 --replication-factor 1 --partitions 1 --topic testpic
 Created topic "testpic".
 
 2.查看topic
-[root@elk-1 /data/kafka]# ./bin/kafka-topics.sh --list --zookeeper 192.168.81.210:2181,192.168.81.220:2181,192.168.81.230:2181
+[root@elk-1 /data/kafka]\# ./bin/kafka-topics.sh --list --zookeeper 192.168.81.210:2181,192.168.81.220:2181,192.168.81.230:2181
 testpic
 
 3.查看topic的描述信息
-[root@elk-1 /data/kafka]# ./bin/kafka-topics.sh --describe --zookeeper 192.168.81.210:2181,192.168.81.220:2181,192.168.81.230:2181 --topic testpic
+[root@elk-1 /data/kafka]\# ./bin/kafka-topics.sh --describe --zookeeper 192.168.81.210:2181,192.168.81.220:2181,192.168.81.230:2181 --topic testpic
 
 4.使用kafka-console-producer控制台生产数据
-[root@elk-1 /data/kafka]# ./bin/kafka-console-producer.sh --broker-list 192.168.81.210:9092,192.168.81.220:9092,192.168.81.230:9092 --topic testpic
+[root@elk-1 /data/kafka]\# ./bin/kafka-console-producer.sh --broker-list 192.168.81.210:9092,192.168.81.220:9092,192.168.81.230:9092 --topic testpic
 >test1
 >test2
 >test3
@@ -382,7 +382,7 @@ testpic
 
 
 5.使用kafka-console-consumer控制台消费数据
-[root@elk-1 /data/kafka]# ./bin/kafka-console-consumer.sh --bootstrap-server 192.168.81.210:9092,192.168.81.220:9092,192.168.81.230:9092 --topic testpic --from-beginning
+[root@elk-1 /data/kafka]\# ./bin/kafka-console-consumer.sh --bootstrap-server 192.168.81.210:9092,192.168.81.220:9092,192.168.81.230:9092 --topic testpic --from-beginning
 test1
 test2
 test3
@@ -396,7 +396,7 @@ test10
 
 
 #删除一个topic
-[root@elk-1 /data/kafka]# ./bin/kafka-topics.sh --delete --zookeeper 192.168.81.210:2181  --topic testpic
+[root@elk-1 /data/kafka]\# ./bin/kafka-topics.sh --delete --zookeeper 192.168.81.210:2181  --topic testpic
 ```
 
 ![请添加图片描述](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/61738bb4dacf417784c5a62ce3388bdd.png)
@@ -407,10 +407,10 @@ test10
 
 ```sh
 1.安装nginx
-[root@elk-3 ~]# yum -y install nginx
+[root@elk-3 ~]\# yum -y install nginx
 
 2.配置nginx日志格式
-[root@elk-3 ~]# vim /etc/nginx/nginx.conf
+[root@elk-3 ~]\# vim /etc/nginx/nginx.conf
 http {
 ··············
     log_format  main '{"时间":"$time_iso8601",'
@@ -429,21 +429,21 @@ http {
 }
 
 2.启动nginx
-[root@elk-3 ~]# systemctl start nginx
-[root@elk-3 ~]# systemctl enable nginx
+[root@elk-3 ~]\# systemctl start nginx
+[root@elk-3 ~]\# systemctl enable nginx
 
 4.访问产生日志查看效果
-[root@elk-3 ~]# curl 127.0.0.1
-[root@elk-3 ~]# tail /var/log/nginx/access.log 
+[root@elk-3 ~]\# curl 127.0.0.1
+[root@elk-3 ~]\# tail /var/log/nginx/access.log 
 {"时间":"2021-07-12T11:29:33+08:00","客户端外网地址":"-","客户端内网地址":"127.0.0.1","状态码":200,"传输流量":4833,"跳转来源":"-","URL":"GET / HTTP/1.1","浏览器":"curl/7.29.0","请求响应时间":0.000,"后端地址":"-"}
 ```
 
 ### 7.2.安装tomcat服务
 
 ```sh
-[root@elk-3 ~]# tar xf apache-tomcat-8.5.12.tar.gz -C /data/
-[root@elk-3 ~]# mv /data/apache-tomcat-8.5.12/ /data/tomcat
-[root@elk-3 ~]# /data/tomcat/bin/startup.sh 
+[root@elk-3 ~]\# tar xf apache-tomcat-8.5.12.tar.gz -C /data/
+[root@elk-3 ~]\# mv /data/apache-tomcat-8.5.12/ /data/tomcat
+[root@elk-3 ~]\# /data/tomcat/bin/startup.sh 
 Using CATALINA_BASE:   /data/tomcat
 Using CATALINA_HOME:   /data/tomcat
 Using CATALINA_TMPDIR: /data/tomcat/temp
@@ -455,14 +455,14 @@ Tomcat started.
 ### 7.3.安装filebeat服务
 
 ```sh
-[root@elk-3 ~]# rpm -ivh filebeat-7.6.0-x86_64.rpm ```
+[root@elk-3 ~]\# rpm -ivh filebeat-7.6.0-x86_64.rpm ```
 ```
 
 ### 7.4.配置filebeat收集应用日志并存储到kafka
 
 ```sh
 1.配置filebeat
-[root@elk-3 ~]# vim /etc/filebeat/filebeat.yml 
+[root@elk-3 ~]\# vim /etc/filebeat/filebeat.yml 
 filebeat.inputs:
 - type: log                                      #类型为log
   enabled: true
@@ -496,8 +496,8 @@ output.kafka:                                   #输出到kafka系统
   max_message_bytes: 1000000
 
 2.启动filebeat
-[root@elk-3 ~]# systemctl start filebeat
-[root@elk-3 ~]# systemctl enable filebeat
+[root@elk-3 ~]\# systemctl start filebeat
+[root@elk-3 ~]\# systemctl enable filebeat
 ```
 
 ### 7.5.产生程序日志数据观察数据是否存储kafka
@@ -506,17 +506,17 @@ output.kafka:                                   #输出到kafka系统
 
 ```sh
 1.产生nginx日志
-[root@elk-3 ~]# ab -n 1000 -c 100 http://127.0.0.1/index.html
+[root@elk-3 ~]\# ab -n 1000 -c 100 http://127.0.0.1/index.html
 
 2.产生tomcat日志
-[root@elk-3 ~]# /data/tomcat/bin/shutdown.sh
-[root@elk-3 ~]# /data/tomcat/bin/startup.sh 
+[root@elk-3 ~]\# /data/tomcat/bin/shutdown.sh
+[root@elk-3 ~]\# /data/tomcat/bin/startup.sh 
 ```
 
 **2.观察kafka中是否创建对应的topic**
 
 ```sh
-[root@elk-1 /data/kafka]# ./bin/kafka-topics.sh --list --zookeeper 192.168.81.210:2181,192.168.81.220:2181,192.168.81.230:2181
+[root@elk-1 /data/kafka]\# ./bin/kafka-topics.sh --list --zookeeper 192.168.81.210:2181,192.168.81.220:2181,192.168.81.230:2181
 __consumer_offsets
 nginx-access
 testpic
@@ -528,7 +528,7 @@ tomcat-cata
 **3.观察kafka日志的输出**
 
 ```sh
-[root@elk-1 /data/kafka]# tail -f logs/kafkaServer.out
+[root@elk-1 /data/kafka]\# tail -f logs/kafkaServer.out
 ```
 
 ![在这里插入图片描述](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/ec8b60b64feb4c1c818b878612dce48d.png)
@@ -541,13 +541,13 @@ tomcat-cata
 
 ```sh
 1.安装logstash
-[root@elk-3 ~]# rpm -ivh logstash-7.6.0.rpm
+[root@elk-3 ~]\# rpm -ivh logstash-7.6.0.rpm
 ```
 
 ### 8.2.配置logstash从kafka读取数据存储到es集群
 
 ```sh
-[root@elk-3 ~]# cat /etc/logstash/conf.d/in_kafka_to_es.conf 
+[root@elk-3 ~]\# cat /etc/logstash/conf.d/in_kafka_to_es.conf 
 #从kafka中读取日志数据
 input {       #数据源端
   kafka {       #类型为kafka
@@ -607,7 +607,7 @@ output {        #目标端
 ### 8.3.启动logstash并观察日志
 
 ```sh
-[root@elk-3 ~]# nphup /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/in_kafka_to_es.conf &
+[root@elk-3 ~]\# nphup /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/in_kafka_to_es.conf &
 ```
 
 观察日志的输出，已经从nginx-access、tomcat-cata topic中读取了数据并存到了es集群中

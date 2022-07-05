@@ -92,21 +92,21 @@ vrrp角色：一主多备
 ### 5.2.在两台机器上分别安装keepalive
 ```sh
 1.配置yum仓库，下载镜像源
-[root@localhost ~]# curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo 
-[root@localhost ~]# curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+[root@localhost ~]\# curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo 
+[root@localhost ~]\# curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
 2.安装keepalive，将软件包下载至本地推送至其他服务器，方便机器安装
-[root@localhost ~]# yum -y install keepalived --downloaddir=/root/soft
-[root@localhost ~]# scp keepalived-1.3.5-16.el7.x86_64.rpm root@192.168.81.220:/root
+[root@localhost ~]\# yum -y install keepalived --downloaddir=/root/soft
+[root@localhost ~]\# scp keepalived-1.3.5-16.el7.x86_64.rpm root@192.168.81.220:/root
 
 3.第二台机器直接安装下载好的rpm包即可
-[root@localhost ~]# yum localinstall /root/keepalived-1.3.5-16.el7.x86_64.rpm -y
+[root@localhost ~]\# yum localinstall /root/keepalived-1.3.5-16.el7.x86_64.rpm -y
 ```
 
 ### 5.3.配置keepalive-master
 ```sh
-[root@localhost keepalived]# cp keepalived.conf keepalived.conf.bak
-[root@localhost keepalived]# vim keepalived.conf
+[root@localhost keepalived]\# cp keepalived.conf keepalived.conf.bak
+[root@localhost keepalived]\# vim keepalived.conf
 global_defs {
    router_id lb01			//路由名称，不能使用相同的路由名称
 }
@@ -129,8 +129,8 @@ vrrp_instance VI_1 {		//定义一个虚拟组实例，实例名是VI_1，不建�
 
 ### 5.4.配置keepalive-backup
 ```sh
-[root@localhost keepalived]# cp keepalived.conf keepalived.conf.bak
-[root@localhost keepalived]# vim keepalived.conf
+[root@localhost keepalived]\# cp keepalived.conf keepalived.conf.bak
+[root@localhost keepalived]\# vim keepalived.conf
 global_defs {
 	router_id lb02
 }
@@ -154,12 +154,12 @@ vrrp_instance VI_1 {
 ### 5.5.启动主备服务器的keepalived
 ```sh
 keepalived-master
-[root@localhost keepalived]# systemctl start keepalived
-[root@localhost keepalived]# systemctl enable keepalived
+[root@localhost keepalived]\# systemctl start keepalived
+[root@localhost keepalived]\# systemctl enable keepalived
 
 keepalived-backup
-[root@localhost keepalived]# systemctl start keepalived
-[root@localhost keepalived]# systemctl enable keepalived
+[root@localhost keepalived]\# systemctl start keepalived
+[root@localhost keepalived]\# systemctl enable keepalived
 ```
 
 ## 6.检查虚拟IP是否漂移
@@ -184,7 +184,7 @@ keepalived-backup
 **在keepalive-master上操作**
 ```sh
 已经获得漂移ip
-[root@jxl ~]# ip add show dev ens33
+[root@jxl ~]\# ip add show dev ens33
 2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
     link/ether 00:0c:29:46:66:34 brd ff:ff:ff:ff:ff:ff
     inet 192.168.81.220/24 brd 192.168.81.255 scope global ens33
@@ -198,8 +198,8 @@ keepalived-backup
 
 **在keepalive-master上恢复master节点并验证是否存在漂移ip**
 ```sh
-[root@localhost ~]# systemctl start keepalived
-[root@localhost ~]# ip add show dev ens33
+[root@localhost ~]\# systemctl start keepalived
+[root@localhost ~]\# ip add show dev ens33
 2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
     link/ether 00:0c:29:55:83:b7 brd ff:ff:ff:ff:ff:ff
     inet 192.168.81.210/24 brd 192.168.81.255 scope global ens33
@@ -213,7 +213,7 @@ keepalived-backup
 
 **在keepalive-backup上验证漂移ip是否已丢失**
 ```sh
-[root@jxl ~]# ip add show dev ens33
+[root@jxl ~]\# ip add show dev ens33
 2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
     link/ether 00:0c:29:46:66:34 brd ff:ff:ff:ff:ff:ff
     inet 192.168.81.220/24 brd 192.168.81.255 scope global ens33
@@ -260,9 +260,9 @@ keepalived-backup
 ### 8.4.部署nginx负载均衡
 ```sh
 lb01配置
-[root@localhost ~]# yum -y install nginx 
-[root@localhost ~]# cd /etc/nginx/conf.d
-[root@localhost ~]# vim lb_wecenter.conf
+[root@localhost ~]\# yum -y install nginx 
+[root@localhost ~]\# cd /etc/nginx/conf.d
+[root@localhost ~]\# vim lb_wecenter.conf
 upstream lb_wecenter {
 	server 192.168.81.230 weight=1 max_fails=3 fail_timeout=60;
 	server 192.168.81.240 weight=1 max_fails=3 fail_timeout=60;
@@ -289,13 +289,13 @@ server {
 }
 
 lb02配置
-[root@localhost ~]# yum -y install nginx
+[root@localhost ~]\# yum -y install nginx
 然后在lb01使用scp将配置文件推送到lb02上
-[root@localhost ~]# scp -rp /etc/nginx/* root@192.168.81.220:/etc/nginx/
+[root@localhost ~]\# scp -rp /etc/nginx/* root@192.168.81.220:/etc/nginx/
 
 在两台机器上启动nginx
-[root@localhost ~]# systemctl start nginx 
-[root@localhost ~]# systemctl enable nginx
+[root@localhost ~]\# systemctl start nginx 
+[root@localhost ~]\# systemctl enable nginx
 
 ```
 
@@ -304,21 +304,21 @@ lb02配置
 #### 8.5.1.在两台机器上分别安装keepalive
 ```sh
 1.配置yum仓库，下载镜像源
-[root@localhost ~]# curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo 
-[root@localhost ~]# curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+[root@localhost ~]\# curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo 
+[root@localhost ~]\# curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
 2.安装keepalive，将软件包下载至本地推送至其他服务器，方便机器安装
-[root@localhost ~]# yum -y install keepalived --downloaddir=/root/soft
-[root@localhost ~]# scp keepalived-1.3.5-16.el7.x86_64.rpm root@192.168.81.220:/root
+[root@localhost ~]\# yum -y install keepalived --downloaddir=/root/soft
+[root@localhost ~]\# scp keepalived-1.3.5-16.el7.x86_64.rpm root@192.168.81.220:/root
 
 3.第二台机器直接安装下载好的rpm包即可
-[root@localhost ~]# yum localinstall /root/keepalived-1.3.5-16.el7.x86_64.rpm -y
+[root@localhost ~]\# yum localinstall /root/keepalived-1.3.5-16.el7.x86_64.rpm -y
 ```
 
 #### 8.5.2.配置keepalive-master
 ```sh
-[root@localhost keepalived]# cp keepalived.conf keepalived.conf.bak
-[root@localhost keepalived]# vim keepalived.conf
+[root@localhost keepalived]\# cp keepalived.conf keepalived.conf.bak
+[root@localhost keepalived]\# vim keepalived.conf
 global_defs {
    router_id lb01			//路由名称，不能使用相同的路由名称
 }
@@ -341,8 +341,8 @@ vrrp_instance VI_1 {		//定义一个虚拟组实例，实例名是VI_1，不建�
 
 #### 8.5.3.配置keepalive-backup
 ```sh
-[root@localhost keepalived]# cp keepalived.conf keepalived.conf.bak
-[root@localhost keepalived]# vim keepalived.conf
+[root@localhost keepalived]\# cp keepalived.conf keepalived.conf.bak
+[root@localhost keepalived]\# vim keepalived.conf
 global_defs {
 	router_id lb02
 }
@@ -366,12 +366,12 @@ vrrp_instance VI_1 {
 #### 8.5.4.启动主备服务器的keepalived
 ```sh
 keepalived-master
-[root@localhost keepalived]# systemctl start keepalived
-[root@localhost keepalived]# systemctl enable keepalived
+[root@localhost keepalived]\# systemctl start keepalived
+[root@localhost keepalived]\# systemctl enable keepalived
 
 keepalived-backup
-[root@localhost keepalived]# systemctl start keepalived
-[root@localhost keepalived]# systemctl enable keepalived
+[root@localhost keepalived]\# systemctl start keepalived
+[root@localhost keepalived]\# systemctl enable keepalived
 ```
 
 ### 8.6.页面访问

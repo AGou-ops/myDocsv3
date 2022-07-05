@@ -1,4 +1,4 @@
-# Kafka Basic 
+# Kafka Basic
 
 ## Kafka 简介
 
@@ -16,11 +16,19 @@ Kafka主要设计目标如下：
 
 官方简介：http://kafka.apache.org/intro
 
+Kafka架构：
+
 ![](https://images2018.cnblogs.com/blog/1385722/201808/1385722-20180804221732434-2116774825.png "zk Arch")
 
 存储机制：
 
-![](https://user-gold-cdn.xitu.io/2020/1/17/16fb2cd4f11f1b55?imageView2/0/w/1280/h/960/format/webp/ignore-error/1 "存储机制")
+![img](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/bVbDJMc.png)
+
+- `topic`： 可以理解为一个消息队列的名字
+- `partition`：为了实现扩展性，一个非常大的topic可以分布到多个 broker（即服务器）上，一个topic可以分为多个partition，每个partition是一个有序的队列
+- `segment`：partition物理上由多个segment组成
+- `message`：每个segment文件中实际存储的每一条数据就是message
+- `offset`：每个partition都由一系列有序的、不可变的消息组成，这些消息被连续的追加到partition中，partition中的每个消息都有一个连续的序列号叫做offset,用于partition唯一标识一条消息
 
 ## Kafka 安装与部署
 
@@ -259,5 +267,6 @@ fetch.message.max.bytes=2000000000
 ## 参考链接
 
 * Kafka 架构原理：https://juejin.im/post/5e217c3fe51d450200787f23Kafka 
+* Kafka文件存储机制：https://segmentfault.com/a/1190000021824942
 * QuickStart: http://kafka.apache.org/quickstart
 * http://kafka.apache.org/quickstart#quickstart_kafkaconnect

@@ -188,7 +188,7 @@ repl_backlog_histlen:68880
 
 ```shell
 # 连接sentinel管理端口
-[root@db01 26380]# redis-cli -p 26380
+[root@db01 26380]\# redis-cli -p 26380
 # 检测状态，返回PONG
 127.0.0.1:26380> PING
 PONG

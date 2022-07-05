@@ -174,7 +174,7 @@ HOME=/
 * syslog
 
 ```
-[root@gop-sg-192-168-56-103 logrotate.d]# cat syslog
+[root@gop-sg-192-168-56-103 logrotate.d]\# cat syslog
 /var/log/cron
 /var/log/maillog
 /var/log/messages
@@ -192,7 +192,7 @@ HOME=/
 * zabbix-agent
 
 ```
-[root@gop-sg-192-168-56-103 logrotate.d]# cat zabbix-agent
+[root@gop-sg-192-168-56-103 logrotate.d]\# cat zabbix-agent
 /var/log/zabbix/zabbix_agentd.log {
 	weekly
 	rotate 12
@@ -207,7 +207,7 @@ HOME=/
 * nginx
 
 ```
-[root@gop-sg-192-168-56-103 logrotate.d]# cat nginx
+[root@gop-sg-192-168-56-103 logrotate.d]\# cat nginx
 /var/log/nginx/*.log /var/log/nginx/*/*.log{
 	daily
 	missingok
@@ -226,7 +226,7 @@ HOME=/
 * influxdb
 
 ```
-[root@gop-sg-192-168-56-103 logrotate.d]# cat influxdb
+[root@gop-sg-192-168-56-103 logrotate.d]\# cat influxdb
 /var/log/influxdb/access.log {
     daily
     rotate 7

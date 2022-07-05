@@ -1,6 +1,27 @@
-# Wireshark 过滤器
+# tcpdump & wireshark
 
-## 过滤符号及组合
+## Tcpdump 常用示例及相关参数
+
+```bash
+# 抓取指定协议和网络接口的数据包，
+# -nn表示不解析主机名称，
+# -c表示抓取的数据包个数
+# -w表示将内容持久化到文件当中去，一般以`.pcap`后缀结尾
+tcpdump -i eth0 -c 5 icmp and host 192.168.1.1 -nn
+
+# 简单tcp数据包，保存的文件可以使用wireshark工具进行分析处理
+tcpdump -i any tcp and host 192.168.2.100 and port 80 -w http.pcap
+```
+
+![tcpdump 常用过滤表达式类](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/8.jpg)
+
+
+
+
+
+## Wireshark 过滤器
+
+### 过滤符号及组合
 
 ![](https://cdn.jsdelivr.net/gh/AGou-ops/images/2020/wireshark-01.png)
 
@@ -132,4 +153,5 @@
 ## 参考链接
 
 - Wireshark过滤器写法总结:  https://www.cnblogs.com/willingtolove/p/12519490.html
+- tcpdump 详解：https://xiaolincoding.com/network/3_tcp/tcp_tcpdump.html
 

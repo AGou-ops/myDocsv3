@@ -23,7 +23,7 @@
 配置`filebeat`收集日志并自定义redis key:
 
 ```yaml
-[root@nginx ~]# vim /etc/filebeat/filebeat.yml 
+[root@nginx ~]\# vim /etc/filebeat/filebeat.yml 
 #定义收集什么日志
 filebeat.inputs:
 - type: log
@@ -73,7 +73,7 @@ setup.template.pattern: "nginx-*"
 setup.template.enabled: false
 setup.template.overwrite: true
 
-[root@nginx ~]# systemctl restart filebeat
+[root@nginx ~]\# systemctl restart filebeat
 ```
 
 option2（将所有的日志都存在于同一个key中，只用tag来标识）: 
@@ -81,7 +81,7 @@ option2（将所有的日志都存在于同一个key中，只用tag来标识）:
 这样做的好处是减少工作量，不然每增加一个日志，就得向filebeat中增加一小段配置，不是很方便；
 
 ```yaml
-[root@nginx /etc/filebeat]# vim filebeat.yml 
+[root@nginx /etc/filebeat]\# vim filebeat.yml 
 #定义收集什么日志
 filebeat.inputs:
 - type: log

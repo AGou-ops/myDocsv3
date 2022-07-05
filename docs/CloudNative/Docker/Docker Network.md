@@ -117,7 +117,11 @@ f5a426943455        host                host                local
 ```
 
 - 桥接式容器
-    默认的容器类型，故可以省去network的参数。创建网络设备时，一半在容器内部，一半在宿主机的docker0上。实现如下：
+    
+
+![图片](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/640.jpeg)
+    
+默认的容器类型，故可以省去network的参数。创建网络设备时，一半在容器内部，一半在宿主机的docker0上。实现如下：
 
 ```bash
 [root@docker2 ~]\# docker run --name busy01 -it --network bridge --rm busybox

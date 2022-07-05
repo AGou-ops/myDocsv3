@@ -48,20 +48,20 @@ k8s服务发现参考文档： https://prometheus.io/docs/prometheus/latest/conf
 ### 2.2.部署nfs作为prometheus存储
 
 ```sh
-[root@nfs ~]# mkdir /data/prometheus
+[root@nfs ~]\# mkdir /data/prometheus
 
-[root@nfs ~]# yum -y install nfs-utils
+[root@nfs ~]\# yum -y install nfs-utils
 
-[root@nfs ~]# vim /etc/exports
+[root@nfs ~]\# vim /etc/exports
 /data/prometheus   192.168.16.0/24(rw,sync,no_root_squash)
 
-[root@nfs ~]# systemctl restart nfs
+[root@nfs ~]\# systemctl restart nfs
 
-[root@nfs ~]# showmount -e
+[root@nfs ~]\# showmount -e
 Export list for nfs:
 /data/prometheus 192.168.16.0/24
 
-[root@nfs ~]# chomd -R 777 /data
+[root@nfs ~]\# chomd -R 777 /data
 ```
 
 ### 2.3.获取prometheus yaml文件
@@ -80,10 +80,10 @@ Export list for nfs:
 
 ```sh
 1.拉取prometheus yaml文件
-[root@k8s-master ~/k8s]# git clone https://github.com/kubernetes/kubernetes.git
+[root@k8s-master ~/k8s]\# git clone https://github.com/kubernetes/kubernetes.git
 
 2.将prometheus yaml文件复制到其他目录
-[root@k8s-master ~/k8s]# cp -rp kubernetes/cluster/addons/prometheus/ . 
+[root@k8s-master ~/k8s]\# cp -rp kubernetes/cluster/addons/prometheus/ . 
 ```
 
 **本人的yaml文件**
@@ -128,7 +128,7 @@ Export list for nfs:
 
 ```sh
 1.创建ns
-[root@k8s-master ~/k8s/prometheus]# kubectl create namespace prometheus
+[root@k8s-master ~/k8s/prometheus]\# kubectl create namespace prometheus
 namespace/prometheus created
 
 2.修改
@@ -142,7 +142,7 @@ namespace/prometheus created
 
 ```sh
 主要用到以下几个yaml
-[root@k8s-master ~/k8s/prometheus]# ls prometheus-*
+[root@k8s-master ~/k8s/prometheus]\# ls prometheus-*
 prometheus-configmap.yaml  prometheus-rbac.yaml  prometheus-service.yaml  prometheus-statefulset.yaml
 ```
 
@@ -159,7 +159,7 @@ prometheus-configmap.yaml  prometheus-rbac.yaml  prometheus-service.yaml  promet
 ### 3.2.创建rbac资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus]# kubectl create -f prometheus-rbac.yaml 
+[root@k8s-master ~/k8s/prometheus]\# kubectl create -f prometheus-rbac.yaml 
 serviceaccount/prometheus created
 clusterrole.rbac.authorization.k8s.io/prometheus created
 clusterrolebinding.rbac.authorization.k8s.io/prometheus created
@@ -168,7 +168,7 @@ clusterrolebinding.rbac.authorization.k8s.io/prometheus created
 ### 3.3.创建configmap资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus]# kubectl create -f prometheus-configmap.yaml 
+[root@k8s-master ~/k8s/prometheus]\# kubectl create -f prometheus-configmap.yaml 
 configmap/prometheus-config created
 ```
 
@@ -181,7 +181,7 @@ github上的statefulset资源使用的是storageclasee动态创建pv，由于不
 改造思路：在yaml中增加pv、pvc的配置，在将原来的storageclass配置项删除，在120行的volume中增加pvc的配置即可
 
 ```yaml
-[root@k8s-master ~/k8s/prometheus]# vim prometheus-statefulset-static-pv.yaml 
+[root@k8s-master ~/k8s/prometheus]\# vim prometheus-statefulset-static-pv.yaml 
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -312,7 +312,7 @@ spec:
 #### 3.4.2.创建statefulset资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus]# kubectl create -f  prometheus-statefulset-static-pv.yaml 
+[root@k8s-master ~/k8s/prometheus]\# kubectl create -f  prometheus-statefulset-static-pv.yaml 
 persistentvolumeclaim/prometheus-data created
 persistentvolume/pv-prometheus created
 statefulset.apps/prometheus created
@@ -323,7 +323,7 @@ statefulset.apps/prometheus created
 #### 3.5.1.修改service资源支持nodeport
 
 ```yaml
-[root@k8s-master ~/k8s/prometheus]# vim prometheus-service.yaml 
+[root@k8s-master ~/k8s/prometheus]\# vim prometheus-service.yaml 
 kind: Service
 apiVersion: v1
 metadata:
@@ -347,14 +347,14 @@ spec:
 #### 3.5.2.创建service资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus]# kubectl create -f prometheus-service.yaml 
+[root@k8s-master ~/k8s/prometheus]\# kubectl create -f prometheus-service.yaml 
 service/prometheus created
 ```
 
 ### 3.6.查看创建的prometheus所有资源类型
 
 ```sh
-[root@k8s-master ~/k8s/prometheus]# kubectl get pod,svc,pv,pvc -n prometheus -o wide
+[root@k8s-master ~/k8s/prometheus]\# kubectl get pod,svc,pv,pvc -n prometheus -o wide
 ```
 
 ![在这里插入图片描述](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/20210106171837694.png)
@@ -379,7 +379,7 @@ service/prometheus created
 语法：kubectl exec -it pod名 进入的环境 -c 容器名称 -n 命名空间
 
 ```sh
-[root@k8s-master ~/k8s/prometheus]# kubectl exec -it prometheus-0 sh -c prometheus-server -n prometheus
+[root@k8s-master ~/k8s/prometheus]\# kubectl exec -it prometheus-0 sh -c prometheus-server -n prometheus
 /prometheus $ 
 ```
 
@@ -580,7 +580,7 @@ metrics页面访问如下也没关系，metrics貌似只能集群内部进行访
 
 ```yaml
 1.编写资源
-[root@k8s-master ~/k8s/prometheus3]# vim grafana_pv_pvc.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# vim grafana_pv_pvc.yaml 
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -608,13 +608,13 @@ spec:
     server: 192.168.16.105
     
 2.在nfs上创建对应的挂载点
-[root@nfs ~]# mkdir /data/prometheus/grafana
+[root@nfs ~]\# mkdir /data/prometheus/grafana
 ```
 
 ### 4.2.编写granfana-statefulset资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# vim grafana_statefulset.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# vim grafana_statefulset.yaml 
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -661,7 +661,7 @@ spec:
 ### 4.3.编写granfana-svc资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# vim grafana_svc.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# vim grafana_svc.yaml 
 apiVersion: v1
 kind: Service
 metadata:
@@ -682,21 +682,21 @@ spec:
 ### 4.4.k8s创建grafana
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f grafana_pv_pvc.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f grafana_pv_pvc.yaml 
 persistentvolumeclaim "grafana-ui-data" created
 persistentvolume "pv-grafana-ui-data" created
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f prometheus-statefulset-static-pv.yaml
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f prometheus-statefulset-static-pv.yaml
 persistentvolumeclaim/prometheus-data created
 persistentvolume/pv-prometheus created
 statefulset.apps/prometheus created
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f grafana_svc.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f grafana_svc.yaml 
 service/grafana-ui created
 ```
 
 ### 4.5.查看资源运行状态
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl get pv,pvc,pod,statefulset,svc -n grafana-ui
+[root@k8s-master ~/k8s/prometheus3]\# kubectl get pv,pvc,pod,statefulset,svc -n grafana-ui
 NAME                                  CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS        CLAIM                         STORAGECLASS   REASON   AGE
 persistentvolume/pv-grafana-ui-data   3Gi        RWO            Retain           Terminating   grafana-ui/grafana-ui-data                            151m
 persistentvolume/pv-prometheus        16Gi       RWO            Retain           Bound         kube-system/prometheus-data                           47m
@@ -766,7 +766,7 @@ service/grafana-ui   NodePort   10.96.170.142   <none>        3000:32040/TCP   8
 ### 5.1.编写一键部署node_exporter脚本
 
 ```shell
-[root@k8s-master ~/k8s/prometheus3]# vim install_node_exportes.sh 
+[root@k8s-master ~/k8s/prometheus3]\# vim install_node_exportes.sh 
 #!/bin/bash
 #批量安装node_exporter
 soft_dir=/root/soft
@@ -817,18 +817,18 @@ fi
 ![在这里插入图片描述](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/20210106172136934.png)
 
 ```sh
-[root@k8s-node1 ~]# wget http://192.168.16.106:888/install_node_exportes.sh
+[root@k8s-node1 ~]\# wget http://192.168.16.106:888/install_node_exportes.sh
 
-[root@k8s-node1 ~]# sh install_node_exportes.sh 
+[root@k8s-node1 ~]\# sh install_node_exportes.sh 
 
-[root@k8s-node1 ~]#  netstat -lnpt | grep 9100
+[root@k8s-node1 ~]\#  netstat -lnpt | grep 9100
 tcp6       0      0 :::9100                 :::*                    LISTEN      14906/node_exporter 
 ```
 
 ### 5.3.在prometheus的configmap资源中增加node节点配置
 
 ```yaml
-[root@k8s-master ~/k8s/prometheus3]# vim prometheus-configmap.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# vim prometheus-configmap.yaml 
     - job_name: k8s-node
       static_configs:
       - targets:
@@ -843,7 +843,7 @@ tcp6       0      0 :::9100                 :::*                    LISTEN      
 更新完配置，prometheus页面会立马显示，因此每当configmap一修改，prometheus容器就会重载
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl apply -f prometheus-configmap.yaml
+[root@k8s-master ~/k8s/prometheus3]\# kubectl apply -f prometheus-configmap.yaml
 configmap/prometheus-config created
 ```
 
@@ -868,7 +868,7 @@ node监控：9276
 ### 6.1.创建rbac资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl create kube-state-metrics-rbac.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create kube-state-metrics-rbac.yaml 
 ```
 
 ### 6.2.创建deployment资源
@@ -878,7 +878,7 @@ deployment资源里面结合了configmap资源
 需要把镜像的地址修改成lizhenliang/kube-state-metrics:v1.8.0、lizhenliang/addon-resizer:1.8.6
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f kube-state-metrics-deployment.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f kube-state-metrics-deployment.yaml 
 ```
 
 ![在这里插入图片描述](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/20210106172259875.png)
@@ -886,13 +886,13 @@ deployment资源里面结合了configmap资源
 ### 6.3.创建service资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f kube-state-metrics-service.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f kube-state-metrics-service.yaml 
 ```
 
 ### 6.4.资源准备就绪
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl get all -n kube-system | grep kube-state
+[root@k8s-master ~/k8s/prometheus3]\# kubectl get all -n kube-system | grep kube-state
 
 ```
 
@@ -920,7 +920,7 @@ deployment资源里面结合了configmap资源
 
 ```sh
 1.编写yaml
-[root@k8s-master ~/k8s/prometheus3]# vim alertmanager-pvc.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# vim alertmanager-pvc.yaml 
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -951,7 +951,7 @@ spec:
     server: 192.168.16.105
 
 2.创建
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f alertmanager-pvc.yaml
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f alertmanager-pvc.yaml
 persistentvolumeclaim/alertmanager created
 persistentvolume/pv-alertmanager-data create
 ```
@@ -962,7 +962,7 @@ persistentvolume/pv-alertmanager-data create
 
 ```sh
 1.增加微信告警配置
-[root@k8s-master ~/k8s/prometheus3]# vim alertmanager-configmap.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# vim alertmanager-configmap.yaml 
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -992,28 +992,28 @@ data:
       repeat_interval: 1m
 
 2.创建资源
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f alertmanager-configmap.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f alertmanager-configmap.yaml 
 configmap/alertmanager-config created
 ```
 
 ### 7.3.创建alertmanager-deployment资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f alertmanager-deployment.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f alertmanager-deployment.yaml 
 deployment.apps/alertmanager created
 ```
 
 ### 7.4.创建alertmanager-service资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f alertmanager-service.yaml
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f alertmanager-service.yaml
 service/alertmanager created
 ```
 
 ### 7.5查看alertmanager所有资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl get all,pv,pvc,cm -n alertmanager
+[root@k8s-master ~/k8s/prometheus3]\# kubectl get all,pv,pvc,cm -n alertmanager
 ```
 
 ![在这里插入图片描述](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/20210106172401946.png)
@@ -1036,12 +1036,12 @@ service/alertmanager created
 
 ```sh
 1.在nfs上创建pv存储路径
-[root@nfs ~]# mkdir /data/prometheus/rules
-[root@nfs ~]# chmod -R 777 /data
-[root@nfs ~]# cd /data/prometheus/rules
+[root@nfs ~]\# mkdir /data/prometheus/rules
+[root@nfs ~]\# chmod -R 777 /data
+[root@nfs ~]\# cd /data/prometheus/rules
 
 2.准备主机宕机的告警规则文件
-[root@nfs rules]# vim hostdown.yml 
+[root@nfs rules]\# vim hostdown.yml 
 groups:
 - name: general.rules
   rules:
@@ -1055,7 +1055,7 @@ groups:
       description: "{{ $labels.instance }} job {{ $labels.job }} 已经宕机5分钟以上!"
       
 3.准备主机基础监控告警规则文件      
-[root@nfs rules]# vim node.yml 
+[root@nfs rules]\# vim node.yml 
 groups:
 - name: node.rules
   rules:
@@ -1091,7 +1091,7 @@ groups:
 
 ```sh
 1.编写资源文件
-[root@k8s-master ~/k8s/prometheus3]# vim prometheus-rules-pvc.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# vim prometheus-rules-pvc.yaml 
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -1119,7 +1119,7 @@ spec:
     server: 192.168.16.105
 
 2.创建资源
-[root@k8s-master ~/k8s/prometheus3]# kubectl create -f prometheus-rules-pvc.yaml
+[root@k8s-master ~/k8s/prometheus3]\# kubectl create -f prometheus-rules-pvc.yaml
 persistentvolumeclaim/prometheus-rules created
 persistentvolume/pv-prometheus-rules created
 
@@ -1130,7 +1130,7 @@ persistentvolume/pv-prometheus-rules created
 在prometheus的statefulset资源中增加rules的pvc挂载路径
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# vim prometheus-statefulset-static-pv.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# vim prometheus-statefulset-static-pv.yaml 
           volumeMounts:
             - name: config-volume
               mountPath: /etc/config
@@ -1158,14 +1158,14 @@ persistentvolume/pv-prometheus-rules created
 ### 8.4.更新prometheus-statefulset资源
 
 ```sh
-[root@k8s-master ~/k8s/prometheus3]# kubectl apply -f prometheus-statefulset-static-pv.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# kubectl apply -f prometheus-statefulset-static-pv.yaml 
 ```
 
 ### 8.5.修改prometheus-configmap资源配置alertmanager地址
 
 ```sh
 1.修改配置增加alertmanager地址
-[root@k8s-master ~/k8s/prometheus3]# vim prometheus-configmap.yaml 
+[root@k8s-master ~/k8s/prometheus3]\# vim prometheus-configmap.yaml 
     alerting:
       alertmanagers:
       - static_configs:
@@ -1173,7 +1173,7 @@ persistentvolume/pv-prometheus-rules created
           - 192.168.16.106:31831
 
 2.更新资源
-[root@k8s-master ~/k8s/prometheus3]# kubectl apply -f prometheus-configmap.yaml
+[root@k8s-master ~/k8s/prometheus3]\# kubectl apply -f prometheus-configmap.yaml
 configmap/prometheus-config configured      
 ```
 
@@ -1189,7 +1189,7 @@ configmap/prometheus-config configured
 
 ```sh
 将任意一个node节点的node_exporter停掉即可
-[root@k8s-node1 ~]# systemctl stop node_exporter
+[root@k8s-node1 ~]\# systemctl stop node_exporter
 ```
 
 **告警已经产生**

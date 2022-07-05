@@ -2,7 +2,7 @@
 
 ```yaml
 1.配置logstash
-[root@elkstack-1 ~]# vim /data/elk/logstash/conf.d/nginx_tomcat.conf 
+[root@elkstack-1 ~]\# vim /data/elk/logstash/conf.d/nginx_tomcat.conf 
 input {
 	file {
 		path => "/var/log/test/nginx.log"
@@ -50,6 +50,6 @@ output {
 }
 
 2.重启logstash
-[root@elkstack-1 conf.d]# systemctl restart logstash
+[root@elkstack-1 conf.d]\# systemctl restart logstash
 ```
 

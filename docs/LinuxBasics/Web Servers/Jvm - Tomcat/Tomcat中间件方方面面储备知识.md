@@ -67,20 +67,20 @@ export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$JAVA_HOME/lib/tools.jar
 EOF
 
-[root@localhost ~]# mkdir /application
-[root@localhost application]# rz -E
+[root@localhost ~]\# mkdir /application
+[root@localhost application]\# rz -E
 rz waiting to receive.
-[root@localhost application]# ln -s jdk1.8.0_60/ jdk
+[root@localhost application]\# ln -s jdk1.8.0_60/ jdk
 ```
 
 ### 3.2.Tomcat
 
 ```sh
-[root@localhost application]# tar xf apache-tomcat-8.5.53.tar.gz
-[root@localhost application]# ln -s apache-tomcat-8.5.53 tomcat
-[root@localhost application]# mkdir soft
-[root@localhost application]# mv *.gz soft/
-[root@localhost application]# /application/tomcat/bin/version.sh 
+[root@localhost application]\# tar xf apache-tomcat-8.5.53.tar.gz
+[root@localhost application]\# ln -s apache-tomcat-8.5.53 tomcat
+[root@localhost application]\# mkdir soft
+[root@localhost application]\# mv *.gz soft/
+[root@localhost application]\# /application/tomcat/bin/version.sh 
 Using CATALINA_BASE:   /application/tomcat
 Using CATALINA_HOME:   /application/tomcat
 Using CATALINA_TMPDIR: /application/tomcat/temp
@@ -117,7 +117,7 @@ exec "$PRGDIR"/"$EXECUTABLE" start "$@"
 启动分析
 
 ```sh
-[root@localhost tomcat]# ./bin/startup.sh 
+[root@localhost tomcat]\# ./bin/startup.sh 
 Using CATALINA_BASE:   /application/tomcat
 Using CATALINA_HOME:   /application/tomcat
 Using CATALINA_TMPDIR: /application/tomcat/temp
@@ -125,11 +125,11 @@ Using JRE_HOME:        /application/jdk
 Using CLASSPATH:       /application/tomcat/bin/bootstrap.jar:/application/tomcat/bin/tomcat-juli.jar
 Tomcat started.
 
-[root@localhost tomcat]# ss -lnptu | grep java
+[root@localhost tomcat]\# ss -lnptu | grep java
 tcp    LISTEN     0      100      :::8080                 :::*                   users:(("java",pid=67926,fd=52))
 tcp    LISTEN     0      1      ::ffff:127.0.0.1:8005                 :::*                   users:(("java",pid=67926,fd=64))
 
-[root@localhost tomcat]# ps -ef | grep java
+[root@localhost tomcat]\# ps -ef | grep java
 root      67926      1 21 14:31 pts/0    00:00:04 /application/jdk/bin/java -Djava.util.logging.config.file=/application/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /application/tomcat/bin/bootstrap.jar:/application/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/application/tomcat -Dcatalina.home=/application/tomcat -Djava.io.tmpdir=/application/tomcat/temp org.apache.catalina.startup.Bootstrap start
 
 
@@ -153,7 +153,7 @@ start
 ## 4.Tomcat目录结构
 
 ```sh
-[root@localhost tomcat]# ll
+[root@localhost tomcat]\# ll
 总用量 124
 drwxr-x---. 2 root root  4096 3月  31 14:30 bin
 -rw-r-----. 1 root root 19318 3月  11 18:06 BUILDING.txt
@@ -194,12 +194,12 @@ drwxr-x---. 3 root root    22 3月  31 14:31 work
     - localhost.2020-03-31.log tomcat的访问日志和nginx的access.log基本一致
 
         ```sh
-        [root@localhost tomcat]# cat /etc/log
+        [root@localhost tomcat]\# cat /etc/log
         login.defs      logrotate.conf  logrotate.d/    
-        [root@localhost tomcat]# cat /etc/logrotate.d/
+        [root@localhost tomcat]\# cat /etc/logrotate.d/
         bootlog         cups            httpd           libvirtd        libvirtd.qemu   numad           psacct          sssd            wpa_supplicant  
         chrony          glusterfs       iscsiuiolog     libvirtd.lxc    mariadb         ppp             samba           syslog          yum             
-        [root@localhost tomcat]# cat /etc/logrotate.d/syslog 
+        [root@localhost tomcat]\# cat /etc/logrotate.d/syslog 
         /var/log/cron
         /var/log/maillog
         /var/log/messages
@@ -212,7 +212,7 @@ drwxr-x---. 3 root root    22 3月  31 14:31 work
           /bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
             endscript
         }
-        [root@localhost tomcat]# 
+        [root@localhost tomcat]\# 
         
         1234567891011121314151617181920
         ```
@@ -225,7 +225,7 @@ drwxr-x---. 3 root root    22 3月  31 14:31 work
 我们需要修改conf/tomcat-users.xml文件即可，下载在登录时输入username当时配置的即可正常登录
 
 ```sh
-[root@localhost tomcat]# cat conf/tomcat-users.xml
+[root@localhost tomcat]\# cat conf/tomcat-users.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <tomcat-users xmlns="http://tomcat.apache.org/xml"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -248,7 +248,7 @@ tomcat8.5以后的版本默认只允许机访问，换需要修改webapps/manage
 
 ```sh
 #将value class的行注释掉即可
-[root@localhost tomcat]# cat webapps/manager/META-INF/context.xml
+[root@localhost tomcat]\# cat webapps/manager/META-INF/context.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Context antiResourceLocking="false" privileged="true" >
   <!--<Valve className="org.apache.catalina.valves.RemoteAddrValve"
@@ -328,12 +328,12 @@ Query OK, 0 rows affected (0.00 sec)
 ![在这里插入图片描述](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/20200502221054840.png)
 
 ```sh
-[root@localhost webapps]# cp jpress/jpress/wars/jpress-web-newest.war  .
-[root@localhost webapps]# rm -rf jpress
-[root@localhost webapps]# rm -rf jpress.war 
-[root@localhost webapps]# mv jpress-web-newest jpress
-[root@localhost webapps]# mv jpress-web-newest.war jpress.war
-[root@localhost webapps]# ls
+[root@localhost webapps]\# cp jpress/jpress/wars/jpress-web-newest.war  .
+[root@localhost webapps]\# rm -rf jpress
+[root@localhost webapps]\# rm -rf jpress.war 
+[root@localhost webapps]\# mv jpress-web-newest jpress
+[root@localhost webapps]\# mv jpress-web-newest.war jpress.war
+[root@localhost webapps]\# ls
 docs  examples  host-manager  jpress  jpress.war  jpress-web-newest  manager  ROOT
 
 ```
@@ -421,7 +421,7 @@ docs  examples  host-manager  jpress  jpress.war  jpress-web-newest  manager  RO
 
 ```sh
 #需要在webapps/ROOT目录下写一个mem.jsp的文件
-[root@localhost tomcat]# cat webapps/ROOT/mem.jsp 
+[root@localhost tomcat]\# cat webapps/ROOT/mem.jsp 
 <%
 Runtime rtm = Runtime.getRuntime();
 long mm = rtm.maxMemory()/1024/1024;
@@ -445,16 +445,16 @@ out.println("Available memory can be used is :"+(mm+fm-tm)+"MB"+"<br>");
 #shutdown端口  连接到这个端口并输入后面的暗号 SHUTDOWN 把tomcat关闭，需要把暗号给改掉
 <Server port="8005" shutdown="SHUTDOWN">
 
-[root@localhost tomcat]# ss -lnptu | grep java
+[root@localhost tomcat]\# ss -lnptu | grep java
 tcp    LISTEN     0      100      :::8080                 :::*                   users:(("java",pid=77014,fd=52))
 tcp    LISTEN     0      1      ::ffff:127.0.0.1:8005                 :::*                   users:(("java",pid=77014,fd=62))
-[root@localhost tomcat]# telnet 127.0.0.1 8005
+[root@localhost tomcat]\# telnet 127.0.0.1 8005
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
 Escape character is '^]'.
 SHUTDOWN
 Connection closed by foreign host.
-[root@localhost tomcat]# ss -lnptu | grep java
+[root@localhost tomcat]\# ss -lnptu | grep java
 
 
 #tomcat管理端，一般不开放，以免用户看到配置
@@ -525,22 +525,22 @@ Connection closed by foreign host.
 一台主机可能会跑多个tomcat
 
 ```sh
-[root@localhost soft]# tar -xf apache-tomcat-8.5.53.tar.gz 
-[root@localhost soft]# ls
+[root@localhost soft]\# tar -xf apache-tomcat-8.5.53.tar.gz 
+[root@localhost soft]\# ls
 apache-tomcat-8.5.53  apache-tomcat-8.5.53.tar.gz  jdk-8u60-linux-x64.tar.gz
-[root@localhost soft]# mv apache-tomcat-8.5.53 ../tomcat_8081
-[root@localhost soft]# tar -xf apache-tomcat-8.5.53.tar.gz 
-[root@localhost soft]# mv apache-tomcat-8.5.53 ../tomcat_8082
+[root@localhost soft]\# mv apache-tomcat-8.5.53 ../tomcat_8081
+[root@localhost soft]\# tar -xf apache-tomcat-8.5.53.tar.gz 
+[root@localhost soft]\# mv apache-tomcat-8.5.53 ../tomcat_8082
 
-[root@localhost application]# sed -ri 's/8080/8081/g' tomcat_8081/conf/server.xml 
-[root@localhost application]# sed -ri 's/8005/8006/g' tomcat_8081/conf/server.xml 
-[root@localhost application]# sed -ri 's/8009/8010/g' tomcat_8081/conf/server.xml
-[root@localhost application]# sed -ri 's/8080/8082/g' tomcat_8082/conf/server.xml 
-[root@localhost application]# sed -ri 's/8005/8007/g' tomcat_8082/conf/server.xml 
-[root@localhost application]# sed -ri 's/8009/8011/g' tomcat_8082/conf/server.xml
+[root@localhost application]\# sed -ri 's/8080/8081/g' tomcat_8081/conf/server.xml 
+[root@localhost application]\# sed -ri 's/8005/8006/g' tomcat_8081/conf/server.xml 
+[root@localhost application]\# sed -ri 's/8009/8010/g' tomcat_8081/conf/server.xml
+[root@localhost application]\# sed -ri 's/8080/8082/g' tomcat_8082/conf/server.xml 
+[root@localhost application]\# sed -ri 's/8005/8007/g' tomcat_8082/conf/server.xml 
+[root@localhost application]\# sed -ri 's/8009/8011/g' tomcat_8082/conf/server.xml
 
-[root@localhost application]# tomcat_8081/bin/startup.sh 
-[root@localhost application]# tomcat_8082/bin/startup.sh 
+[root@localhost application]\# tomcat_8081/bin/startup.sh 
+[root@localhost application]\# tomcat_8082/bin/startup.sh 
 
 ```
 
@@ -573,7 +573,7 @@ java自带的监控命令
 - 参数选项：-lvm最详细
 
     ```sh
-    [root@localhost ~]# jps -lvm
+    [root@localhost ~]\# jps -lvm
     7457 org.apache.catalina.startup.Bootstrap start start -Djava.util.logging.config.file=/application/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -Dcatalina.base=/application/tomcat -Dcatalina.home=/application/tomcat -Djava.io.tmpdir=/application/tomcat/temp
     7525 org.apache.catalina.startup.Bootstrap start start -Djava.util.logging.config.file=/application/tomcat_8082/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -Dcatalina.base=/application/tomcat_8082 -Dcatalina.home=/application/tomcat_8082 -Djava.io.tmpdir=/application/tomcat_8082/temp
     9144 sun.tools.jps.Jps -lvm -Denv.class.path=.:/application/jdk/lib:/application/jdk/jre/lib:/application/jdk/lib/tools.jar -Dapplication.home=/application/jdk1.8.0_60 -Xms8m
@@ -589,7 +589,7 @@ java自带的监控命令
 - 参数：-heap
 
     ```sh
-    [root@localhost ~]# jmap -heap 7457
+    [root@localhost ~]\# jmap -heap 7457
     Attaching to process ID 7457, please wait...
     Debugger attached successfully.
     Server compiler detected.
@@ -649,7 +649,7 @@ java自带的监控命令
 - 格式：jstack -l pid
 
     ```sh
-    [root@localhost ~]#  jstack -l 7457
+    [root@localhost ~]\#  jstack -l 7457
     1
     ```
 
@@ -670,7 +670,7 @@ java自带的监控命令
 
     ```sh
     #修改bin/catalina.sh
-    [root@localhost tomcat]# vim bin/catalina.sh
+    [root@localhost tomcat]\# vim bin/catalina.sh
     #注意不能分行写会报错找不到命令，要写在一行上
     CATALINA_OPTS="$CATALINA_OPTS"
     -Dcom.sun.management.jmxremote
@@ -692,7 +692,7 @@ java自带的监控命令
     
     配置完成后重启tomcat即可
     使用ps命令可以看到输出的信息多了我们写入的几行
-    [root@localhost tomcat]# ps aux | grep java
+    [root@localhost tomcat]\# ps aux | grep java
     root      17786  5.7 10.6 2306592 105860 pts/1  Sl   15:52   0:08 /application/jdk/bin/java
     -Djava.util.logging.config.file=/application/tomcat/conf/logging.properties 
     -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager 
@@ -710,7 +710,7 @@ java自带的监控命令
     -Djava.io.tmpdir=/application/tomcat/temp org.apache.catalina.startup.Bootstrap start
     
     使用ss/netstat 命令可以看到多出啦的三个端口
-    [root@localhost tomcat]# ss -lnptu | grep java
+    [root@localhost tomcat]\# ss -lnptu | grep java
     tcp    LISTEN     0      100      :::8080                 :::*                   users:(("java",pid=17786,fd=56))
     #我们制定的
     tcp    LISTEN     0      50       :::12345                :::*                   users:(("java",pid=17786,fd=22))

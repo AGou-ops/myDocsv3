@@ -43,7 +43,7 @@ Jenkins部署在k8s环境之后，通过建立RBAC授权机制，可以实现Jen
 ### 2.1.编写Jenkins namespace文件
 
 ```yaml
-[root@k8s-master1 jenkins]# cat jenkins-namespace.yaml 
+[root@k8s-master1 jenkins]\# cat jenkins-namespace.yaml 
 apiVersion: v1 
 kind: Namespace 
 metadata: 
@@ -55,7 +55,7 @@ metadata:
 创建一个serviceaccount账号Jenkins，直接将sa账号与cluster-admin集群角色进行绑定
 
 ```yaml
-[root@k8s-master1 jenkins]# cat jenkins-rbac.yaml 
+[root@k8s-master1 jenkins]\# cat jenkins-rbac.yaml 
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -84,7 +84,7 @@ subjects:
 Jenkins也会产生数据，因此采用statefulset部署有状态的服务，并配合StorageClass动态创建存储系统
 
 ```yaml
-[root@k8s-master1 jenkins]# cat jenkins-statefulset.yaml 
+[root@k8s-master1 jenkins]\# cat jenkins-statefulset.yaml 
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -140,7 +140,7 @@ spec:
 ### 2.4.编写Jenkins StorageClass资源文件
 
 ```yaml
-[root@k8s-master1 jenkins]# cat jenkins-storageclass.yaml 
+[root@k8s-master1 jenkins]\# cat jenkins-storageclass.yaml 
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -152,7 +152,7 @@ reclaimPolicy: Retain
 ### 2.5.编写Jenkins svc资源文件
 
 ```yaml
-[root@k8s-master1 jenkins]# cat jenkins-svc.yaml 
+[root@k8s-master1 jenkins]\# cat jenkins-svc.yaml 
 apiVersion: v1
 kind: Service
 metadata:
@@ -178,16 +178,16 @@ spec:
 ### 2.6.准备Jenkins镜像并推送至harbor
 
 ```sh
-[root@k8s-master1 jenkins]# docker pull jenkinsci/blueocean:1.24.6
-[root@k8s-master1 jenkins]# docker tag jenkinsci/blueocean:1.24.6 harbor.jiangxl.com/jenkins/jenkinsci-blueocean:1.24.6
-[root@k8s-master1 jenkins]# docker push harbor.jiangxl.com/jenkins/jenkinsci-blueocean:1.24.6
+[root@k8s-master1 jenkins]\# docker pull jenkinsci/blueocean:1.24.6
+[root@k8s-master1 jenkins]\# docker tag jenkinsci/blueocean:1.24.6 harbor.jiangxl.com/jenkins/jenkinsci-blueocean:1.24.6
+[root@k8s-master1 jenkins]\# docker push harbor.jiangxl.com/jenkins/jenkinsci-blueocean:1.24.6
 ```
 
 ### 2.7.创建所有资源并查看资源的状态
 
 ```sh
 1.创建所有资源
-[root@k8s-master1 jenkins]# kubectl apply -f ./
+[root@k8s-master1 jenkins]\# kubectl apply -f ./
 namespace/jenkins created
 serviceaccount/jenkins created
 clusterrolebinding.rbac.authorization.k8s.io/jenkins-crb created
@@ -196,7 +196,7 @@ storageclass.storage.k8s.io/jenkins-storageclass created
 service/jenkins-svc created
 
 2.查看资源状态
-[root@k8s-master1 jenkins]# kubectl get pod,statefulset,svc,storageclass,sa -n jenkins
+[root@k8s-master1 jenkins]\# kubectl get pod,statefulset,svc,storageclass,sa -n jenkins
 NAME                   READY   STATUS    RESTARTS   AGE
 pod/jenkins-master-0   1/1     Running   0          31m
 
@@ -213,7 +213,7 @@ NAME                     SECRETS   AGE
 serviceaccount/jenkins   1         31m
 
 3.查看pvc，已经动态创建
-[root@k8s-master1 jenkins]# kubectl get pvc -n jenkins
+[root@k8s-master1 jenkins]\# kubectl get pvc -n jenkins
 NAME                            STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS           AGE
 jenkins-data-jenkins-master-0   Bound    pvc-3f49831b-7faa-456e-9a2f-65b6085933de   10Gi       RWX            jenkins-storageclass   32m
 ```
@@ -267,9 +267,9 @@ jenkins-data-jenkins-master-0   Bound    pvc-3f49831b-7faa-456e-9a2f-65b6085933d
 ### 3.1.部署gitlab
 
 ```sh
-[root@k8s-master2 ~]# docker run -d --hostname 192.168.16.105 -p 8443:443 -p 8080:80 -p 8022:22 --name gitlab --restart always -v /data2/k8s/gitlab-data/config/:/etc/gitlab -v /data2/k8s/gitlab-data/logs/:/var/log/gitlab -v /data2/k8s/gitlab-data/data/:/var/opt/gitlab gitlab/gitlab-ce:13.11.4-ce.0
+[root@k8s-master2 ~]\# docker run -d --hostname 192.168.16.105 -p 8443:443 -p 8080:80 -p 8022:22 --name gitlab --restart always -v /data2/k8s/gitlab-data/config/:/etc/gitlab -v /data2/k8s/gitlab-data/logs/:/var/log/gitlab -v /data2/k8s/gitlab-data/data/:/var/opt/gitlab gitlab/gitlab-ce:13.11.4-ce.0
 
-[root@k8s-master2 ~]# docker ps
+[root@k8s-master2 ~]\# docker ps
 CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS                   PORTS                                                               NAMES
 33d868fe0369        gitlab/gitlab-ce:13.11.4-ce.0   "/assets/wrapper"        14 minutes ago      Up 4 minutes (healthy)   0.0.0.0:8022->22/tcp, 0.0.0.0:8080->80/tcp, 0.0.0.0:8443->443/tcp   gitlab
 ```
@@ -298,8 +298,8 @@ CONTAINER ID        IMAGE                           COMMAND                  CRE
 ### 4.1.将gitlab镜像推送至harbor仓库
 
 ```sh
-[root@k8s-master1 ~]# docker tag gitlab/gitlab-ce:13.11.4-ce.0 harbor.jiangxl.com/jenkins/gitlab-ce:13.11.4-ce.0 
-[root@k8s-master1 ~]# docker push  harbor.jiangxl.com/jenkins/gitlab-ce:13.11.4-ce.0 
+[root@k8s-master1 ~]\# docker tag gitlab/gitlab-ce:13.11.4-ce.0 harbor.jiangxl.com/jenkins/gitlab-ce:13.11.4-ce.0 
+[root@k8s-master1 ~]\# docker push  harbor.jiangxl.com/jenkins/gitlab-ce:13.11.4-ce.0 
 ```
 
 ### 4.2.使用docker运行gitlab查询用户的id号
@@ -310,10 +310,10 @@ gitlab每个组件都是不同的所属用户来管理，我们不明确每个�
 
 ```sh
 1.使用docker运行gitlab容器
-[root@k8s-master1 ~]# docker run -d harbor.jiangxl.com/jenkins/gitlab-ce:13.11.4-ce.0
+[root@k8s-master1 ~]\# docker run -d harbor.jiangxl.com/jenkins/gitlab-ce:13.11.4-ce.0
 
 2.进入容器
-[root@k8s-master1 ~]# docker exec -it 33d868fe0369 bash
+[root@k8s-master1 ~]\# docker exec -it 33d868fe0369 bash
 
 3.查看gitlab数据路径下各组件使用的所属用户
 root@192:/# ll /var/opt/gitlab/
@@ -361,7 +361,7 @@ uid=992(gitlab-prometheus) gid=992(gitlab-prometheus) groups=992(gitlab-promethe
 ### 4.3.编写gitlab StorageClass 资源文件
 
 ```yaml
-[root@k8s-master1 gitlab]# vim gitlab-storageclass.yaml 
+[root@k8s-master1 gitlab]\# vim gitlab-storageclass.yaml 
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -377,7 +377,7 @@ StorageClass pvc模板定义两个，一个存储gitlab数据，一个存储gitl
 将刚刚查到的用户uid、gid，通过初始化容器分别赋权限给每个组件目录
 
 ```yaml
-[root@k8s-master1 gitlab]# vim gitlab-statefulset.yaml 
+[root@k8s-master1 gitlab]\# vim gitlab-statefulset.yaml 
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -471,7 +471,7 @@ spec:
 ### 4.5.编写gitlab service 资源文件
 
 ```yaml
-[root@k8s-master1 gitlab]# vim gitlab-svc.yaml 
+[root@k8s-master1 gitlab]\# vim gitlab-svc.yaml 
 apiVersion: v1
 kind: Service
 metadata:
@@ -494,13 +494,13 @@ spec:
 
 ```sh
 1.创建所有资源
-[root@k8s-master1 gitlab]# kubectl apply -f ./
+[root@k8s-master1 gitlab]\# kubectl apply -f ./
 statefulset.apps/gitlab created
 storageclass.storage.k8s.io/gitlab-storageclass created
 service/gitlab-svc created
 
 2.查看资源的状态
-[root@k8s-master1 gitlab]# kubectl get all -n jenkins
+[root@k8s-master1 gitlab]\# kubectl get all -n jenkins
 NAME                   READY   STATUS    RESTARTS   AGE
 pod/gitlab-0           1/1     Running   0          4m21s
 pod/jenkins-master-0   1/1     Running   0          18h
@@ -514,7 +514,7 @@ statefulset.apps/gitlab           1/1     57m
 statefulset.apps/jenkins-master   1/1     23h
 
 3.查看pvc资源的状态
-[root@k8s-master1 gitlab]# kubectl get pvc -n jenkins
+[root@k8s-master1 gitlab]\# kubectl get pvc -n jenkins
 NAME                            STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS           AGE
 gitlab-config-gitlab-0          Bound    pvc-91e63538-e07d-4196-82e8-4195b29d9352   1Gi        RWX            gitlab-storageclass    64m
 gitlab-data-gitlab-0            Bound    pvc-2a300c8d-49e6-4035-99f1-81c3e190fe3e   10Gi       RWX            gitlab-storageclass    57m
@@ -530,14 +530,14 @@ jenkins-data-jenkins-master-0   Bound    pvc-9efb572b-d566-418d-bb6e-b225b43de4a
 这一步也可以不做，因为对于k8s而言都是通过集群任意节点ip去映射的
 
 ```sh
-[root@k8s-master2 ~]# vim /data2/k8s/storageclass/jenkins-gitlab-config-gitlab-0-pvc-91e63538-e07d-4196-82e8-4195b29d9352/gitlab.rb 
+[root@k8s-master2 ~]\# vim /data2/k8s/storageclass/jenkins-gitlab-config-gitlab-0-pvc-91e63538-e07d-4196-82e8-4195b29d9352/gitlab.rb 
 external_url 'http://192.168.16.106'
 ```
 
 修改完重新部署一下gitlab即可
 
 ```sh
-[root@k8s-master1 gitlab]# kubectl replace -f gitlab-statefulset.yaml 
+[root@k8s-master1 gitlab]\# kubectl replace -f gitlab-statefulset.yaml 
 statefulset.apps/gitlab replaced
 
 ```
@@ -586,12 +586,12 @@ statefulset.apps/gitlab replaced
 ### 5.2.将程序代码提交到gitlab
 
 ```sh
-[root@k8s-master1 python-demo]# git init
+[root@k8s-master1 python-demo]\# git init
 初始化空的 Git 版本库于 /root/gitlab_project/python-demo/.git/
-[root@k8s-master1 python-demo]# git remote add origin http://192.168.16.106:30080/root/blog_project.git
-[root@k8s-master1 python-demo]# git add .
-[root@k8s-master1 python-demo]# git commit -m "Initial commit"
-[root@k8s-master1 python-demo]# git push -u origin master
+[root@k8s-master1 python-demo]\# git remote add origin http://192.168.16.106:30080/root/blog_project.git
+[root@k8s-master1 python-demo]\# git add .
+[root@k8s-master1 python-demo]\# git commit -m "Initial commit"
+[root@k8s-master1 python-demo]\# git push -u origin master
 Username for 'http://192.168.16.106:30080': root        #输入用户名
 Password for 'http://root@192.168.16.106:30080':        #输入密码
 Counting objects: 48, done.
@@ -621,7 +621,7 @@ sed -i 's/http:\/\/updates.jenkins- ci.org\/download/https:\/\/mirrors.tuna.tsin
 sed -i 's/http:\/\/www.google.com/https:\/\/www.baidu.com/g' default.json
 
 2.重启Jenkins
-[root@k8s-master1 ~]# kubectl replace -f /root/k8s1.19/jenkins/jenkins-statefulset.yaml 
+[root@k8s-master1 ~]\# kubectl replace -f /root/k8s1.19/jenkins/jenkins-statefulset.yaml 
 statefulset.apps/jenkins-master replaced
 ```
 
@@ -692,14 +692,14 @@ slave节点有很多方式部署，我们采用
 
 ```sh
 1.创建节点工作目录
-[root@k8s-node2 ~]# mkdir /data/jenkins_jobs
-[root@k8s-node2 ~]# cd /data/jenkins_jobs
+[root@k8s-node2 ~]\# mkdir /data/jenkins_jobs
+[root@k8s-node2 ~]\# cd /data/jenkins_jobs
 
 2.下载agent程序
-[root@k8s-node2 /data/jenkins_jobs]# wget http://192.168.16.104:38080/jnlpJars/agent.jar
+[root@k8s-node2 /data/jenkins_jobs]\# wget http://192.168.16.104:38080/jnlpJars/agent.jar
 
 3.启动agent
-[root@k8s-node2 /data/jenkins_jobs]# nohup java -jar agent.jar -jnlpUrl http://192.168.16.104:38080/computer/Jenkins-slave1-107/jenkins-agent.jnlp -secret efbde6c51590ca2c9097e6866de9f2d18520bfc05440a1872135e78b47283721 -workDir "/data/jenkins_jobs" &
+[root@k8s-node2 /data/jenkins_jobs]\# nohup java -jar agent.jar -jnlpUrl http://192.168.16.104:38080/computer/Jenkins-slave1-107/jenkins-agent.jnlp -secret efbde6c51590ca2c9097e6866de9f2d18520bfc05440a1872135e78b47283721 -workDir "/data/jenkins_jobs" &
 
 
 命令解释：
@@ -761,7 +761,7 @@ agent启动后在Jenkins页面上观察节点，发现已经是可用状态
 
 ```yaml
 1.准备deployment资源
-[root@k8s-master1 know-system]# cat nginx-depoly.yaml 
+[root@k8s-master1 know-system]\# cat nginx-depoly.yaml 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -797,7 +797,7 @@ spec:
             readOnly: false
 
 2.准备configmap资源
-[root@k8s-master1 know-system]# cat nginx-configmap.yaml 
+[root@k8s-master1 know-system]\# cat nginx-configmap.yaml 
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -815,7 +815,7 @@ data:
     }
 
 3.准备svc资源
-[root@k8s-master1 know-system]# cat nginx-svc.yaml 
+[root@k8s-master1 know-system]\# cat nginx-svc.yaml 
 apiVersion: v1
 kind: Service
 metadata:
@@ -833,7 +833,7 @@ spec:
 **2）创建所有资源**
 
 ```sh
-[root@k8s-master1 know-system]# kubectl apply -f ./
+[root@k8s-master1 know-system]\# kubectl apply -f ./
 configmap/nginx-configmap unchanged
 deployment.apps/know-system configured
 service/nginx-service configured
@@ -847,18 +847,18 @@ service/nginx-service configured
 
 ```sh
 1.将部署文件复制到代码目录
-[root@k8s-master1 know_system]# mkdir deploy
-[root@k8s-master1 know_system]# cp /root/k8s1.19/know-system/* deploy/
+[root@k8s-master1 know_system]\# mkdir deploy
+[root@k8s-master1 know_system]\# cp /root/k8s1.19/know-system/* deploy/
 
 2.修改deployment资源中的image
 #将image对应的镜像改成一个字符串，pipeline更新时可以通过更换这个字符串把最新的镜像替换到deployment资源中
-[root@k8s-master1 know_system]# vim deploy/nginx-depoly.yaml 
+[root@k8s-master1 know_system]\# vim deploy/nginx-depoly.yaml 
         image: {{updateimage}}
 
 2.提交至gitlab
-[root@k8s-master1 know_system]# git add .
-[root@k8s-master1 know_system]# git commit -m "deploy"
-[root@k8s-master1 know_system]# git push origin master
+[root@k8s-master1 know_system]\# git add .
+[root@k8s-master1 know_system]\# git commit -m "deploy"
+[root@k8s-master1 know_system]\# git push origin master
 ```
 
 ### 8.4.编写Jenkins pipeline将项目更新到k8s
