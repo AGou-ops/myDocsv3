@@ -15,14 +15,7 @@
       "lvl3": ".VPDoc h3",
       "lvl4": ".VPDoc h4",
       "lvl5": ".VPDoc h5",
-      "text": ".VPDoc p, .VPDoc li",
-      "lang": {
-        "selector": "/html/@lang",
-        "type": "xpath",
-        "global": true
-      }
-    },
-    "custom_settings": {
-      "attributesForFaceting": ["lang"]
+      "content": ".VPContent p, .VPContent li",
+      "lang": ""
     }
   }

@@ -234,6 +234,7 @@ function Interview(){
         { text: '选择公司', link: '/Interview/工作面试题/选择公司' },
         { text: '来自网络1', link: '/Interview/工作面试题/网络1' },
         { text: '来自群友1', link: '/Interview/工作面试题/群友1' },
+        { text: '临时复习用（很乱）', link: '/Interview/工作面试题/临时复习用（很乱）' },
         ]
     },
 	]

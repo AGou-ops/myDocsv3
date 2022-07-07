@@ -21,7 +21,7 @@ export const themeConfig: DefaultTheme.Config = {
   algolia: {
     appId: '5M8VQRD7W9',
     apiKey: '2fcdbd0ce638664e7a28cc64939603b9',
-    indexName: 'myDocsv3',
+    indexName: 'myDocsv3_tmp',
     // searchParameters: {
     //   facetFilters: ["lang:en-US"]
     // }
