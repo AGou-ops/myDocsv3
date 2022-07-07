@@ -19,9 +19,9 @@ export const themeConfig: DefaultTheme.Config = {
   //   items: [{ text: "简体中文", link: `${site}/zh/` }]
   // },
   algolia: {
-    appId: '5M8VQRD7W9',
-    apiKey: '2fcdbd0ce638664e7a28cc64939603b9',
-    indexName: 'myDocsv3_tmp',
+    appId: 'WPWULJDHAK',
+    apiKey: '711a226d87ed07d52214aa403a6526ba',
+    indexName: 'myDocsv3',
     // searchParameters: {
     //   facetFilters: ["lang:en-US"]
     // }
