@@ -53,6 +53,10 @@ POSTROUTING链：在对数据包作路由选择之后，应用此链中的规则
 
 ![hook point chain - table](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/55afd069e4f1ba01d87cee0b9322c6c7.png)
 
+简单记住：`filter`表可以管理`INPUT/FORWARD/OUTPUT`链，`nat`表可以管理`PREROUTING/INPUT/OUTPUT/POSTROUTING`链。
+
+此外：`mangle`表可以管理所有链，`raw`表可以管理`PREROUTING/OUTPUT`链，这两个表其实很少用到.
+
 ### 相关命令（CRUD）
 
 ```bash
@@ -98,6 +102,26 @@ services iptables save
 iptables -t filter -I OUTPUT -d 192.168.1.111,192.168.1.118 -j DROP
 iptables -t filter -I INPUT -d 192.168.1.0/24 -j ACCEPT
 iptables -t filter -I INPUT ! -d 192.168.1.0/24 -j ACCEPT
+
+# 将本机的7777端口转发到6666端口
+iptables -t nat -A PREROUTING -p tcp --dport 7777 -j REDIRECT --to-port 6666
+
+# 开启转发功能
+sysctl -w net.ipv4.ip_forward=1
+# client -> 192.168.1.168:6666 -> 192.168.1.8:7777
+# 将本机的6666端接口转发到 192.168.1.8 主机的7777端口
+iptables -t nat -A PREROUTING -p tcp --dport 6666 -j DNAT --to-destination 192.168.1.8:7777
+# 将client的地址转换为192.168.1.168，
+iptables -t nat -A POSTROUTING -p tcp -d 192.168.1.8 --dport 7777 -j SNAT --to-source 192.168.1.168
+
+# 访问本机的80端口，转发到8080端口
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
+# 将本机访问80端口的转发到本机8080
+iptables -t nat -A OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j DNAT --to 127.0.0.1:8080
+iptables -t nat -A OUTPUT -p tcp -d 192.168.4.177 --dport 80 -j DNAT --to 127.0.0.1:8080
+
+# 将192.168.75.3 8000端口将数据返回给客户端时，将源ip改为192.168.75.5
+iptables -t nat -A POSTROUTING -d 192.168.75.3 -p tcp --dport 8000 -j SNAT --to 192.168.75.5
 
 # -p：用于匹配报文的协议类型,可以匹配的协议类型tcp、udp、udplite、icmp、esp、ah、sctp等（centos7中还支持icmpv6、mh）：
 iptables -t filter -I INPUT -p tcp -s 192.168.1.146 -j ACCEPT

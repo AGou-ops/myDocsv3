@@ -1,7 +1,7 @@
 /** basic site info */
 export const name = "AGou's Docsv3";
 export const site = "https://agou-ops.cn";
-export const logo = "http://agou-images.oss-cn-qingdao.aliyuncs.com/BaseIMG/circle-tuoer.png";
+export const logo = "https://agou-images.oss-cn-qingdao.aliyuncs.com/BaseIMG/circle-tuoer.png";
 export const keywords = "AGou-ops, AGou, AGou's Docs, Docs, Documentations";
 export const descriptionEN =
   "Welcome to AGou's Docs~";
