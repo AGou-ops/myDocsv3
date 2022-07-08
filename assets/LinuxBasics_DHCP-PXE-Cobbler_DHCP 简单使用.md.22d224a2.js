@@ -1,0 +1,95 @@
+import{_ as s,o as n,c as a,a as e}from"./app.1e6146c3.js";const D=JSON.parse('{"title":"DHCP \u7B80\u5355\u4F7F\u7528","description":"","frontmatter":{},"headers":[{"level":2,"title":"\u7B80\u4ECB","slug":"\u7B80\u4ECB"},{"level":2,"title":"\u5B89\u88C5\u4E0E\u914D\u7F6E\u6587\u4EF6","slug":"\u5B89\u88C5\u4E0E\u914D\u7F6E\u6587\u4EF6"},{"level":2,"title":"dhclient \u4F7F\u7528","slug":"dhclient-\u4F7F\u7528"},{"level":2,"title":"\u53C2\u8003\u94FE\u63A5","slug":"\u53C2\u8003\u94FE\u63A5"}],"relativePath":"LinuxBasics/DHCP-PXE-Cobbler/DHCP \u7B80\u5355\u4F7F\u7528.md","lastUpdated":1657272051000}'),l={name:"LinuxBasics/DHCP-PXE-Cobbler/DHCP \u7B80\u5355\u4F7F\u7528.md"},p=e(`<h1 id="dhcp-\u7B80\u5355\u4F7F\u7528" tabindex="-1">DHCP \u7B80\u5355\u4F7F\u7528 <a class="header-anchor" href="#dhcp-\u7B80\u5355\u4F7F\u7528" aria-hidden="true">#</a></h1><h2 id="\u7B80\u4ECB" tabindex="-1">\u7B80\u4ECB <a class="header-anchor" href="#\u7B80\u4ECB" aria-hidden="true">#</a></h2><p><strong>\u52A8\u6001\u4E3B\u673A\u8BBE\u7F6E\u534F\u8BAE</strong>\uFF08\u82F1\u8BED\uFF1A<strong>D</strong>ynamic <strong>H</strong>ost <strong>C</strong>onfiguration <strong>P</strong>rotocol\uFF0C\u7F29\u5199\uFF1A<strong>DHCP</strong>\uFF09\u662F\u4E00\u4E2A\u7528\u4E8E<a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E9%99%85%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener noreferrer">IP</a>\u7F51\u7EDC\u7684<a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener noreferrer">\u7F51\u7EDC\u534F\u8BAE</a>\uFF0C\u4F4D\u4E8E<a href="https://zh.wikipedia.org/wiki/OSI%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener noreferrer">OSI\u6A21\u578B</a>\u7684<a href="https://zh.wikipedia.org/wiki/%E5%BA%94%E7%94%A8%E5%B1%82" target="_blank" rel="noopener noreferrer">\u5E94\u7528\u5C42</a>\uFF0C\u4F7F\u7528<a href="https://zh.wikipedia.org/wiki/%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener noreferrer">UDP</a>\u534F\u8BAE\u5DE5\u4F5C\uFF0C\u4E3B\u8981\u6709\u4E24\u4E2A\u7528\u9014\uFF1A</p><ul><li>\u7528\u4E8E\u5185\u90E8\u7F51\u6216\u7F51\u7EDC\u670D\u52A1\u4F9B\u5E94\u5546\u81EA\u52A8\u5206\u914D<a href="https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80" target="_blank" rel="noopener noreferrer">IP\u5730\u5740</a>\u7ED9\u7528\u6237</li><li>\u7528\u4E8E\u5185\u90E8\u7F51\u7BA1\u7406\u5458\u5BF9\u6240\u6709\u7535\u8111\u4F5C\u4E2D\u592E\u7BA1\u7406</li></ul><p>\u670D\u52A1\u5668\u7AEF\u5DE5\u5177\u6709:</p><ul><li>dhcp: \u53EA\u63D0\u4F9B<code>dhcp</code>\u670D\u52A1</li><li>dnsmasq: \u8F7B\u91CF\u7EA7,\u63D0\u4F9B<code>dhcp</code>\u548C<code>dns</code>\u670D\u52A1</li></ul><h2 id="\u5B89\u88C5\u4E0E\u914D\u7F6E\u6587\u4EF6" tabindex="-1">\u5B89\u88C5\u4E0E\u914D\u7F6E\u6587\u4EF6 <a class="header-anchor" href="#\u5B89\u88C5\u4E0E\u914D\u7F6E\u6587\u4EF6" aria-hidden="true">#</a></h2><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;"> yum install -y dhcp</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;"> yum install -y dhcp</span></span>
+<span class="line"></span></code></pre></div><p>\u901A\u8FC7<code>rpm -ql dhcp</code>\u53EF\u4EE5\u4E86\u89E3\u5230</p><ol><li><code>dhcp</code> \u63D0\u4F9B\u4E24\u4E2A\u7A0B\u5E8F,\u4E00\u4E2A\u662F<code>dhcpd</code>(dhcp\u670D\u52A1\u5668\u7AEF\u5B88\u62A4\u8FDB\u7A0B),\u53E6\u4E00\u4E2A\u662F<code>dhcrelay</code>(dhcp\u4E2D\u7EE7\u4EE3\u7406\u670D\u52A1)</li><li><code>dhcp</code>\u6709\u4E09\u4E2A<code>UNIT FILE</code>\u542F\u52A8\u670D\u52A1\u65F6\u5E94\u5F53\u5206\u6E05\u51FA\u81EA\u5DF1\u8981\u542F\u52A8\u7684\u670D\u52A1</li></ol><p>\u914D\u7F6E\u6587\u4EF6<code>/etc/dhcp/dhcp.conf</code>:</p><p>\u8BE5\u914D\u7F6E\u6587\u4EF6\u9ED8\u8BA4\u5185\u5BB9\u4E3A\u7A7A,\u7A0B\u5E8F\u5305\u63D0\u4F9B\u4E86\u793A\u4F8B\u914D\u7F6E\u6587\u4EF6,\u6211\u4EEC\u53EF\u4EE5\u76F4\u63A5\u62FF\u6765\u4FEE\u6539\u4FEE\u6539</p><p><code>cp /usr/share/doc/dhcp-4.2.5/dhcpd.conf.example ./dhcpd.conf</code></p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#758575;"># option definitions common to all supported networks...</span></span>
+<span class="line"><span style="color:#758575;"># \u5168\u5C40\u914D\u7F6E</span></span>
+<span class="line"><span style="color:#DBD7CA;">option domain-name </span><span style="color:#C98A7D;">&quot;agou-ops.com&quot;</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">option domain-name-servers 192.168.159.2</span><span style="color:#CB7676;">;</span><span style="color:#DBD7CA;">		</span><span style="color:#758575;"># \u6307\u5B9A\u9ED8\u8BA4DNS\u670D\u52A1\u5668</span></span>
+<span class="line"><span style="color:#DBD7CA;">option routers 192.168.99.1</span><span style="color:#CB7676;">;</span><span style="color:#DBD7CA;">		</span><span style="color:#758575;"># \u6307\u5B9A\u9ED8\u8BA4\u8DEF\u7531</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DBD7CA;">default-lease-time 43200</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">max-lease-time 86400</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">log-facility local7</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#758575;"># \u5B50\u7F51\u914D\u7F6E</span></span>
+<span class="line"><span style="color:#DBD7CA;">subnet 192.168.0.0 netmask 255.255.0.0 </span><span style="color:#858585;">{</span></span>
+<span class="line"><span style="color:#DBD7CA;">    range 192.168.99.101 192.168.99.120</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#858585;">}</span></span>
+<span class="line"><span style="color:#758575;"># \u4E3A\u7279\u5B9A\u4E3B\u673A\u5206\u914D\u56FA\u5B9AIP\u5730\u5740</span></span>
+<span class="line"><span style="color:#DBD7CA;">host apex </span><span style="color:#858585;">{</span></span>
+<span class="line"><span style="color:#DBD7CA;">   hardware ethernet 00:0c:29:b8:73:9e</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">   fixed-address 192.168.99.99</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#858585;">}</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#A0ADA0;"># option definitions common to all supported networks...</span></span>
+<span class="line"><span style="color:#A0ADA0;"># \u5168\u5C40\u914D\u7F6E</span></span>
+<span class="line"><span style="color:#393A34;">option domain-name </span><span style="color:#B56959;">&quot;agou-ops.com&quot;</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">option domain-name-servers 192.168.159.2</span><span style="color:#AB5959;">;</span><span style="color:#393A34;">		</span><span style="color:#A0ADA0;"># \u6307\u5B9A\u9ED8\u8BA4DNS\u670D\u52A1\u5668</span></span>
+<span class="line"><span style="color:#393A34;">option routers 192.168.99.1</span><span style="color:#AB5959;">;</span><span style="color:#393A34;">		</span><span style="color:#A0ADA0;"># \u6307\u5B9A\u9ED8\u8BA4\u8DEF\u7531</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#393A34;">default-lease-time 43200</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">max-lease-time 86400</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">log-facility local7</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#A0ADA0;"># \u5B50\u7F51\u914D\u7F6E</span></span>
+<span class="line"><span style="color:#393A34;">subnet 192.168.0.0 netmask 255.255.0.0 </span><span style="color:#8E8F8B;">{</span></span>
+<span class="line"><span style="color:#393A34;">    range 192.168.99.101 192.168.99.120</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#8E8F8B;">}</span></span>
+<span class="line"><span style="color:#A0ADA0;"># \u4E3A\u7279\u5B9A\u4E3B\u673A\u5206\u914D\u56FA\u5B9AIP\u5730\u5740</span></span>
+<span class="line"><span style="color:#393A34;">host apex </span><span style="color:#8E8F8B;">{</span></span>
+<span class="line"><span style="color:#393A34;">   hardware ethernet 00:0c:29:b8:73:9e</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">   fixed-address 192.168.99.99</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#8E8F8B;">}</span></span>
+<span class="line"></span></code></pre></div><p>\u4FEE\u6539\u5B8C\u914D\u7F6E\u6587\u4EF6\u9700\u8981\u91CD\u542Fdhcpd,<code>systemctl restart dhcpd</code></p><p>\u67E5\u770Bdhcpd \u5DE5\u4F5C\u60C5\u51B5\u53EF\u4EE5\u67E5\u770B\u5176\u5206\u914D\u60C5\u51B5:</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#858585;">[</span><span style="color:#DBD7CA;">root@master </span><span style="color:#CB7676;">~</span><span style="color:#858585;">]</span><span style="color:#D4976C;">\\#</span><span style="color:#DBD7CA;"> less /var/lib/dhcpd/dhcpd.leases</span></span>
+<span class="line"><span style="color:#758575;"># The format of this file is documented in the dhcpd.leases(5) manual page.</span></span>
+<span class="line"><span style="color:#758575;"># This lease file was written by isc-dhcp-4.2.5</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DBD7CA;">lease 192.168.99.101 </span><span style="color:#858585;">{</span></span>
+<span class="line"><span style="color:#DBD7CA;">  starts 0 2020/04/19 19:53:55</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  ends 1 2020/04/20 07:53:55</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  tstp 1 2020/04/20 07:53:55</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  cltt 0 2020/04/19 19:53:55</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  binding state active</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  next binding state free</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  rewind binding state free</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  hardware ethernet 00:0c:29:ad:e1:01</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  client-hostname </span><span style="color:#C98A7D;">&quot;master&quot;</span><span style="color:#CB7676;">;</span></span>
+<span class="line"><span style="color:#858585;">}</span></span>
+<span class="line"><span style="color:#DBD7CA;">server-duid </span><span style="color:#C98A7D;">&quot;\\000\\001\\000\\001&amp;/d^\\000\\014)\\255\\341\\001&quot;</span><span style="color:#CB7676;">;</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#8E8F8B;">[</span><span style="color:#393A34;">root@master </span><span style="color:#AB5959;">~</span><span style="color:#8E8F8B;">]</span><span style="color:#A65E2B;">\\#</span><span style="color:#393A34;"> less /var/lib/dhcpd/dhcpd.leases</span></span>
+<span class="line"><span style="color:#A0ADA0;"># The format of this file is documented in the dhcpd.leases(5) manual page.</span></span>
+<span class="line"><span style="color:#A0ADA0;"># This lease file was written by isc-dhcp-4.2.5</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#393A34;">lease 192.168.99.101 </span><span style="color:#8E8F8B;">{</span></span>
+<span class="line"><span style="color:#393A34;">  starts 0 2020/04/19 19:53:55</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">  ends 1 2020/04/20 07:53:55</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">  tstp 1 2020/04/20 07:53:55</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">  cltt 0 2020/04/19 19:53:55</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">  binding state active</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">  next binding state free</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">  rewind binding state free</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">  hardware ethernet 00:0c:29:ad:e1:01</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#393A34;">  client-hostname </span><span style="color:#B56959;">&quot;master&quot;</span><span style="color:#AB5959;">;</span></span>
+<span class="line"><span style="color:#8E8F8B;">}</span></span>
+<span class="line"><span style="color:#393A34;">server-duid </span><span style="color:#B56959;">&quot;\\000\\001\\000\\001&amp;/d^\\000\\014)\\255\\341\\001&quot;</span><span style="color:#AB5959;">;</span></span>
+<span class="line"></span></code></pre></div><h2 id="dhclient-\u4F7F\u7528" tabindex="-1">dhclient \u4F7F\u7528 <a class="header-anchor" href="#dhclient-\u4F7F\u7528" aria-hidden="true">#</a></h2><p>\u9ED8\u8BA4\u60C5\u51B5\u4E0B,dhcp\u670D\u52A1\u7AEF\u76D1\u542C\u7684\u7AEF\u53E3\u662F<code>udp</code>\u7684<code>67</code>\u53F7\u7AEF\u53E3,\u5BA2\u6237\u7AEF<code>dhclient</code>\u5219\u76D1\u542C<code>udp</code>\u7684<code>68</code>\u53F7\u7AEF\u53E3</p><p>\u5728\u524D\u53F0\u67E5\u770B\u7F51\u7EDC\u5730\u5740\u4FE1\u606F\u7684\u83B7\u53D6\u60C5\u51B5(\u7B2C\u4E8C\u6B21\u6267\u884C):</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#858585;">[</span><span style="color:#DBD7CA;">root@node01 </span><span style="color:#CB7676;">~</span><span style="color:#858585;">]</span><span style="color:#D4976C;">\\#</span><span style="color:#DBD7CA;"> dhclient -d		</span><span style="color:#758575;"># -d \u8FD0\u884C\u5728\u524D\u53F0,\u9700\u8981\u7279\u522B\u6CE8\u610F</span></span>
+<span class="line"><span style="color:#DBD7CA;">Internet Systems Consortium DHCP Client 4.2.5</span></span>
+<span class="line"><span style="color:#DBD7CA;">Copyright 2004-2013 Internet Systems Consortium.</span></span>
+<span class="line"><span style="color:#DBD7CA;">All rights reserved.</span></span>
+<span class="line"><span style="color:#DBD7CA;">For info, please visit https://www.isc.org/software/dhcp/</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DBD7CA;">Listening on LPF/ens33/00:0c:29:d1:17:17</span></span>
+<span class="line"><span style="color:#DBD7CA;">Sending on   LPF/ens33/00:0c:29:d1:17:17</span></span>
+<span class="line"><span style="color:#DBD7CA;">Sending on   Socket/fallback</span></span>
+<span class="line"><span style="color:#DBD7CA;">DHCPREQUEST on ens33 to 255.255.255.255 port 67 </span><span style="color:#858585;">(</span><span style="color:#DBD7CA;">xid=0x2447b4d8</span><span style="color:#858585;">)</span></span>
+<span class="line"><span style="color:#DBD7CA;">DHCPACK from 192.168.159.129 </span><span style="color:#858585;">(</span><span style="color:#DBD7CA;">xid=0x2447b4d8</span><span style="color:#858585;">)</span></span>
+<span class="line"><span style="color:#DBD7CA;">bound to 192.168.99.103 -- renewal </span><span style="color:#4D9375;">in</span><span style="color:#DBD7CA;"> 18303 seconds.</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#8E8F8B;">[</span><span style="color:#393A34;">root@node01 </span><span style="color:#AB5959;">~</span><span style="color:#8E8F8B;">]</span><span style="color:#A65E2B;">\\#</span><span style="color:#393A34;"> dhclient -d		</span><span style="color:#A0ADA0;"># -d \u8FD0\u884C\u5728\u524D\u53F0,\u9700\u8981\u7279\u522B\u6CE8\u610F</span></span>
+<span class="line"><span style="color:#393A34;">Internet Systems Consortium DHCP Client 4.2.5</span></span>
+<span class="line"><span style="color:#393A34;">Copyright 2004-2013 Internet Systems Consortium.</span></span>
+<span class="line"><span style="color:#393A34;">All rights reserved.</span></span>
+<span class="line"><span style="color:#393A34;">For info, please visit https://www.isc.org/software/dhcp/</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#393A34;">Listening on LPF/ens33/00:0c:29:d1:17:17</span></span>
+<span class="line"><span style="color:#393A34;">Sending on   LPF/ens33/00:0c:29:d1:17:17</span></span>
+<span class="line"><span style="color:#393A34;">Sending on   Socket/fallback</span></span>
+<span class="line"><span style="color:#393A34;">DHCPREQUEST on ens33 to 255.255.255.255 port 67 </span><span style="color:#8E8F8B;">(</span><span style="color:#393A34;">xid=0x2447b4d8</span><span style="color:#8E8F8B;">)</span></span>
+<span class="line"><span style="color:#393A34;">DHCPACK from 192.168.159.129 </span><span style="color:#8E8F8B;">(</span><span style="color:#393A34;">xid=0x2447b4d8</span><span style="color:#8E8F8B;">)</span></span>
+<span class="line"><span style="color:#393A34;">bound to 192.168.99.103 -- renewal </span><span style="color:#1C6B48;">in</span><span style="color:#393A34;"> 18303 seconds.</span></span>
+<span class="line"></span></code></pre></div><p>\u53EF\u4EE5\u770B\u5230\u4ECE\u672C\u5730\u5C40\u57DF\u7F51\u4E2D\u7684DHCP\u670D\u52A1\u5668\u4E2D\u83B7\u53D6\u5230\u4E86IP\u5730\u5740\u7B49\u76F8\u5173\u4FE1\u606F.</p><h2 id="\u53C2\u8003\u94FE\u63A5" tabindex="-1">\u53C2\u8003\u94FE\u63A5 <a class="header-anchor" href="#\u53C2\u8003\u94FE\u63A5" aria-hidden="true">#</a></h2><ul><li>redhat-dhcp\u670D\u52A1\u5668:<a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/sec-dhcp-configuring-server" target="_blank" rel="noopener noreferrer">https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/sec-dhcp-configuring-server</a></li><li>dhcp-\u4E2D\u7EE7\u670D\u52A1\u5668:<a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/dhcp-relay-agent" target="_blank" rel="noopener noreferrer">https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/dhcp-relay-agent</a></li></ul>`,24),o=[p];function c(t,r,i,d,y,h){return n(),a("div",null,o)}var B=s(l,[["render",c]]);export{D as __pageData,B as default};

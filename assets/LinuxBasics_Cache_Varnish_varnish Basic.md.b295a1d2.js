@@ -1,0 +1,49 @@
+import{_ as s,o as a,c as n,a as e}from"./app.1e6146c3.js";const v=JSON.parse('{"title":"varnish Basic","description":"","frontmatter":{},"headers":[{"level":2,"title":"\u4ECEepel\u4ED3\u5E93\u4E2D\u5B89\u88C5","slug":"\u4ECEepel\u4ED3\u5E93\u4E2D\u5B89\u88C5"},{"level":2,"title":"\u4ECE\u5B98\u65B9\u4ED3\u5E93\u4E2D\u5B89\u88C5\u8F83\u65B0\u7248\u672C","slug":"\u4ECE\u5B98\u65B9\u4ED3\u5E93\u4E2D\u5B89\u88C5\u8F83\u65B0\u7248\u672C"},{"level":2,"title":"\u7F16\u8BD1\u5B89\u88C5","slug":"\u7F16\u8BD1\u5B89\u88C5"},{"level":2,"title":"\u542F\u52A8","slug":"\u542F\u52A8"},{"level":2,"title":"\u53C2\u8003\u94FE\u63A5","slug":"\u53C2\u8003\u94FE\u63A5"}],"relativePath":"LinuxBasics/Cache/Varnish/varnish Basic.md","lastUpdated":1657272051000}'),l={name:"LinuxBasics/Cache/Varnish/varnish Basic.md"},p=e(`<h1 id="varnish-basic" tabindex="-1">varnish Basic <a class="header-anchor" href="#varnish-basic" aria-hidden="true">#</a></h1><h2 id="\u4ECEepel\u4ED3\u5E93\u4E2D\u5B89\u88C5" tabindex="-1">\u4ECEepel\u4ED3\u5E93\u4E2D\u5B89\u88C5 <a class="header-anchor" href="#\u4ECEepel\u4ED3\u5E93\u4E2D\u5B89\u88C5" aria-hidden="true">#</a></h2><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">yum install epel-release -y</span></span>
+<span class="line"><span style="color:#DBD7CA;">yum install varnish</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">yum install epel-release -y</span></span>
+<span class="line"><span style="color:#393A34;">yum install varnish</span></span>
+<span class="line"></span></code></pre></div><p>epel\u4ED3\u5E93\u4E2D\u7684varnish\u7248\u672C\u4E3A<code>4.0.5</code>,\u622A\u6B62\u76EE\u524D,\u5B98\u65B9\u6700\u65B0\u7248\u672C\u4E3A<code>6.4.0</code></p><h2 id="\u4ECE\u5B98\u65B9\u4ED3\u5E93\u4E2D\u5B89\u88C5\u8F83\u65B0\u7248\u672C" tabindex="-1">\u4ECE\u5B98\u65B9\u4ED3\u5E93\u4E2D\u5B89\u88C5\u8F83\u65B0\u7248\u672C <a class="header-anchor" href="#\u4ECE\u5B98\u65B9\u4ED3\u5E93\u4E2D\u5B89\u88C5\u8F83\u65B0\u7248\u672C" aria-hidden="true">#</a></h2><p>\u4EE5<code>5.2.0</code>\u7248\u672C\u4E3A\u4F8B</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">curl -s https://packagecloud.io/install/repositories/varnishcache/varnish52/script.rpm.sh </span><span style="color:#CB7676;">|</span><span style="color:#DBD7CA;"> sudo bash</span></span>
+<span class="line"><span style="color:#DBD7CA;">yum install -y varnish</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">curl -s https://packagecloud.io/install/repositories/varnishcache/varnish52/script.rpm.sh </span><span style="color:#AB5959;">|</span><span style="color:#393A34;"> sudo bash</span></span>
+<span class="line"><span style="color:#393A34;">yum install -y varnish</span></span>
+<span class="line"></span></code></pre></div><h2 id="\u7F16\u8BD1\u5B89\u88C5" tabindex="-1">\u7F16\u8BD1\u5B89\u88C5 <a class="header-anchor" href="#\u7F16\u8BD1\u5B89\u88C5" aria-hidden="true">#</a></h2><ol><li><p>Download the appropriate release tarball, which you can find on <a href="https://varnish-cache.org/releases/" target="_blank" rel="noopener noreferrer">https://varnish-cache.org/releases/</a> .</p></li><li><p>To build Varnish on a Red Hat or CentOS system, this command should install required packages (replace sudo yum install if needed):</p></li></ol><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">sudo yum install \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    make \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    autoconf \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    automake \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    jemalloc-devel \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    libedit-devel \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    libtool \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    ncurses-devel \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    pcre-devel \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    pkgconfig \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    python-docutils \\</span></span>
+<span class="line"><span style="color:#DBD7CA;">    python-sphinx</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">sudo yum install \\</span></span>
+<span class="line"><span style="color:#393A34;">    make \\</span></span>
+<span class="line"><span style="color:#393A34;">    autoconf \\</span></span>
+<span class="line"><span style="color:#393A34;">    automake \\</span></span>
+<span class="line"><span style="color:#393A34;">    jemalloc-devel \\</span></span>
+<span class="line"><span style="color:#393A34;">    libedit-devel \\</span></span>
+<span class="line"><span style="color:#393A34;">    libtool \\</span></span>
+<span class="line"><span style="color:#393A34;">    ncurses-devel \\</span></span>
+<span class="line"><span style="color:#393A34;">    pcre-devel \\</span></span>
+<span class="line"><span style="color:#393A34;">    pkgconfig \\</span></span>
+<span class="line"><span style="color:#393A34;">    python-docutils \\</span></span>
+<span class="line"><span style="color:#393A34;">    python-sphinx</span></span>
+<span class="line"></span></code></pre></div><p>Optionally, to rebuild the svg files:</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">yum install graphviz</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">yum install graphviz</span></span>
+<span class="line"></span></code></pre></div><p>Optionally, to pull from a repository:</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">yum install git</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">yum install git</span></span>
+<span class="line"></span></code></pre></div><ol start="3"><li>The configuration will need the dependencies above satisfied. Once that is taken care of:</li></ol><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#E0A569;">cd</span><span style="color:#DBD7CA;"> varnish-cache</span></span>
+<span class="line"><span style="color:#DBD7CA;">sh autogen.sh</span></span>
+<span class="line"><span style="color:#DBD7CA;">sh configure</span></span>
+<span class="line"><span style="color:#DBD7CA;">make</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#B58451;">cd</span><span style="color:#393A34;"> varnish-cache</span></span>
+<span class="line"><span style="color:#393A34;">sh autogen.sh</span></span>
+<span class="line"><span style="color:#393A34;">sh configure</span></span>
+<span class="line"><span style="color:#393A34;">make</span></span>
+<span class="line"></span></code></pre></div><p>The configure script takes some arguments, but more likely than not you can forget about that for now, almost everything in Varnish can be tweaked with run time parameters.</p><ol start="4"><li>Before you install, you may want to run the test suite, make a cup of tea while it runs, it usually takes a couple of minutes:</li></ol><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">make check</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">make check</span></span>
+<span class="line"></span></code></pre></div><ol start="5"><li>And finally, the true test of a brave heart: <code>sudo make install</code></li></ol><p>Varnish will now be installed in /usr/local. The varnishd binary is in /usr/local/sbin/varnishd. To make sure that the necessary links and caches of the most recent shared libraries are found, run sudo ldconfig.</p><h2 id="\u542F\u52A8" tabindex="-1">\u542F\u52A8 <a class="header-anchor" href="#\u542F\u52A8" aria-hidden="true">#</a></h2><p>\u4F7F\u7528<code>systemctl start varnish</code>\u5373\u53EF,\u624B\u52A8\u542F\u52A8\u4F7F\u7528\u4E00\u4E0B\u547D\u4EE4:</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">varnishd -a :6081 -T localhost:6082 -b localhost:8080</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">varnishd -a :6081 -T localhost:6082 -b localhost:8080</span></span>
+<span class="line"></span></code></pre></div><h2 id="\u53C2\u8003\u94FE\u63A5" tabindex="-1">\u53C2\u8003\u94FE\u63A5 <a class="header-anchor" href="#\u53C2\u8003\u94FE\u63A5" aria-hidden="true">#</a></h2><ul><li>\u5B98\u65B9\u5B89\u88C5\u6307\u5357:<a href="https://varnish-cache.org/docs/6.0/installation/install.html" target="_blank" rel="noopener noreferrer">https://varnish-cache.org/docs/6.0/installation/install.html</a></li><li>\u5B98\u65B9\u955C\u50CF\u4ED3\u5E93:<a href="https://packagecloud.io/varnishcache" target="_blank" rel="noopener noreferrer">https://packagecloud.io/varnishcache</a></li></ul>`,26),c=[p];function o(i,r,t,d,h,y){return a(),n("div",null,c)}var g=s(l,[["render",o]]);export{v as __pageData,g as default};

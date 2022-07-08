@@ -1,0 +1,61 @@
+import{_ as s,o as n,c as a,a as l}from"./app.1e6146c3.js";const C=JSON.parse('{"title":"Shell\u5E76\u53D1","description":"","frontmatter":{},"headers":[],"relativePath":"Scripts/shell/Shell \u5E76\u53D1.md","lastUpdated":1657272051000}'),p={name:"Scripts/shell/Shell \u5E76\u53D1.md"},o=l(`<h1 id="shell\u5E76\u53D1" tabindex="-1">Shell\u5E76\u53D1 <a class="header-anchor" href="#shell\u5E76\u53D1" aria-hidden="true">#</a></h1><p>shell\u5E76\u53D1\u811A\u672C\u793A\u4F8B\uFF1A</p><div class="language-shell"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#758575;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#758575;"># \u5E76\u53D1\u6570</span></span>
+<span class="line"><span style="color:#DBD7CA;">pnum=6</span></span>
+<span class="line"><span style="color:#758575;">#\u60F3\u8981\u6267\u884C\u7684\u51FD\u6570</span></span>
+<span class="line"><span style="color:#A1B567;">task</span><span style="color:#DBD7CA;"> </span><span style="color:#858585;">()</span><span style="color:#DBD7CA;"> </span><span style="color:#858585;">{</span></span>
+<span class="line"><span style="color:#DBD7CA;">  </span><span style="color:#E0A569;">echo</span><span style="color:#DBD7CA;"> </span><span style="color:#C98A7D;">&quot;</span><span style="color:#858585;">$</span><span style="color:#C98A7D;">u start&quot;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  sleep 5</span></span>
+<span class="line"><span style="color:#DBD7CA;">  </span><span style="color:#E0A569;">echo</span><span style="color:#DBD7CA;"> </span><span style="color:#C98A7D;">&quot;</span><span style="color:#858585;">$</span><span style="color:#C98A7D;">u done&quot;</span></span>
+<span class="line"><span style="color:#858585;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DBD7CA;">FifoFile=</span><span style="color:#C98A7D;">&quot;</span><span style="color:#858585;">$</span><span style="color:#C98A7D;">$.fifo&quot;</span></span>
+<span class="line"><span style="color:#DBD7CA;">mkfifo </span><span style="color:#858585;">$</span><span style="color:#B8A965;">FifoFile</span></span>
+<span class="line"><span style="color:#E0A569;">exec</span><span style="color:#DBD7CA;"> </span><span style="color:#CB7676;">6&lt;&gt;</span><span style="color:#858585;">$</span><span style="color:#B8A965;">FifoFile</span></span>
+<span class="line"><span style="color:#DBD7CA;">rm </span><span style="color:#858585;">$</span><span style="color:#B8A965;">FifoFile</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375;">for</span><span style="color:#DBD7CA;"> </span><span style="color:#C98A7D;">((i</span><span style="color:#CB7676;">=</span><span style="color:#6394BF;">0</span><span style="color:#C98A7D;">;i</span><span style="color:#CB7676;">&lt;=</span><span style="color:#858585;">$</span><span style="color:#C98A7D;">pnum;i</span><span style="color:#CB7676;">++</span><span style="color:#C98A7D;">))</span><span style="color:#CB7676;">;</span><span style="color:#4D9375;">do</span><span style="color:#DBD7CA;"> </span><span style="color:#E0A569;">echo</span><span style="color:#CB7676;">;</span><span style="color:#4D9375;">done</span><span style="color:#DBD7CA;"> </span><span style="color:#CB7676;">&gt;&amp;6</span></span>
+<span class="line"><span style="color:#758575;">#\u6267\u884C20\u6B21</span></span>
+<span class="line"><span style="color:#4D9375;">for</span><span style="color:#DBD7CA;"> </span><span style="color:#B8A965;">u</span><span style="color:#DBD7CA;"> </span><span style="color:#4D9375;">in</span><span style="color:#DBD7CA;"> </span><span style="color:#C98A7D;">\`seq 1 20\`</span></span>
+<span class="line"><span style="color:#4D9375;">do</span></span>
+<span class="line"><span style="color:#DBD7CA;">  </span><span style="color:#E0A569;">read</span><span style="color:#DBD7CA;"> -u6</span></span>
+<span class="line"><span style="color:#DBD7CA;">  </span><span style="color:#858585;">{</span></span>
+<span class="line"><span style="color:#858585;">  </span><span style="color:#758575;">#\u8C03\u7528\u51FD\u6570</span></span>
+<span class="line"><span style="color:#DBD7CA;">  task</span></span>
+<span class="line"><span style="color:#858585;">  </span><span style="color:#758575;">#\u5E76\u53D1\u6267\u884C\u51FD\u6570\u6253\u5370\u7ED3\u679C\u65E5\u5FD7</span></span>
+<span class="line"><span style="color:#DBD7CA;">  </span><span style="color:#858585;">[</span><span style="color:#DBD7CA;"> </span><span style="color:#858585;">$</span><span style="color:#B8A965;">?</span><span style="color:#DBD7CA;"> </span><span style="color:#CB7676;">-eq</span><span style="color:#DBD7CA;"> 0 </span><span style="color:#858585;">]</span><span style="color:#DBD7CA;"> </span><span style="color:#CB7676;">&amp;&amp;</span><span style="color:#DBD7CA;"> </span><span style="color:#E0A569;">echo</span><span style="color:#DBD7CA;"> </span><span style="color:#C98A7D;">&quot;</span><span style="color:#858585;">\${</span><span style="color:#C98A7D;">u</span><span style="color:#858585;">}</span><span style="color:#C98A7D;"> \u6B21\u6210\u529F&quot;</span><span style="color:#DBD7CA;"> </span><span style="color:#CB7676;">||</span><span style="color:#DBD7CA;"> </span><span style="color:#E0A569;">echo</span><span style="color:#DBD7CA;"> </span><span style="color:#C98A7D;">&quot;</span><span style="color:#858585;">\${</span><span style="color:#C98A7D;">u</span><span style="color:#858585;">}</span><span style="color:#C98A7D;"> \u6B21\u5931\u8D25&quot;</span></span>
+<span class="line"><span style="color:#DBD7CA;">  </span><span style="color:#E0A569;">echo</span><span style="color:#DBD7CA;"> </span><span style="color:#CB7676;">&gt;&amp;6</span></span>
+<span class="line"><span style="color:#DBD7CA;">  </span><span style="color:#858585;">}</span><span style="color:#DBD7CA;"> </span><span style="color:#CB7676;">&amp;</span></span>
+<span class="line"><span style="color:#4D9375;">done</span></span>
+<span class="line"><span style="color:#E0A569;">wait</span></span>
+<span class="line"><span style="color:#E0A569;">exec</span><span style="color:#DBD7CA;"> </span><span style="color:#CB7676;">6&gt;&amp;</span><span style="color:#DBD7CA;">-</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#A0ADA0;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A0ADA0;"># \u5E76\u53D1\u6570</span></span>
+<span class="line"><span style="color:#393A34;">pnum=6</span></span>
+<span class="line"><span style="color:#A0ADA0;">#\u60F3\u8981\u6267\u884C\u7684\u51FD\u6570</span></span>
+<span class="line"><span style="color:#6C7834;">task</span><span style="color:#393A34;"> </span><span style="color:#8E8F8B;">()</span><span style="color:#393A34;"> </span><span style="color:#8E8F8B;">{</span></span>
+<span class="line"><span style="color:#393A34;">  </span><span style="color:#B58451;">echo</span><span style="color:#393A34;"> </span><span style="color:#B56959;">&quot;</span><span style="color:#8E8F8B;">$</span><span style="color:#B56959;">u start&quot;</span></span>
+<span class="line"><span style="color:#393A34;">  sleep 5</span></span>
+<span class="line"><span style="color:#393A34;">  </span><span style="color:#B58451;">echo</span><span style="color:#393A34;"> </span><span style="color:#B56959;">&quot;</span><span style="color:#8E8F8B;">$</span><span style="color:#B56959;">u done&quot;</span></span>
+<span class="line"><span style="color:#8E8F8B;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#393A34;">FifoFile=</span><span style="color:#B56959;">&quot;</span><span style="color:#8E8F8B;">$</span><span style="color:#B56959;">$.fifo&quot;</span></span>
+<span class="line"><span style="color:#393A34;">mkfifo </span><span style="color:#8E8F8B;">$</span><span style="color:#8C862B;">FifoFile</span></span>
+<span class="line"><span style="color:#B58451;">exec</span><span style="color:#393A34;"> </span><span style="color:#AB5959;">6&lt;&gt;</span><span style="color:#8E8F8B;">$</span><span style="color:#8C862B;">FifoFile</span></span>
+<span class="line"><span style="color:#393A34;">rm </span><span style="color:#8E8F8B;">$</span><span style="color:#8C862B;">FifoFile</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#1C6B48;">for</span><span style="color:#393A34;"> </span><span style="color:#B56959;">((i</span><span style="color:#AB5959;">=</span><span style="color:#296AA3;">0</span><span style="color:#B56959;">;i</span><span style="color:#AB5959;">&lt;=</span><span style="color:#8E8F8B;">$</span><span style="color:#B56959;">pnum;i</span><span style="color:#AB5959;">++</span><span style="color:#B56959;">))</span><span style="color:#AB5959;">;</span><span style="color:#1C6B48;">do</span><span style="color:#393A34;"> </span><span style="color:#B58451;">echo</span><span style="color:#AB5959;">;</span><span style="color:#1C6B48;">done</span><span style="color:#393A34;"> </span><span style="color:#AB5959;">&gt;&amp;6</span></span>
+<span class="line"><span style="color:#A0ADA0;">#\u6267\u884C20\u6B21</span></span>
+<span class="line"><span style="color:#1C6B48;">for</span><span style="color:#393A34;"> </span><span style="color:#8C862B;">u</span><span style="color:#393A34;"> </span><span style="color:#1C6B48;">in</span><span style="color:#393A34;"> </span><span style="color:#B56959;">\`seq 1 20\`</span></span>
+<span class="line"><span style="color:#1C6B48;">do</span></span>
+<span class="line"><span style="color:#393A34;">  </span><span style="color:#B58451;">read</span><span style="color:#393A34;"> -u6</span></span>
+<span class="line"><span style="color:#393A34;">  </span><span style="color:#8E8F8B;">{</span></span>
+<span class="line"><span style="color:#8E8F8B;">  </span><span style="color:#A0ADA0;">#\u8C03\u7528\u51FD\u6570</span></span>
+<span class="line"><span style="color:#393A34;">  task</span></span>
+<span class="line"><span style="color:#8E8F8B;">  </span><span style="color:#A0ADA0;">#\u5E76\u53D1\u6267\u884C\u51FD\u6570\u6253\u5370\u7ED3\u679C\u65E5\u5FD7</span></span>
+<span class="line"><span style="color:#393A34;">  </span><span style="color:#8E8F8B;">[</span><span style="color:#393A34;"> </span><span style="color:#8E8F8B;">$</span><span style="color:#8C862B;">?</span><span style="color:#393A34;"> </span><span style="color:#AB5959;">-eq</span><span style="color:#393A34;"> 0 </span><span style="color:#8E8F8B;">]</span><span style="color:#393A34;"> </span><span style="color:#AB5959;">&amp;&amp;</span><span style="color:#393A34;"> </span><span style="color:#B58451;">echo</span><span style="color:#393A34;"> </span><span style="color:#B56959;">&quot;</span><span style="color:#8E8F8B;">\${</span><span style="color:#B56959;">u</span><span style="color:#8E8F8B;">}</span><span style="color:#B56959;"> \u6B21\u6210\u529F&quot;</span><span style="color:#393A34;"> </span><span style="color:#AB5959;">||</span><span style="color:#393A34;"> </span><span style="color:#B58451;">echo</span><span style="color:#393A34;"> </span><span style="color:#B56959;">&quot;</span><span style="color:#8E8F8B;">\${</span><span style="color:#B56959;">u</span><span style="color:#8E8F8B;">}</span><span style="color:#B56959;"> \u6B21\u5931\u8D25&quot;</span></span>
+<span class="line"><span style="color:#393A34;">  </span><span style="color:#B58451;">echo</span><span style="color:#393A34;"> </span><span style="color:#AB5959;">&gt;&amp;6</span></span>
+<span class="line"><span style="color:#393A34;">  </span><span style="color:#8E8F8B;">}</span><span style="color:#393A34;"> </span><span style="color:#AB5959;">&amp;</span></span>
+<span class="line"><span style="color:#1C6B48;">done</span></span>
+<span class="line"><span style="color:#B58451;">wait</span></span>
+<span class="line"><span style="color:#B58451;">exec</span><span style="color:#393A34;"> </span><span style="color:#AB5959;">6&gt;&amp;</span><span style="color:#393A34;">-</span></span>
+<span class="line"></span></code></pre></div>`,3),e=[o];function c(t,r,y,A,B,i){return n(),a("div",null,e)}var u=s(p,[["render",c]]);export{C as __pageData,u as default};

@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,a as l}from"./app.1e6146c3.js";const C=JSON.parse('{"title":"rsysnc","description":"","frontmatter":{},"headers":[],"relativePath":"Scripts/shell/Rsync.md","lastUpdated":1657272051000}'),p={name:"Scripts/shell/Rsync.md"},o=l("",3),e=[o];function t(c,r,y,A,B,i){return n(),a("div",null,e)}var d=s(p,[["render",t]]);export{C as __pageData,d as default};

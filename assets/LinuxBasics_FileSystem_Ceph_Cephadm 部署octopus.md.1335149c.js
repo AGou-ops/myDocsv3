@@ -1,0 +1,39 @@
+import{_ as s,o as a,c as p,a as e}from"./app.1e6146c3.js";const A=JSON.parse('{"title":"Cepha   \u90E8\u7F72octopus","description":"","frontmatter":{},"headers":[],"relativePath":"LinuxBasics/FileSystem/Ceph/Cephadm \u90E8\u7F72octopus.md","lastUpdated":1657272051000}'),n={name:"LinuxBasics/FileSystem/Ceph/Cephadm \u90E8\u7F72octopus.md"},c=e(`<h1 id="cepha-\u90E8\u7F72octopus" tabindex="-1">Cepha \u90E8\u7F72octopus <a class="header-anchor" href="#cepha-\u90E8\u7F72octopus" aria-hidden="true">#</a></h1><p>\u83B7\u53D6<code>cephadm</code>\u90E8\u7F72\u5DE5\u5177</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#758575;"># curl --silent --remote-name --location https://github.com/ceph/ceph/raw/octopus/src/cephadm/cephadm</span></span>
+<span class="line"><span style="color:#758575;"># chmod +x cephadm</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#A0ADA0;"># curl --silent --remote-name --location https://github.com/ceph/ceph/raw/octopus/src/cephadm/cephadm</span></span>
+<span class="line"><span style="color:#A0ADA0;"># chmod +x cephadm</span></span>
+<span class="line"></span></code></pre></div><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">\u6CE8\u610F\u63D0\u524D\u5B89\u88C5\u597Ddocker\u548Cchronyd</span></span>
+<span class="line"><span style="color:#758575;"># ./cephadm add-repo --release octopus</span></span>
+<span class="line"><span style="color:#758575;"># ./cephadm install</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575;"># which cephadm</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">\u6CE8\u610F\u63D0\u524D\u5B89\u88C5\u597Ddocker\u548Cchronyd</span></span>
+<span class="line"><span style="color:#A0ADA0;"># ./cephadm add-repo --release octopus</span></span>
+<span class="line"><span style="color:#A0ADA0;"># ./cephadm install</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A0ADA0;"># which cephadm</span></span>
+<span class="line"></span></code></pre></div><p>\u5B89\u88C5\u5F15\u5BFC\u96C6\u7FA4:</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#758575;"># mkdir -p /etc/ceph</span></span>
+<span class="line"><span style="color:#758575;"># cephadm bootstrap --mon-ip 192.168.159.139</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#A0ADA0;"># mkdir -p /etc/ceph</span></span>
+<span class="line"><span style="color:#A0ADA0;"># cephadm bootstrap --mon-ip 192.168.159.139</span></span>
+<span class="line"></span></code></pre></div><p>\u6B64\u547D\u4EE4\u5C06\uFF1A</p><ul><li>\u5728\u672C\u5730\u4E3B\u673A\u4E0A\u4E3A\u65B0\u96C6\u7FA4\u521B\u5EFA\u76D1\u89C6\u548C\u7BA1\u7406\u5668\u5B88\u62A4\u7A0B\u5E8F\u3002</li><li>\u4E3ACeph\u96C6\u7FA4\u751F\u6210\u4E00\u4E2A\u65B0\u7684SSH\u5BC6\u94A5\uFF0C\u5E76\u5C06\u5176\u6DFB\u52A0\u5230root\u7528\u6237\u7684<code>/root/.ssh/authorized_keys</code>\u6587\u4EF6\u4E2D\u3002</li><li>\u5C06\u4E0E\u65B0\u7FA4\u96C6\u901A\u4FE1\u6240\u9700\u7684\u6700\u5C0F\u914D\u7F6E\u6587\u4EF6\u5199\u5165<code>/etc/ceph/ceph.conf</code>\u3002</li><li>\u5C06client.admin\u7BA1\u7406\uFF08root\uFF09\u5BC6\u94A5\u7684\u526F\u672C\u5199\u5165<code>/etc/ceph/ceph.client.admin.keyring</code>\u3002</li><li>\u5C06\u516C\u5171\u5BC6\u94A5\u7684\u526F\u672C\u5199\u5165<code>/etc/ceph/ceph.pub</code>\u3002</li></ul><p>\u542F\u7528CEPH CLI</p><p>\u4E0E\u4E4B\u524D\u4E0D\u540C\u7684\u662F, ceph\u7684\u547D\u4EE4\u4E0D\u518D\u5728bash shell\u4E2D\u51FA\u73B0, \u800C\u662F\u5355\u72EC\u51FA\u6765\u4E86.</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#758575;"># cephadm shell</span></span>
+<span class="line"><span style="color:#DBD7CA;">\u4E3A\u4E86\u65B9\u4FBF,\u53EF\u4EE5\u6DFB\u52A0\u4E00\u4E2A\u522B\u540D</span></span>
+<span class="line"><span style="color:#758575;"># alias ceph=&#39;cephadm shell -- ceph&#39;</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#A0ADA0;"># cephadm shell</span></span>
+<span class="line"><span style="color:#393A34;">\u4E3A\u4E86\u65B9\u4FBF,\u53EF\u4EE5\u6DFB\u52A0\u4E00\u4E2A\u522B\u540D</span></span>
+<span class="line"><span style="color:#A0ADA0;"># alias ceph=&#39;cephadm shell -- ceph&#39;</span></span>
+<span class="line"></span></code></pre></div><p>\u4F60\u8FD8\u53EF\u4EE5\u5B89\u88C5ceph-common\u8F6F\u4EF6\u5305\uFF0C\u5176\u4E2D\u5305\u542B\u6240\u6709ceph\u547D\u4EE4\uFF0C\u5305\u62ECceph\uFF0Crbd\uFF0Cmount.ceph\uFF08\u7528\u4E8E\u5B89\u88C5CephFS\u6587\u4EF6\u7CFB\u7EDF\uFF09\u7B49\uFF1A</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">cephadm add-repo --release octopus</span></span>
+<span class="line"><span style="color:#758575;"># cephadm install ceph-common</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">cephadm add-repo --release octopus</span></span>
+<span class="line"><span style="color:#A0ADA0;"># cephadm install ceph-common</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre></div><p>\u786E\u8BA4\u53EF\u4EE5\u4F7F\u7528\u4EE5\u4E0B\u547D\u4EE4\u8BBF\u95EEceph\u547D\u4EE4\uFF1A</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#758575;"># ceph -v</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#A0ADA0;"># ceph -v</span></span>
+<span class="line"></span></code></pre></div><p>\u4F7F\u7528\u4EE5\u4E0B\u547D\u4EE4\u786E\u8BA4ceph\u547D\u4EE4\u53EF\u4EE5\u8FDE\u63A5\u5230\u96C6\u7FA4\u53CA\u5176\u72B6\u6001:</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#758575;"># ceph status</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#A0ADA0;"># ceph status</span></span>
+<span class="line"></span></code></pre></div><p>\u5C06\u4E3B\u673A\u6DFB\u52A0\u5230\u96C6\u7FA4\u4E2D</p><p>\u5728\u65B0\u4E3B\u673A\u7684root\u7528\u6237\u7684authorized_keys\u6587\u4EF6\u4E2D\u5B89\u88C5\u7FA4\u96C6\u7684\u516C\u5171SSH\u5BC6\u94A5\uFF1A</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#758575;"># ssh-copy-id -f -i /etc/ceph/ceph.pub root@stor2</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#A0ADA0;"># ssh-copy-id -f -i /etc/ceph/ceph.pub root@stor2</span></span>
+<span class="line"></span></code></pre></div><p>\u544A\u8BC9Ceph\uFF0C\u65B0\u8282\u70B9\u662F\u96C6\u7FA4\u7684\u4E00\u90E8\u5206\uFF1A</p><div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#758575;"># ceph orch host add stor2</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#A0ADA0;"># ceph orch host add stor2</span></span>
+<span class="line"></span></code></pre></div>`,22),l=[c];function o(d,i,r,t,h,m){return a(),p("div",null,l)}var u=s(n,[["render",o]]);export{A as __pageData,u as default};

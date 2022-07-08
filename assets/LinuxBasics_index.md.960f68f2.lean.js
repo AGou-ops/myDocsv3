@@ -1,0 +1,1 @@
+import{_ as i,o as l,c as e,a}from"./app.1e6146c3.js";const h=JSON.parse('{"title":"Linux \u57FA\u7840","description":"","frontmatter":{},"headers":[],"relativePath":"LinuxBasics/index.md","lastUpdated":1657272051000}'),t={name:"LinuxBasics/index.md"},r=a("",2),s=[r];function n(o,_,c,d,u,x){return l(),e("div",null,s)}var f=i(t,[["render",n]]);export{h as __pageData,f as default};

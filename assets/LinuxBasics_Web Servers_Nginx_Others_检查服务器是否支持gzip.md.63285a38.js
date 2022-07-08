@@ -1,0 +1,7 @@
+import{_ as s,o as n,c as a,a as e}from"./app.1e6146c3.js";const u=JSON.parse('{"title":"Content-Encoding: gzip\\t\\t\\t# \u4E3B\u8981\u67E5\u770B\u8FD9\u4E2A","description":"","frontmatter":{},"headers":[],"relativePath":"LinuxBasics/Web Servers/Nginx/Others/\u68C0\u67E5\u670D\u52A1\u5668\u662F\u5426\u652F\u6301gzip.md","lastUpdated":1657272051000}'),t={name:"LinuxBasics/Web Servers/Nginx/Others/\u68C0\u67E5\u670D\u52A1\u5668\u662F\u5426\u652F\u6301gzip.md"},p=e(`<div class="language-bash"><span class="copy"></span><pre class="vp-code-dark"><code><span class="line"><span style="color:#DBD7CA;">curl -I -H \u2018Accept-Encoding: gzip,deflate\u2019 -H \u201CHost:\u57DF\u540D\u201D  http://ip/url</span></span>
+<span class="line"><span style="color:#758575;"># </span></span>
+<span class="line"><span style="color:#DBD7CA;">Content-Encoding: gzip			</span><span style="color:#758575;"># \u4E3B\u8981\u67E5\u770B\u8FD9\u4E2A</span></span>
+<span class="line"></span></code></pre><pre class="vp-code-light"><code><span class="line"><span style="color:#393A34;">curl -I -H \u2018Accept-Encoding: gzip,deflate\u2019 -H \u201CHost:\u57DF\u540D\u201D  http://ip/url</span></span>
+<span class="line"><span style="color:#A0ADA0;"># </span></span>
+<span class="line"><span style="color:#393A34;">Content-Encoding: gzip			</span><span style="color:#A0ADA0;"># \u4E3B\u8981\u67E5\u770B\u8FD9\u4E2A</span></span>
+<span class="line"></span></code></pre></div>`,1),c=[p];function o(l,i,r,_,d,g){return n(),a("div",null,c)}var h=s(t,[["render",o]]);export{u as __pageData,h as default};
