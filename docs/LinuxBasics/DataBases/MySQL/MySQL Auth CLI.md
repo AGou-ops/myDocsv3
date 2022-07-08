@@ -1,4 +1,4 @@
-# MySQL Auth CLI    
+# MySQL Auth CLI
 
 [TOC]
 

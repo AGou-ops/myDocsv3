@@ -4,6 +4,14 @@
 mysql -h <mysql_server_addr> -P <PORT> -u <USER> -p <PASSWORD>
 ```
 
+![SQL Commands](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/SQL-Commands-1-700x470.png)
+
+- DDL（**Data Definition Languages**）：数据库定义语句：用来创建数据库中的表、索引、视图、存储过程、触发器等
+- DML（**Data Manipulation Language**）：数据操纵语句：用来查询、添加、更新、删除等
+- DCL（**Data Control Language**）：数据控制语句：用于授权/撤销数据库及其字段的权限
+- TCL（**Transaction Control Language**）：事务控制语句：用于控制事务
+- DQL（**Data Query Language**）：数据查询语言，select， from， where，order by， having，asc|desc
+
 ## 基础
 
 ```sql
@@ -65,8 +73,8 @@ ALTER TABLE <TABLE_NAME> <...OPTIONS...>;
 */
 
 DROP TABLE [IF EXISTS] <TABLE_NAME...>;		-- 删除表
-TRUNCATE TABLE <TABLE_NAME>;		-- 清空表数据
-DELETE FROM <TABLE_NAME>;		-- 清空表数据
+TRUNCATE TABLE <TABLE_NAME>;		-- 清空表数据，不删除表结构
+DELETE FROM <TABLE_NAME>;		-- 清空表数据，不删除表结构
 
 -- 检查表是否有错误
 CHECK TABLE <TABLE_NAME1>,<TBL_NAME2>...;
