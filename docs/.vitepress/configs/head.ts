@@ -29,5 +29,5 @@ export const head: HeadConfig[] = [
   ["link", { rel: "alternate", href: site, hreflang: "en-us" }],
   ["link", { rel: "alternate", href: site + "/zh/", hreflang: "zh-hans" }],
 
-  ["link", { rel: "shortcut icon", href: "/images/favicon.ico" }],
+  ["link", { rel: "shortcut icon", href: "https://agou-ops.cn/myDocsv3/images/favicon.ico" }],
 ];
